@@ -99,6 +99,7 @@
 .offered-services-align {
   display: flex;
   align-items: center;
+  padding: 4%;
   justify-content: space-around;
 }
 .list-data-align {
@@ -146,6 +147,7 @@
   width: 100%;
   height: 60vh;
   position: relative;
+  padding: 4%;
 }
 .Apart-con {
   background-image: url(./images/line-background.png);
@@ -166,6 +168,9 @@
   margin: 2%;
 }
 /* section5 */
+.section5{
+  padding: 2%;
+}
 .out-source-head-50 {
   font-family: var(--font-family);
   font-size: 32px;
