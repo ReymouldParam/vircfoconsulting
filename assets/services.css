@@ -91,6 +91,11 @@
   font-weight: 500;
   text-align: center;
 }
+.offered-service {
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
 .offered-services-align {
   display: flex;
   align-items: center;
@@ -118,15 +123,15 @@
 }
 .offered-list-services {
   background-color: white;
-  height: auto;
-  width: 50%;
+  height: 40vh;
+  width: 100%;
+  padding: 20px;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 5%;
-  margin: 2%;
+  
 }
 .list-item3 {
   font-family: var(--font-family);
@@ -137,6 +142,11 @@
   margin-left: 40px;
 }
 /* section4 */
+.section4 {
+  width: 100%;
+  height: 60vh;
+  position: relative;
+}
 .Apart-con {
   background-image: url(./images/line-background.png);
   background-size: cover;
@@ -167,22 +177,18 @@
   padding: 30px;
 }
 /* section6 */
-.logo-card{
+.logo-card {
   background-color: white;
   width: 200px;
   height: 200px;
   border-radius: 15px;
   margin: 20px;
-
 }
 
-.logo{
+.logo {
   color: var(--primary-color);
   font-family: var(--font-family);
   text-align: center;
   font-size: 32px;
   font-weight: 600;
-
 }
-
-
