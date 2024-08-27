@@ -5,27 +5,15 @@
   width: 100vw;
   position: relative;
   overflow: hidden;
-  animation: changeBackground 4s forwards 2s;
 }
-.section-head-con {
-  font-size: 40px;
+.about-us{
   font-family: var(--font-family);
   color: var(--secondary-color);
   font-weight: 900;
-  text-align: center;
-  padding-top: 20px;
+  font-size: 64px;
 }
 
-/* Container wrapper for 3D perspective */
-.container-wrapper {
-  perspective: 1000px;
-  height: 100%;
-  width: 100%;
-  position: relative;
-}
-
-/* First container that moves fully to center and rotates */
-.section1-para-con {
+.section-head-con {
   background: linear-gradient(
     135deg,
     rgba(14, 13, 35, 0.96),
@@ -33,18 +21,31 @@
   );
   width: 60%;
   height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  left: 0;
-  transform: translateY(-50%) translateX(-100%);
-  backface-visibility: hidden;
-  animation: moveAndRotateFirstContainer 4s forwards; /* Smooth movement and rotation */
+  left: -100%; /* Start hidden to the left */
+  animation: slideIn 1.5s forwards ease-out; /* Trigger the animation */
 }
+
+/* Animation for sliding the container in */
+@keyframes slideIn {
+  0% {
+    left: -100%; /* Hidden */
+  }
+  100% {
+    left: 0; /* Fully visible */
+  }
+}
+
 
 /* section2 */
 .section2 {
   display: flex;
   justify-content: space-evenly;
-  padding-top:4%;
+  padding-top: 4%;
   padding-bottom: 2%;
 }
 .section2-h3 {
@@ -54,10 +55,10 @@
   font-size: 30px;
   font-weight: 600;
 }
-.founder-con{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.founder-con {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .section3-h3 {
@@ -67,19 +68,20 @@
   font-size: 30px;
   font-weight: 900;
 }
-.found-paras-align{
-    display: flex;
-    align-items: flex-end;
-    width: 90%;
-    margin: auto;
-  
+.found-paras-align {
+  display: flex;
+  align-items: flex-end;
+  width: 90%;
+  margin: auto;
+  padding-top: 1%;
+  padding-bottom: 2%;
 }
-.para-founder-img{
-    display: flex;
-    justify-content: space-around;
-    padding-top: 2%;
-    width: 90%;
-    margin: auto;
+.para-founder-img {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 2%;
+  width: 90%;
+  margin: auto;
 }
 .section3-para {
   font-family: var(--font-family);
@@ -88,97 +90,106 @@
   color: var(--secondary-color);
 }
 .quote-h3 {
-    text-align: center;
-    font-family: var(--font-family);
-    color: var(--primary-color);
-    font-size: 30px;
-    font-weight: 600;
-  }
-  .founder-para1 {
-    font-family: var(--font-family);
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--secondary-color);
-    width: 70%;
-  }
-  /* section4 */
-  .ethical-img{
-    width: 100px;;
-    height: 70px;
-  }
-  .cards-align{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .ethical-card{
-    width:400px;
-    height: 300px;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    gap:20px;
-    padding: 1%;
-    border-radius: 20px;
-    background-color: #FFFFFF;
-    margin: 2%;
-  }
-  .ethical-head{
-    text-align: left;
-    font-family: var(--font-family);
-    color: var(--primary-color);
-    font-size: 25px;
-    font-weight: 600;
-  }
-  .ethical-para{
-    text-align: left;
-    font-family: var(--font-family);
-    color:#000000;
-    font-size: 16px;
-    font-weight: 600;
-
-  }
-  /* section5 */
-  .service-head {
-    font-size: 40px;
-    font-family: var(--font-family);
-    color: var(--primary-color);
-    font-weight: 900;
-    text-align: center;
-    padding-top: 25px;
-    padding-bottom: 15px;
-  }
-  .service-para {
-    font-family: var(--font-family);
-    color: var(--primary-color);
-    font-size: 16px;
-    font-weight: 400;
-    text-align: center;
-    padding-bottom: 70px;
-  }
-  .our-con{
-    background-color: var(--primary-color);
-    width:95%;
-    margin: auto;
-    margin-top: 20px;
-    height: auto;
-    border-radius: 20px;
-    margin-bottom: 20px;
-  }
-.mission-align{
-    display: flex;
-    justify-content: space-around;
+  text-align: center;
+  font-family: var(--font-family);
+  color: var(--primary-color);
+  font-size: 30px;
+  font-weight: 600;
 }
-  .our-mission{
-    font-size: 32px;
-    font-family: var(--font-family);
-    color: var(--secondary-color);
-    font-weight: 900;
-  }
-  .our-para{
-    font-family: var(--font-family);
-    color: var(--secondary-color);
-    font-size: 16px;
-    font-weight: 400;
-  }
+.founder-para1 {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--secondary-color);
+  width: 70%;
+}
+/* section4 */
+.ethical-img {
+  width: 100px;
+  height: 70px;
+}
+.cards-align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.ethical-card {
+  width: 400px;
+  height: 300px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  padding: 1%;
+  border-radius: 20px;
+  background-color: #ffffff;
+  margin: 2%;
+}
+.ethical-head {
+  text-align: left;
+  font-family: var(--font-family);
+  color: var(--primary-color);
+  font-size: 25px;
+  font-weight: 600;
+}
+.ethical-para {
+  text-align: left;
+  font-family: var(--font-family);
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+}
+/* section5 */
+.service-head {
+  font-size: 40px;
+  font-family: var(--font-family);
+  color: var(--primary-color);
+  font-weight: 900;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+.service-para {
+  font-family: var(--font-family);
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 70px;
+}
+.our-con {
+  background-color: var(--primary-color);
+  width: 95%;
+  margin: auto;
+  margin-top: 20px;
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.mission-align {
+  display: flex;
+  justify-content: space-around;
+  gap: 5%;
+}
+.mission-text {
+  padding: 20px;
+}
+.mission-img {
+  padding: 20px;
+}
+.founder {
+  padding-bottom: 30px;
+}
+.our-mission {
+  font-size: 32px;
+  font-family: var(--font-family);
+  color: var(--secondary-color);
+  font-weight: 900;
+}
+.our-para {
+  font-family: var(--font-family);
+  color: var(--secondary-color);
+  font-size: 16px;
+  font-weight: 400;
+}
