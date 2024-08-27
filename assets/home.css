@@ -1,0 +1,391 @@
+/* Keyframes for moving the first container and rotating */
+@keyframes moveAndRotateFirstContainer {
+  0% {
+    transform: translateX(-100%) rotate(0deg); /* Start off-screen */
+    opacity: 1;
+  }
+  60% {
+    transform: translateX(0%) rotate(0deg); /* Fully visible in the center */
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(+50%) rotate(-180deg); /* Fully rotated and moved */
+    opacity: 0;
+  }
+}
+
+/* Keyframes for revealing the second container */
+@keyframes revealSecondContainer {
+  0% {
+    opacity: 0;
+    transform: translateX(50%) rotate(0deg); /* Start hidden and rotated */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(+360deg); /* Appear fully after the rotation */
+  }
+}
+
+/* Keyframes for changing the background image */
+@keyframes changeBackground {
+  60% {
+    background-image: url(./images/section1-bg.png); /* Initial background */
+  }
+  100% {
+    background-image: url(./images/front-view-bg.png); /* Change background */
+  }
+}
+
+/* Section styles with background animation */
+.section1 {
+  background-image: url(./images/section1-bg.png);
+  background-size: cover;
+  height: 70vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  animation: changeBackground 4s forwards 2s;
+}
+
+.section-head-con {
+  font-size: 40px;
+  font-family: var(--font-family);
+  color: var(--secondary-color);
+  font-weight: 900;
+  text-align: center;
+  padding-top: 20px;
+}
+
+/* Container wrapper for 3D perspective */
+.container-wrapper {
+  perspective: 1000px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+/* First container that moves fully to center and rotates */
+.section1-para-con {
+  background: linear-gradient(
+    135deg,
+    rgba(14, 13, 35, 0.96),
+    rgba(0, 104, 56, 0.7)
+  );
+  width: 60%;
+  height: 70vh;
+  position: absolute;
+  left: 0;
+  transform: translateY(-50%) translateX(-100%);
+  backface-visibility: hidden;
+  animation: moveAndRotateFirstContainer 4s forwards; /* Smooth movement and rotation */
+}
+
+/* Second container revealed after the rotation */
+.section2-para-con {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 104, 56, 0.7),
+    rgba(14, 13, 35, 0.96)
+  );
+  width: 60%;
+  height: 70vh;
+  position: absolute;
+  left: 40%;
+  transform: translateY(-50%) translateX(50%);
+  backface-visibility: hidden;
+  opacity: 0;
+  animation: revealSecondContainer 4s forwards 2s; /* Revealed after rotation with delay */
+}
+
+/* section2 */
+.section2 {
+  background-color: rgba(14, 15, 36, 1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+  margin: auto;
+}
+.what-con {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 2%;
+}
+.what-we-con {
+  padding-left: 5%;
+  margin-right: 10%;
+  margin-top: -80px;
+}
+.cfo-sub-align {
+  display: flex;
+  align-items: center;
+  width: 70%;
+}
+.line-divide {
+  margin-left: -50%;
+}
+/* section2 */
+.cfo-head {
+  font-family: var(--font-family);
+  color: var(--primary-color);
+  font-weight: 900;
+  font-size: 40px;
+}
+.cfo-sub-head {
+  font-family: var(--font-family);
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+.cfo-para {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 500;
+  width: 60%;
+  color: var(--secondary-color);
+}
+.cfo-para2 {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 500;
+  width: 50%;
+  color: var(--secondary-color);
+}
+.cfo-para3 {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  color: var(--secondary-color);
+}
+.cfo-section1-btn {
+  background: transparent;
+  border-radius: 20px;
+  font-size: 16px;
+  font-family: var(--font-family);
+  color: var(--secondary-color);
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  padding: 10px;
+  margin-top: 5%;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(80px); /* Initially translate downwards */
+  transition: all 1.5s ease-in-out; /* Smooth transition */
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0); /* Slide up from the bottom */
+}
+
+/* section3 */
+/* Initial hidden state */
+.section3 {
+  opacity: 0;
+  transform: translateY(20%) scale(0.9); /* Start off-screen at the bottom and slightly zoomed out */
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out,
+    box-shadow 1.2s ease-out; /* Smooth transition with shadow */
+  will-change: opacity, transform, box-shadow; /* Optimize performance */
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* No shadow initially */
+}
+
+/* Animation effect */
+.section3.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1); /* Slide up to original position and zoom in to normal size */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow on visibility */
+}
+
+.service-head {
+  font-size: 40px;
+  font-family: var(--font-family);
+  color: var(--primary-color);
+  font-weight: 900;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+.service-para {
+  font-family: var(--font-family);
+  color: var(--secondary-color);
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 70px;
+}
+.service-sub-head {
+  font-family: var(--font-family);
+  font-size: 30px;
+  color: var(--primary-color);
+  font-weight: 900;
+  margin-left: -15px;
+}
+.list-item {
+  font-family: var(--font-family);
+  font-size: 20px;
+  color: var(--secondary-color);
+  font-weight: 500;
+  width: 85%;
+  padding: 1%;
+}
+.services-alignment {
+  display: flex;
+  width: 85%;
+  margin: auto;
+  justify-content: space-around;
+}
+
+.service-sec-img {
+  width: 100%;
+  height: auto;
+  padding-bottom: 50px;
+}
+
+/* section4 */
+/* Initial hidden state */
+.section4 {
+  opacity: 0;
+  transform: scale(0.98); /* Start slightly scaled down */
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out; /* Smooth transition */
+  will-change: opacity, transform; /* Optimize performance */
+}
+
+/* Animation effect */
+.section4.visible {
+  opacity: 1;
+  transform: scale(1); /* Scale to original size */
+}
+
+.section4 {
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  width: 90%;
+  /* justify-content: space-between; */
+  margin: auto;
+}
+.improve-align {
+  padding: 1%;
+  display: flex;
+  gap: 10%;
+}
+.value-align {
+  padding: 1%;
+  display: flex;
+  gap: 10%;
+  justify-content: space-between;
+}
+.improve-head {
+  font-size: 30px;
+  font-family: var(--font-family);
+  color: var(--primary-color);
+  font-weight: 900;
+  margin-left: -15px;
+}
+
+.list-item2 {
+  font-family: var(--font-family);
+  font-size: 20px;
+  color: var(--secondary-color);
+  font-weight: 500;
+  width: 85%;
+  padding-bottom: 20px;
+  padding-left: 30px; /* Increase padding to make room for the larger image */
+  background-image: url(../assets/images/checkmark.png);
+  background-size: 20px 20px; /* Image size set to 30px by 30px */
+  background-repeat: no-repeat;
+  background-position: 0 10%; /* Align the image to the left and center vertically */
+  line-height: 30px; /* Match the line-height to the image size to vertically align */
+  list-style-type: none; /* Remove default list style */
+}
+.value-sec-img {
+  margin-top: 15px;
+}
+.minus-width {
+  width: 400px !important;
+  margin-left: -20px;
+}
+/* section5 */
+/* Keyframes for horizontal movement with limited range */
+@keyframes moveText {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50px); /* Move text left */
+  }
+  100% {
+    transform: translateX(0); /* Move text back to original position */
+  }
+}
+
+@keyframes moveArrow {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50px); /* Move arrow right */
+  }
+  100% {
+    transform: translateX(0); /* Move arrow back to original position */
+  }
+}
+
+.section5 {
+  background-color: #006838;
+  overflow: hidden; /* Hide overflow to ensure smooth animation */
+  position: relative; /* Ensure positioning for child elements */
+  padding: 1%; /* Adjust padding as needed */
+}
+
+.arrow-align {
+  display: flex;
+  justify-content: space-around;
+  position: relative; /* Ensure the position is relative for proper animation */
+}
+
+/* Animation for the text container */
+.get-in-touch {
+  font-size: 64px;
+  font-family: var(--font-family);
+  color: var(--secondary-color);
+  font-weight: 600;
+  position: relative;
+  animation: moveText 4s ease-in-out infinite; /* Continuous movement left and right */
+}
+
+/* Animation for the arrow container */
+.arrow-size {
+  font-size: 60px;
+  animation: moveArrow 4s ease-in-out infinite; /* Continuous movement right and left */
+}
+
+.section5 {
+  background-color: #006838;
+}
+.get-in-touch {
+  font-size: 64px;
+  font-family: var(--font-family);
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+.arrow-align {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2%;
+  gap: 20%;
+}
+.arrow-size {
+  font-size: 60px;
+}
+/* footer */
