@@ -49,7 +49,9 @@
 }
 
 .section-head-con {
-  font-size: 40px;
+  font-size: 64px;
+  width: 80%;
+  margin: auto;
   font-family: var(--font-family);
   color: var(--secondary-color);
   font-weight: 900;

@@ -115,24 +115,90 @@
 
 /* section2 */
 .map-heading {
-    font-family: var(--font-family);
-    color: var(--secondary-color);
-    font-size: 32px;
-    font-weight: 700px;
-    padding-top: 5%;
-    text-align: center;
+  font-family: var(--font-family);
+  color: var(--secondary-color);
+  font-size: 32px;
+  font-weight: 700px;
+  padding-top: 5%;
+  text-align: center;
+}
+
+/* Define the animation for the background image movement */
+@keyframes backgroundImageAnimation {
+  0% {
+    background-position: 0% 0%;
   }
-  /* section3 */
-  .get-in-con{
-      width: 100vw;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(
-        135deg,
-        rgba(14, 13, 35, 0.96),
-        rgba(0, 104, 56, 0.7)
-      );
-      padding-bottom: 4%;
+  50% {
+    background-position: 100% 0%;
   }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* Define the animation for the gradient color change */
+@keyframes gradientAnimation {
+  0% {
+    background: linear-gradient(
+      135deg,
+      rgba(14, 13, 35, 0.96) 0%,
+      rgba(0, 104, 56, 0.7) 100%
+    );
+  }
+  50% {
+    background: linear-gradient(
+      135deg,
+      rgba(0, 104, 56, 0.7) 0%,
+      rgba(14, 13, 50, 0.96) 100%
+    );
+  }
+  100% {
+    background: linear-gradient(
+      135deg,
+      rgba(14, 13, 50, 0.96) 0%,
+      rgba(0, 104, 56, 0.8) 100%
+    );
+  }
+}
+
+.get-in-con {
+  /* Adjust height as needed to ensure visibility */
+  display: flex;
+  height: 50vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./images/motion-bg.png);
+  background-position-y: 30px !important;
+  background-size: 25% auto;
+  background-repeat: no-repeat;
+  background-position: center; /* Corrected from 'cente' to 'center' */
+  animation: backgroundImageAnimation 2.5s ease-out infinite;
+  padding-bottom: 4%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Pseudo-element for gradient animation */
+.get-in-con::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent; /* Initially transparent for troubleshooting */
+  animation: gradientAnimation 5s ease-out infinite;
+  z-index: 1; /* Ensure it overlays the background image */
+  pointer-events: none; /* Allows interaction with elements below */
+}
+.map-heading{
+  width: 40%;
+  margin: auto;
+  z-index: 2;
+}
+.contact-btn {
+  position: relative; /* Ensure these elements appear above the gradient */
+  z-index: 2;
+
+}
