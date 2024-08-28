@@ -40,14 +40,84 @@
   }
 }
 
+
+
 /* section2 */
+.section2 {
+  overflow: hidden;
+}
+/* Add these CSS styles */
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Base Card Styles */
+.out-source-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 40%;
+  border-radius: 20px;
+  padding: 3%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: auto;
+  margin: 2%;
+  padding-left: 20px;
+  opacity: 0;
+  animation: slideUp 1s ease-in-out forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Add the .animated class to trigger the animation */
+.out-source-card.animated {
+  animation: slideUp 1s ease-in-out forwards;
+}
+
+/* Hover Effect */
+.out-source-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* 3D Text Effect on Hover */
+.out-source-card:hover .service-sub-head,
+.out-source-card:hover .list-item {
+  color: var(--secondary-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8),
+    -2px -2px 4px rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Animation Delays */
+.out-source-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.out-source-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.out-source-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
 .out-source-head {
   font-family: var(--font-family);
   font-size: 32px;
   font-weight: 900;
   color: var(--primary-color);
   text-align: center;
-  padding: 30px;
+  padding: 15px;
 }
 .out-source-cards-align {
   display: flex;
@@ -67,22 +137,27 @@
   height: auto;
   margin: 2%;
 }
+
 .service-sub-head {
   font-family: var(--font-family);
-  font-size: 30px;
+  font-size: 32px;
   color: var(--secondary-color);
   font-weight: 600;
-  margin-left: -15px;
-  padding-bottom: 2%;
+  margin-left: -14px;
+  padding-bottom: 4%;
+  margin-top: -15px;
 }
 .list-item {
   font-family: var(--font-family);
-  font-size: 20px;
+  font-size: 16px;
   color: var(--secondary-color);
   font-weight: 500;
-  width: 85%;
-  padding: 1%;
+  width: 90%;
+  padding: 0.5%;
+  margin-bottom: 10px;
 }
+
+
 /* section3 */
 .cfo-para {
   font-family: var(--font-family);
@@ -132,7 +207,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
 }
 .list-item3 {
   font-family: var(--font-family);
@@ -168,7 +242,7 @@
   margin: 2%;
 }
 /* section5 */
-.section5{
+.section5 {
   padding: 2%;
 }
 .out-source-head-50 {

@@ -66,7 +66,7 @@
                 </div>
             </section>
             <!-- section2 -->
-            <section2>
+            <section class="section2">
                 <div>
                     <h2 class="out-source-head">
                         OUTSOURCED
@@ -178,7 +178,7 @@
                         </div>
                     </div>
                 </div>
-            </section2>
+            </section>
             <hr />
             <!-- section3 -->
             <section>
@@ -271,47 +271,8 @@
 
             </section>
             <hr />
-            <!-- section4 -->
-            <section class="section4">
-                <h3 class="out-source-head">
-                    WHAT SETS CFO BRIDGE APART?
-                </h3>
-                <p class="cfo-para">
-                    Service We Offer
-                </p>
-                <div class="Apart-con">
-                    <div class="apart-cards-align">
-                        <div class="apart-card">
-                            <h6>
-                                Accessible Expert Talent
-                            </h6>
-                        </div>
-                        <div class="apart-card">
-                            <h6>
-                                On-Demand CFOs
-                            </h6>
-                        </div>
-                        <div class="apart-card">
-                            <h6>
-                                End-to-End Delivery
-                            </h6>
-                        </div>
-                        <div class="apart-card">
-                            <h6>
-                                Comprehensive Service Offerings
-                            </h6>
-                        </div>
-                        <div class="apart-card">
-                            <h6>
-                                Affordable Value-addition
-                            </h6>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <hr />
-            <!-- section5 -->
-            <section class="section5">
+            <!-- logos -->
+            <section class="section3">
                 <div>
                     <h3 class="out-source-head-50">
                         We've helped over 50 SMEs and startups thrive with
@@ -321,9 +282,6 @@
                         Service We Offer
                     </p>
                 </div>
-            </section>
-            <!-- logos -->
-            <section class="section3">
                 <div class="carousel2">
                     <div class="logo-card">
                         <h4 class="logo">
@@ -449,11 +407,13 @@
                 </p>
             </footer>
         </div>
+        <!-- slick carousel cdn -->
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
             integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
             crossorigin="anonymous" referrerpolicy="no-referrer">
         </script>
+        <!-- carousel -->
         <script type="text/javascript"
             src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script>
@@ -467,6 +427,35 @@
     pauseOnHover: false
 });
     </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const section2 = document.querySelector('.section2');
+      const cards = document.querySelectorAll('.out-source-card');
+      
+      const options = {
+        threshold: 0.1
+      };
+  
+      const observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            section2.classList.add('scrolled-into-view');
+            
+            // Apply the animation to each card with a delay
+            cards.forEach((card, index) => {
+              card.style.animationDelay = `${index * 0.2}s`;
+              card.classList.add('animated');
+            });
+  
+            observer.unobserve(entry.target);  // Stop observing after triggering the animation
+          }
+        });
+      }, options);
+  
+      observer.observe(section2);
+    });
+  </script>
+  
         <!-- service cards -->
         <script>
 function showService(serviceId) {

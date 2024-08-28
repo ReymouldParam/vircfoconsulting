@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home</title>
-        <link rel="icon" type="image/jpg" href="./Assets/images/FAVICON VIRCFO FINAL.svg" />
+        <link rel="icon" type="image/jpg"
+            href="./Assets/images/FAVICON VIRCFO FINAL.svg" />
         <!-- font-family -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -281,16 +282,20 @@
             </section>
             <section class="section5">
                 <div class="arrow-align">
-                  <h3 class="get-in-touch">Get in Touch</h3>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right arrow-size" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFFFFF" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M5 12l14 0" />
-                    <path d="M13 18l6 -6" />
-                    <path d="M13 6l6 6" />
-                  </svg>
+                    <h3 class="get-in-touch">Get in Touch</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-arrow-right arrow-size"
+                        width="44" height="44" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="#FFFFFF" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M5 12l14 0" />
+                        <path d="M13 18l6 -6" />
+                        <path d="M13 6l6 6" />
+                    </svg>
                 </div>
-              </section>
-              
+            </section>
+
             <footer>
                 <div class="footer-section">
                     <div class="footer-div">
@@ -366,67 +371,7 @@
                 </p>
             </footer>
         </div>
-        <script>
-         document.addEventListener("DOMContentLoaded", function () {
-  const section2 = document.querySelector('.section2');
-
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      // Check if the element is intersecting the viewport
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target); // Stop observing after animation triggers
-      }
-    });
-  }, { threshold: 0.5 }); // Trigger when 50% of the element is visible
-
-  // Add 'hidden' class initially so the element starts off hidden
-  section2.classList.add('hidden');
-
-  // Observe the section2 element
-  observer.observe(section2);
-});
-
+        <script src="./assets/Animation/home.js">
         </script>
-        <!-- section3 -->
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-              const section3 = document.querySelector('.section3');
-            
-              const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                  if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // Stop observing after animation triggers
-                  }
-                });
-              }, { threshold: 0.5 }); // Trigger when 50% of the element is visible
-            
-              // Add 'hidden' class initially so the element starts off hidden
-              section3.classList.add('hidden');
-            
-              // Observe the section3 element
-              observer.observe(section3);
-            });
-            </script>
-        <!-- section4 -->
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-              const section4 = document.querySelector('.section4');
-            
-              const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                  if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // Stop observing after animation triggers
-                  }
-                });
-              }, { threshold: 0.5 }); // Trigger when 50% of the element is visible
-            
-              // Observe the section4 element
-              observer.observe(section4);
-            });
-            </script>
-
     </body>
 </html>

@@ -6,7 +6,7 @@
   position: relative;
   overflow: hidden;
 }
-.about-us{
+.about-us {
   font-family: var(--font-family);
   color: var(--secondary-color);
   font-weight: 900;
@@ -40,8 +40,8 @@
   }
 }
 
-
 /* section2 */
+
 .section2 {
   display: flex;
   justify-content: space-evenly;
@@ -55,6 +55,120 @@
   font-size: 30px;
   font-weight: 600;
 }
+
+.line1 svg path:last-child,
+.line2 svg path:last-child {
+  stroke-dasharray: 390; /* This matches the length of the path */
+}
+
+.line1 svg path:last-child {
+  stroke-dashoffset: 390; /* Initially hide the left line */
+  animation: growLineRight 2s ease-in-out forwards;
+}
+
+.line2 svg path:last-child {
+  stroke-dashoffset: -390; /* Start with the right line fully drawn */
+  animation: growLineLeft 2s ease-in-out forwards;
+}
+
+@keyframes growLineRight {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes growLineLeft {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.section2-h3 {
+  text-align: center;
+  font-family: var(--font-family);
+  color: var(--secondary-color);
+  font-size: 30px;
+  font-weight: 600;
+  opacity: 0;
+  animation: fadeInText 2s ease-in-out forwards 1s;
+}
+
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+  }
+}
+
+/* section3 */
+.section3 {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInSection 1.5s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+@keyframes fadeInSection {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.found-paras-align > div,
+.para-founder-img > div {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.found-paras-align > div:nth-child(1) {
+  animation: fadeInTextLeft 1.2s ease-out forwards;
+  animation-delay: 1s;
+}
+
+.found-paras-align > div:nth-child(2) {
+  animation: fadeInTextRight 1.2s ease-out forwards;
+  animation-delay: 1.2s;
+}
+
+.para-founder-img > div:nth-child(1) {
+  animation: fadeInTextLeft 1.2s ease-out forwards;
+  animation-delay: 1.4s;
+}
+
+.para-founder-img > div:nth-child(2) {
+  animation: fadeInTextLeft 1.2s ease-out forwards;
+  animation-delay: 1.6s;
+}
+
+.founder {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: fadeInImage 1.5s ease-out forwards;
+  animation-delay: 1.8s;
+  padding-bottom: 30px;
+}
+
+@keyframes fadeInTextLeft {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInTextRight {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInImage {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .founder-con {
   display: flex;
   flex-direction: column;
@@ -68,6 +182,7 @@
   font-size: 30px;
   font-weight: 900;
 }
+
 .found-paras-align {
   display: flex;
   align-items: flex-end;
@@ -76,6 +191,7 @@
   padding-top: 1%;
   padding-bottom: 2%;
 }
+
 .para-founder-img {
   display: flex;
   justify-content: space-around;
@@ -83,12 +199,14 @@
   width: 90%;
   margin: auto;
 }
+
 .section3-para {
   font-family: var(--font-family);
   font-size: 16px;
   font-weight: 500;
   color: var(--secondary-color);
 }
+
 .quote-h3 {
   text-align: center;
   font-family: var(--font-family);
@@ -96,6 +214,7 @@
   font-size: 30px;
   font-weight: 600;
 }
+
 .founder-para1 {
   font-family: var(--font-family);
   font-size: 16px;
@@ -103,7 +222,58 @@
   color: var(--secondary-color);
   width: 70%;
 }
+
 /* section4 */
+/* Initially hide section4 */
+.section4 {
+  opacity: 0;
+  transform: translateY(
+    50px
+  ); /* Move it slightly down to create an entrance effect */
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* Increased duration for slower animation */
+}
+
+/* When the animate class is added, show the section and animate the cards */
+.section4.animate {
+  opacity: 1;
+  transform: translateY(0); /* Move it to its final position */
+}
+
+/* Define keyframes for the 3D zoom-in effect for cards */
+@keyframes zoomInFromInside {
+  0% {
+    transform: perspective(1000px) scale(1.5) rotateX(15deg) rotateY(15deg)
+      translateZ(-100px); /* Start from inside */
+    opacity: 0;
+  }
+  100% {
+    transform: perspective(1000px) scale(1) rotateX(0) rotateY(0) translateZ(0); /* End at normal scale and position */
+    opacity: 1;
+  }
+}
+
+/* Apply animation to ethical cards when section has the animate class */
+.section4.animate .ethical-card {
+  animation: zoomInFromInside 3s ease-out forwards; /* Increased duration for slower animation */
+}
+
+/* Optional: Add a slight delay to each card for a staggered effect */
+.section4.animate .ethical-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.section4.animate .ethical-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.section4.animate .ethical-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.section4.animate .ethical-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.section4.animate .ethical-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
 .ethical-img {
   width: 100px;
   height: 70px;
@@ -111,12 +281,17 @@
 .cards-align {
   display: flex;
   align-items: center;
+  width: 80%;
+  padding: 1%;
+  margin: auto;
   justify-content: center;
   flex-wrap: wrap;
 }
+
+/* Initial state for the cards before they are in view */
 .ethical-card {
-  width: 400px;
-  height: 300px;
+  width: 300px;
+  height: 250px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -124,8 +299,36 @@
   padding: 1%;
   border-radius: 20px;
   background-color: #ffffff;
-  margin: 2%;
+  margin: 0.8%;
+  transform: perspective(1000px) scale(1.5) rotateX(15deg) rotateY(15deg)
+    translateZ(-100px); /* Start from inside */
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
 }
+
+/* Add this class when the section is in view */
+.animate .ethical-card {
+  transform: perspective(1000px) scale(1) rotateX(0) rotateY(0) translateZ(0); /* End at normal scale and position */
+  opacity: 1;
+}
+
+/* Optional: Add a slight delay to each card for a staggered effect */
+.animate .ethical-card:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.animate .ethical-card:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.animate .ethical-card:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.animate .ethical-card:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.animate .ethical-card:nth-child(5) {
+  transition-delay: 0.5s;
+}
+
 .ethical-head {
   text-align: left;
   font-family: var(--font-family);
@@ -140,6 +343,9 @@
   font-size: 16px;
   font-weight: 600;
 }
+
+
+
 /* section5 */
 .service-head {
   font-size: 40px;
@@ -150,14 +356,16 @@
   padding-top: 25px;
   padding-bottom: 15px;
 }
+
 .service-para {
   font-family: var(--font-family);
   color: var(--primary-color);
   font-size: 16px;
   font-weight: 400;
   text-align: center;
-  padding-bottom: 70px;
+
 }
+
 .our-con {
   background-color: var(--primary-color);
   width: 95%;
@@ -166,30 +374,62 @@
   height: auto;
   border-radius: 20px;
   margin-bottom: 20px;
+  opacity: 0;
+  transition: opacity 2s ease-out;
 }
+
 .mission-align {
   display: flex;
   justify-content: space-around;
-  gap: 5%;
+  gap: 2%;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.4s ease-out, transform 1.4s ease-out;
 }
+
 .mission-text {
   padding: 20px;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 1.6s ease-out, transform 1.6s ease-out;
 }
+
 .mission-img {
   padding: 20px;
+  opacity: 0;
+  transform: translateX(50px) rotateY(-10deg);
+  transition: opacity 1.8s ease-out, transform 1.8s ease-out;
 }
-.founder {
-  padding-bottom: 30px;
-}
+
 .our-mission {
   font-size: 32px;
   font-family: var(--font-family);
   color: var(--secondary-color);
   font-weight: 900;
+  opacity: 0;
+  transition: opacity 1s ease-out;
 }
+
 .our-para {
   font-family: var(--font-family);
   color: var(--secondary-color);
   font-size: 16px;
   font-weight: 400;
+  opacity: 0;
+  transition: opacity 1.2s ease-out;
+}
+
+/* Trigger animations when in view */
+.section5.scrolled-into-view .service-head,
+.section5.scrolled-into-view .service-para,
+.section5.scrolled-into-view .our-con,
+.section5.scrolled-into-view .mission-align,
+.section5.scrolled-into-view .mission-text,
+.section5.scrolled-into-view .mission-img,
+.section5.scrolled-into-view .our-mission,
+.section5.scrolled-into-view .our-para {
+  opacity: 1;
+  transform: translateY(0);
+  transform: translateX(0);
+  transform: rotateY(0deg);
 }
