@@ -60,7 +60,8 @@ a {
 
 
 .nav-item.active {
-  color: #006838; /* Replace with your primary color */
+  color: #006838;
+  font-size: 18px; /* Replace with your primary color */
   font-weight: 700; /* Optional: Make the active item bold */
   position: relative;
 }
