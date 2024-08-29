@@ -100,6 +100,48 @@
   animation: revealSecondContainer 4s forwards 2s; /* Revealed after rotation with delay */
 }
 
+/* mobile view  */
+@media (max-width: 768px) {
+  /* Section styles with background animation */
+  .section1 {
+    height: 60vh;
+    background-size: cover;
+  }
+
+  /* Container wrapper for 3D perspective */
+  .container-wrapper {
+    perspective: 800px; /* Slightly reduced perspective */
+    height: 100%;
+    width: 100%;
+  }
+
+  /* First container that moves fully to center and rotates */
+  .section1-para-con {
+    width: 60%;
+    /* height: 50vh; 
+    left: 10%;  */
+    transform: translateY(-50%) translateX(-100%);
+    animation: moveAndRotateFirstContainer 4s forwards;
+  }
+
+  /* Second container revealed after the rotation */
+  .section2-para-con {
+    width: 60%;
+    /* height: 50vh; */
+    /* left: 10%; */
+    transform: translateY(-50%) translateX(50%);
+    animation: revealSecondContainer 4s forwards 2s;
+  }
+
+  /* Adjust the font size for mobile view */
+  .section-head-con {
+    font-size: 16px; /* Reduced font size */
+    padding-top: 10px;
+  }
+}
+
+
+
 /* section2 */
 .section2 {
   background-color: rgba(14, 15, 36, 1);
@@ -186,7 +228,70 @@
   transform: translateY(0); /* Slide up from the bottom */
 }
 
+/* Base styles for mobile view */
+@media only screen and (max-width: 768px) {
+  .section2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding:0;
+    margin: 0; /* Add padding around the content */
+    background-color: rgba(14, 15, 36, 1);
+  }
+
+  .what-con, .what-we-con {
+    width: 90%;
+    display: flex;
+    text-align: center;
+    margin: 10px 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cfo-head {
+    font-size: 28px; /* Adjusted font size */
+    margin-bottom: 10px;
+  }
+
+  .cfo-sub-head {
+    font-size: 20px; /* Adjusted font size */
+    margin-bottom: 10px;
+  }
+
+  .cfo-para, .cfo-para2, .cfo-para3 {
+    font-size: 14px; /* Adjusted font size */
+    width: 100%; /* Full width for better readability */
+    margin: 0 auto; /* Center-align paragraphs */
+    padding: 0;
+  }
+
+  .cfo-section1-btn {
+    font-size: 14px; /* Adjusted font size */
+    padding: 10px 20px; /* Adjusted padding for button */
+    margin-top: 10px; /* Space above the button */
+    border-radius: 20px;
+    border: 1px solid white; /* Consistent border style */
+    background: transparent;
+    color: var(--secondary-color);
+  }
+
+  .cfo-sub-align {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Full width for mobile */
+    margin-top: 20px;
+  }
+
+  .line-divide {
+    display: none; /* Hide the vertical line on mobile */
+  }
+}
+
 /* section3 */
+
 /* Initial hidden state */
 .section3 {
   opacity: 0;
@@ -257,6 +362,61 @@
   padding-bottom: 50px;
 }
 
+
+
+/* Base styles for mobile view */
+@media only screen and (max-width: 768px) {
+  .section3 {
+    padding: 20px; /* Add padding around the content */
+    text-align: center; /* Center align text */
+    width: 100%;
+  }
+
+  .service-head {
+    font-size: 28px; /* Adjusted font size for smaller screens */
+    padding-top: 15px; /* Reduced padding */
+    padding-bottom: 10px;
+  }
+
+  .service-para {
+    font-size: 14px; /* Adjusted font size */
+    padding-bottom: 30px; /* Reduced bottom padding */
+  }
+
+  .service-sub-head {
+    font-size: 22px; /* Adjusted font size */
+    padding-bottom: 10px;
+  }
+
+  .list-item {
+    font-size: 16px; /* Reduced font size */
+    padding-bottom: 15px; /* Reduced bottom padding */
+    padding-left: 25px; /* Adjusted padding */
+    background-size: 16px 16px; /* Adjusted image size */
+    background-position: 0 5%; /* Adjusted image position */
+    line-height: 24px; /* Adjusted line-height */
+  }
+
+  .services-alignment {
+    display: block; /* Stack elements vertically */
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .services-alignment > div {
+    width: 100%; /* Full width for mobile view */
+    margin-bottom: 30px; /* Space between sections */
+  }
+
+  .service-sec-img {
+    width: 100%; /* Full width for image */
+    height: auto;
+    padding-bottom: 20px; /* Reduced padding */
+  }
+}
+
+
+
 /* section4 */
 /* Initial hidden state */
 .section4 {
@@ -322,6 +482,58 @@
   width: 400px !important;
   margin-left: -20px;
 }
+
+
+/* Base styles for mobile view */
+@media only screen and (max-width: 768px) {
+  .section4 {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .improve-align, .value-align {
+    display: block; /* Stack items vertically */
+    width: 100%; /* Full width for mobile view */
+    margin-bottom: 30px; /* Space between sections */
+    text-align: center; /* Center text */
+  }
+
+  .improve-align img, .value-align img {
+    width: 100%; /* Full width for images */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 300px; /* Set a max-width for better scaling */
+  }
+
+  .value-align .value-sec-img {
+    margin-top: 0; /* Remove top margin */
+  }
+
+  .improve-head, .value-align .improve-head {
+    font-size: 24px; /* Adjust font size */
+    margin-left: 0; /* Remove negative margin */
+    margin-bottom: 10px; /* Space below the heading */
+  }
+
+  .list-item2 {
+    font-size: 16px; /* Adjust font size */
+    padding-bottom: 15px; /* Adjust padding */
+    padding-left: 20px; /* Adjust padding for smaller screens */
+    background-size: 16px 16px; /* Adjust background image size */
+    background-position: 0 5%; /* Adjust background image position */
+    line-height: 24px; /* Adjust line-height */
+  }
+
+  .minus-width {
+    width: 100%; /* Full width for mobile view */
+    margin-left: 0; /* Remove negative margin */
+  }
+}
+
+
+
 /* section5 */
 /* Keyframes for horizontal movement with limited range */
 @keyframes moveText {
@@ -395,4 +607,32 @@
 .arrow-size {
   font-size: 60px;
 }
-/* footer */
+/* section5 */
+/* Base styles for mobile view */
+@media only screen and (max-width: 768px) {
+  .section5 {
+    padding: 10px; /* Add padding around the content */
+    background-color: #006838;
+    text-align: center; /* Center-align text and content */
+  }
+
+  .arrow-align {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align items */
+    justify-content: center; /* Center-align items vertically */
+    gap: 10px; /* Adjust gap between text and arrow */
+  }
+
+  .get-in-touch {
+    font-size: 36px; /* Reduced font size */
+    animation: none; /* Disable animation on mobile for better performance */
+  }
+
+  .arrow-size {
+    font-size: 30px; /* Reduced font size */
+    animation: none; /* Disable animation on mobile for better performance */
+  }
+}
+
+

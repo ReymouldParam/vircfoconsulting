@@ -82,6 +82,54 @@ a {
   display: inline-block;
 }
 
+/* Toggle button styling */
+.toggle-button {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.toggle-button span {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 2px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .toggle-button {
+    display: flex;
+  }
+.header{
+  width: 80%;
+}
+  .nav-container {
+    display: none; /* Hidden initially */
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 6px 10px rgba(0, 104, 56, 0.5);
+  }
+
+  .list-items-align {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 10px 0;
+  }
+
+  .nav-container.show {
+    display: flex;
+  }
+}
+
+
+
 /* footer */
 /* footer */
 footer {
@@ -124,4 +172,50 @@ footer {
 }
 .hr-line {
   margin-top: 50px;
+}
+
+/* Base styles for mobile view */
+@media only screen and (max-width: 768px) {
+  footer {
+    padding: 10px; /* Add padding around the footer */
+  }
+
+  .footer-section {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center-align items */
+    text-align: center; /* Center-align text */
+  }
+
+  .footer-div {
+    margin-bottom: 20px; /* Add spacing between items */
+  }
+
+  .footer-head {
+    font-size: 14px; /* Reduced font size for headers */
+    font-weight: 600; /* Ensure headers stand out */
+  }
+
+  .footer-para {
+    font-size: 14px; /* Reduced font size for paragraphs */
+  }
+
+  .icon-div {
+    flex-direction: row; /* Align icons horizontally */
+    justify-content: center; /* Center-align icons */
+    gap: 10px; /* Adjust gap between icons */
+  }
+
+  .icon-div svg {
+    width: 32px; /* Reduced size of icons */
+    height: 32px; /* Reduced size of icons */
+  }
+
+  .last-line {
+    font-size: 14px; /* Reduced font size for the copyright text */
+    padding-top: 10px; /* Adjust padding for better spacing */
+  }
+
+  .hr-line {
+    margin-top: 30px; /* Reduced margin for the horizontal line */
+  }
 }

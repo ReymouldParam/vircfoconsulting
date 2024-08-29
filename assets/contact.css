@@ -95,6 +95,13 @@
   font-weight: 600;
 }
 
+#charCount {
+  font-size: 14px;
+  font-family: var(--font-family);
+  color: var(--secondary-color);
+  margin-top: 5px;
+}
+
 .check-box-head {
   font-size: 16px;
   font-family: var(--font-family);
@@ -115,6 +122,7 @@
   padding: 10px;
   margin-top: 30px;
 }
+
 
 /* section2 */
 .map-heading {

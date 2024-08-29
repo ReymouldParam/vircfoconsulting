@@ -55,3 +55,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 
+// nav toggler
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.getElementById('toggleButton');
+    const navContainer = document.getElementById('navContainer');
+
+    toggleButton.addEventListener('click', function () {
+        navContainer.classList.toggle('show');
+    });
+});
+

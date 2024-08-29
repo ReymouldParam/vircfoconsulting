@@ -29,24 +29,29 @@
                 <div>
                     <ul class="list-items-align">
                         <li class="none-item">
-                            <a href="." class="nav-item">Home <span class="dot"></span></a>
+                            <a href="." class="nav-item">Home <span
+                                    class="dot"></span></a>
                         </li>
                         <li class="none-item">
-                            <a href="about.html" class="nav-item">About Us <span class="dot"></span></a>
+                            <a href="about.html" class="nav-item">About Us <span
+                                    class="dot"></span></a>
                         </li>
                         <li class="none-item">
-                            <a href="services.html" class="nav-item">Services <span class="dot"></span></a>
+                            <a href="services.html" class="nav-item">Services
+                                <span class="dot"></span></a>
                         </li>
                         <li class="none-item">
-                            <a href="blogs.html" class="nav-item">Blogs <span class="dot"></span></a>
+                            <a href="blogs.html" class="nav-item">Blogs <span
+                                    class="dot"></span></a>
                         </li>
                         <li class="none-item">
-                            <a href="contact.html" class="nav-item">Contact <span class="dot"></span></a>
+                            <a href="contact.html" class="nav-item">Contact
+                                <span class="dot"></span></a>
                         </li>
                     </ul>
                 </div>
             </nav>
-            
+
             <section>
                 <div class="img-form-align">
                     <div>
@@ -107,7 +112,9 @@
                         <div class="label-field">
                             <label class="label-name">Drop Your Message</label>
                             <textarea name="dropMessage"
-                                class="input-field-area"></textarea>
+                                class="input-field-area" id="dropMessage"
+                                maxlength="300"></textarea>
+                            <span id="charCount">0 / 300 characters used</span>
                         </div>
                         <div class="name-email">
                             <div style="width: 300px;">
@@ -249,5 +256,19 @@
         </div>
         <!-- header -->
         <script src="./assets/Animation/global.js"></script>
+        <!-- character cout -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+    const textarea = document.getElementById('dropMessage');
+    const charCount = document.getElementById('charCount');
+    const maxChars = 300;
+
+    textarea.addEventListener('input', function () {
+        const currentLength = textarea.value.length;
+        charCount.textContent = `${currentLength} / ${maxChars} characters used`;
+    });
+});
+
+         </script>
     </body>
 </html>
