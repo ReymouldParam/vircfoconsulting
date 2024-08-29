@@ -13,7 +13,9 @@
 }
 .img-form-align {
   display: flex;
-  justify-content: center;
+  width: 85%;
+  margin: auto;
+  justify-content:space-between;
   gap: 4%;
 }
 .label-field {

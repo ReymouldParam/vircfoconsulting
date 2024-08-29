@@ -42,3 +42,16 @@ window.addEventListener('load', () => {
         console.error('Element with class ".about-section1" not found.');
     }
 });
+
+// header 
+window.addEventListener('DOMContentLoaded', (event) => {
+    const navItems = document.querySelectorAll('.nav-item');
+
+    navItems.forEach(item => {
+        // Check if the href matches the current URL
+        if (item.href === window.location.href) {
+            item.classList.add('active');
+        }
+    });
+});
+

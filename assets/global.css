@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: rgba(14, 15, 36, 1); 
+  background-color: rgba(14, 15, 36, 1);
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -14,7 +14,7 @@ body {
 
 :root {
   --primary-color: #006838;
-  --secondary-color: #FFFFFF;
+  --secondary-color: #ffffff;
   --font-family: "Inter";
 }
 
@@ -51,54 +51,76 @@ a {
   font-size: 16px;
   font-weight: 400;
   color: #000000;
+  position: relative;
 }
 
-.none-item{
-  list-style-type:none;
+.none-item {
+  list-style-type: none;
 }
 
+
+.nav-item.active {
+  color: #006838; /* Replace with your primary color */
+  font-weight: 700; /* Optional: Make the active item bold */
+  position: relative;
+}
+
+.dot {
+  display: none;
+  background-color: #006838; /* Replace with your primary color */
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-item.active .dot {
+  display: inline-block;
+}
 
 /* footer */
 /* footer */
 footer {
-    background-color: #f4f4f4;
-    padding: 2%;
-  }
-  .footer-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: #f4f4f4;
-  }
-  .footer-div {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .footer-head {
-    color: #0e0f24;
-    font-size: 16px;
-    font-family: var(--font-family);
-    font-family: 300;
-  }
-  .footer-para {
-    color: #0e0f24;
-    font-size: 16px;
-    font-family: var(--font-family);
-  }
-  .icon-div {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-  .last-line {
-    text-align: center;
-    color: #0e0f24;
-    font-size: 16px;
-    font-family: var(--font-family);
-    padding-top: 20px;
-  }
-  .hr-line {
-    margin-top: 50px;
-  }
-  
+  background-color: #f4f4f4;
+  padding: 2%;
+}
+.footer-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #f4f4f4;
+}
+.footer-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer-head {
+  color: #0e0f24;
+  font-size: 16px;
+  font-family: var(--font-family);
+  font-family: 300;
+}
+.footer-para {
+  color: #0e0f24;
+  font-size: 16px;
+  font-family: var(--font-family);
+}
+.icon-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.last-line {
+  text-align: center;
+  color: #0e0f24;
+  font-size: 16px;
+  font-family: var(--font-family);
+  padding-top: 20px;
+}
+.hr-line {
+  margin-top: 50px;
+}
