@@ -13,7 +13,8 @@
 }
 .img-form-align {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 4%;
 }
 .label-field {
   width: 100%;
@@ -119,8 +120,27 @@
   color: var(--secondary-color);
   font-size: 32px;
   font-weight: 700px;
-  padding-top: 5%;
+  padding-top: 20px;
   text-align: center;
+}
+.map-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/mav-bg.png);
+  animation: gradientAnimation 5s ease-out infinite;
+  height: auto; /* This will make the container full height of the viewport */
+}
+
+.map-styles {
+  width: 90%;
+  height: 500px;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  margin: 4%;
 }
 
 /* Define the animation for the background image movement */
@@ -164,7 +184,7 @@
 .get-in-con {
   /* Adjust height as needed to ensure visibility */
   display: flex;
-  height: 50vh;
+  height: 60vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -192,7 +212,7 @@
   z-index: 1; /* Ensure it overlays the background image */
   pointer-events: none; /* Allows interaction with elements below */
 }
-.map-heading{
+.map-heading {
   width: 40%;
   margin: auto;
   z-index: 2;
@@ -200,5 +220,4 @@
 .contact-btn {
   position: relative; /* Ensure these elements appear above the gradient */
   z-index: 2;
-
 }

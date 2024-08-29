@@ -40,11 +40,10 @@
   }
 }
 
-
-
 /* section2 */
 .section2 {
   overflow: hidden;
+  padding-bottom: 1.5%;
 }
 /* Add these CSS styles */
 @keyframes slideUp {
@@ -79,7 +78,7 @@
 }
 /* Add the .animated class to trigger the animation */
 .out-source-card.animated {
-  animation: slideUp 1s ease-in-out forwards;
+  animation: slideUp 2.5s ease-in-out forwards;
 }
 
 /* Hover Effect */
@@ -100,15 +99,15 @@
 
 /* Animation Delays */
 .out-source-card:nth-child(1) {
-  animation-delay: 0.2s;
+  animation-delay: 0.8s;
 }
 
 .out-source-card:nth-child(2) {
-  animation-delay: 0.4s;
+  animation-delay: 0.1s;
 }
 
 .out-source-card:nth-child(3) {
-  animation-delay: 0.6s;
+  animation-delay: 0.12s;
 }
 
 .out-source-head {
@@ -117,7 +116,8 @@
   font-weight: 900;
   color: var(--primary-color);
   text-align: center;
-  padding: 15px;
+  padding: 10px;
+  padding-top: 15px;
 }
 .out-source-cards-align {
   display: flex;
@@ -157,7 +157,6 @@
   margin-bottom: 10px;
 }
 
-
 /* section3 */
 .cfo-para {
   font-family: var(--font-family);
@@ -165,6 +164,14 @@
   color: var(--secondary-color);
   font-weight: 500;
   text-align: center;
+}
+.cfo-para2 {
+  font-family: var(--font-family);
+  font-size: 20px;
+  color: var(--secondary-color);
+  font-weight: 500;
+  text-align: center;
+  padding-top: 10px;
 }
 .offered-service {
   cursor: pointer;
@@ -216,36 +223,101 @@
   width: 85%;
   margin-left: 40px;
 }
+
 /* section4 */
-.unique-cards-align{
+.unique-cards-align {
   display: flex;
+  height: 50vh;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   background-image: url(./images/Vector\ 1.png);
   background-size: cover;
+  padding: 1%;
 }
-.unique-card{
+.unique-card1{
   width: 200px;
-  height: 200px;
+  height: 250px;
   background-color: white;
   border-radius: 15px;
   margin: 1%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.unique-card-head{
+.unique-card2{
+  width: 200px;
+  height: 250px;
+  background-color: white;
+  border-radius: 15px;
+  margin: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -50px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.unique-card3{
+  width: 200px;
+  height: 250px;
+  background-color: white;
+  border-radius: 15px;
+  margin: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.unique-card4{
+  width: 200px;
+  height: 250px;
+  background-color: white;
+  border-radius: 15px;
+  margin: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -50px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.unique-card5{
+  width: 200px;
+  height: 250px;
+  background-color: white;
+  border-radius: 15px;
+  margin: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.unique-card1:hover, 
+.unique-card2:hover, 
+.unique-card3:hover, 
+.unique-card4:hover, 
+.unique-card5:hover {
+  transform: scale(1.05); /* Slightly increase the size */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect */
+}
+.unique-card-head {
   font-family: var(--font-family);
   font-size: 20px;
   color: var(--primary-color);
   font-weight: 600;
   text-align: center;
-
 }
 /* section5 */
 .section5 {
-  padding: 2%;
+  padding: 1%;
+  height: auto;
+}
+.carousel2 {
+  padding-top: 2% !important;
 }
 .out-source-head-50 {
   font-family: var(--font-family);
@@ -255,7 +327,6 @@
   font-weight: 900;
   color: var(--primary-color);
   text-align: center;
-  padding: 30px;
 }
 /* section6 */
 .logo-card {

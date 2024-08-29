@@ -106,26 +106,24 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-  width: 90%;
-  margin: auto;
+  justify-content: space-evenly;
 }
 .what-con {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
   justify-content: space-around;
-  padding-left: 2%;
+  padding-left: 5%;
 }
 .what-we-con {
-  padding-left: 5%;
+  padding-left: 2%;
   margin-right: 10%;
   margin-top: -80px;
 }
 .cfo-sub-align {
   display: flex;
   align-items: center;
-  width: 70%;
+  width: 90%;
 }
 .line-divide {
   margin-left: -50%;
@@ -229,7 +227,7 @@
   font-size: 30px;
   color: var(--primary-color);
   font-weight: 900;
-  margin-left: -15px;
+  padding-bottom: 10px;
 }
 .list-item {
   font-family: var(--font-family);
@@ -237,11 +235,18 @@
   color: var(--secondary-color);
   font-weight: 500;
   width: 85%;
-  padding: 1%;
+  padding-bottom: 20px;
+  padding-left: 30px; /* Increase padding to make room for the larger image */
+  background-image: url(../assets/images/checkmark.png);
+  background-size: 20px 20px; /* Image size set to 30px by 30px */
+  background-repeat: no-repeat;
+  background-position: 0 10%; /* Align the image to the left and center vertically */
+  line-height: 30px; /* Match the line-height to the image size to vertically align */
+  list-style-type: none; /* Remove default list style */
 }
 .services-alignment {
   display: flex;
-  width: 85%;
+  width: 90%;
   margin: auto;
   justify-content: space-around;
 }
@@ -385,7 +390,6 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 2%;
   gap: 20%;
 }
 .arrow-size {
