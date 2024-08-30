@@ -123,6 +123,89 @@
   margin-top: 30px;
 }
 
+/* Mobile View Styles */
+@media only screen and (max-width: 767px) {
+  .contact-img {
+    width: 100vw;
+    /* height: auto; */
+    /* margin: 0; */
+    margin-top: -11%;
+  }
+
+  .img-form-align {
+    flex-direction: column; /* Stack image and form vertically */
+    align-items: center; /* Center align items */
+    width: 90%; /* Adjust width for mobile */
+    gap: 2%; /* Reduce gap for mobile */
+  }
+
+  .form-arrange {
+    width: 100%; /* Full width for form */
+    align-items: center; /* Center align form elements */
+  }
+
+  .form-heading {
+    font-size: 24px; /* Smaller font size for mobile */
+    text-align: center; /* Center align heading */
+    padding-top: 2%; /* Adjust padding */
+  }
+
+  .input-field-name,
+  .input-field,
+  .input-field-area {
+    width: 100%; /* Full width inputs */
+    font-size: 14px; /* Smaller font size */
+  }
+
+  .input-field-name {
+    max-width: 100%; /* Ensure no overflow */
+  }
+
+  .input-field-area {
+    height: 100px; /* Reduced height for mobile */
+  }
+
+  .select-con {
+    width: 100%; /* Full width select input */
+    height: 40px; /* Adjust height */
+    font-size: 14px; /* Smaller font size */
+  }
+
+  .name-email {
+    gap: 10px; /* Adjust gap */
+    align-items: stretch; /* Stretch items to fit width */
+  }
+  .tandc {
+    display: flex;
+    flex-direction: column;
+    /* gap: 9px; */
+    margin-left: -30px;
+    /* align-items: stretch; */
+    padding-top: 10px;
+  }
+  .check-box-head {
+    font-size: 14px; /* Smaller font size */
+    padding-left: 0; /* Remove left padding */
+    text-align: center; /* Center align text */
+  }
+
+  .contact-btn {
+    width: 100%; /* Full width button */
+    font-size: 14px; /* Smaller font size */
+    padding: 10px;
+    margin-bottom: 30px; /* Adequate padding */
+  }
+
+  .label-field {
+    width: 100%; /* Full width for label fields */
+  }
+
+  .label-name {
+    font-size: 16px; /* Smaller font size */
+  }
+}
+
+
 /* section2 */
 .map-heading {
   font-family: var(--font-family);
@@ -151,6 +234,27 @@
   border-color: white;
   margin: 4%;
 }
+
+
+/* Mobile View Styles */
+@media only screen and (max-width: 767px) {
+  .map-heading {
+    font-size: 24px; /* Smaller font size for mobile */
+    padding-top: 10px; /* Adjust padding for mobile */
+  }
+
+  .map-container {
+    background-image: url(./images/mav-bg.png); /* Ensure background image fits well */
+    padding: 10px; /* Add padding to avoid content touching edges */
+  }
+
+  .map-styles {
+    width: 100%; /* Full width for mobile */
+    height: 300px; /* Reduced height for mobile */
+    margin: 2% 0; /* Adjust margin for better spacing */
+  }
+}
+
 
 /* Define the animation for the background image movement */
 @keyframes backgroundImageAnimation {
@@ -222,13 +326,36 @@
   pointer-events: none; /* Allows interaction with elements below */
 }
 .map-heading {
-  width: 40%;
   margin: auto;
   z-index: 2;
 }
 .contact-btn {
   position: relative; /* Ensure these elements appear above the gradient */
   z-index: 2;
+}
+
+/* Mobile View Styles */
+@media only screen and (max-width: 767px) {
+  .get-in-con {
+    height: 20vh; /* Adjust height for better fitting on mobile */
+    padding: 20px 10px; /* Add padding for mobile */
+    background-size: 100% auto; /* Adjust background size for mobile */
+  }
+
+  .map-heading {
+    font-size: 24px; /* Scale down font size */
+    text-align: center; /* Center align heading */
+    margin-bottom: 20px; /* Add margin below heading */
+  }
+
+  .contact-btn2{
+    width: 50%; /* Full width button */
+    font-size: 16px; /* Adjust font size for mobile */
+    padding: 10px; /* Ensure adequate padding */
+    border: solid white 1px; /* Ensure button border is visible */
+    border-radius: 10px; /* Consistent border radius */
+    margin: 18px; /* Remove margin for mobile */
+  }
 }
 
 /* popo-up para */

@@ -21,12 +21,17 @@
     <body>
         <div>
             <nav class="header">
-                <div>
+                <div class="logo-container">
                     <a href=".">
-                        <img src="./assets/images/image 5 (1).svg" alt="CFO" />
+                        <img src="./assets/images/image 5 (1).svg" alt="CFO" class="logo"/>
                     </a>
                 </div>
-                <div>
+                <div class="toggle-button" id="toggleButton">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="nav-container" id="navContainer">
                     <ul class="list-items-align">
                         <li class="none-item">
                             <a href="." class="nav-item">Home <span
@@ -51,13 +56,12 @@
                     </ul>
                 </div>
             </nav>
-
             <section>
                 <div class="img-form-align">
                     <div>
                         <img
                             src="./assets/images/customer-service-handsome-young-guy-office-suit-with-laptop-headset-taking-down-notes.png"
-                            alt="customer" />
+                            alt="customer" class="contact-img"/>
                     </div>
                     <form action="contct.php" method="post"
                         class="form-arrange">
@@ -116,7 +120,7 @@
                                 maxlength="300"></textarea>
                             <span id="charCount">0 / 300 characters used</span>
                         </div>
-                        <div class="name-email">
+                        <div class="name-email tandc">
                             <div style="width: 300px;">
                                 <input type="checkbox" id="checkbox"
                                     class="check-field" required /><label
@@ -159,7 +163,7 @@
                     <h4 class="map-heading">
                         Prepared to elevate your finances to the next level?
                     </h4>
-                    <button class="contact-btn">
+                    <button class="contact-btn contact-btn2">
                         Get In Touch
                     </button>
                 </div>

@@ -94,7 +94,6 @@ a {
   background-color: #000;
   border-radius: 2px;
 }
-
 /* Responsive styles */
 @media (max-width: 768px) {
   .global-section {
@@ -102,23 +101,52 @@ a {
     margin: 0 !important;
     padding: 0 !important;
   }
+
   .logo-container {
     width: 80%;
     height: 100%;
   }
+
   .logo {
     width: auto;
     height: 30px;
   }
+
   .toggle-button {
     display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 11; /* Ensure the toggle button is on top of other elements */
   }
+
+  .toggle-button span {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    border-radius: 2px;
+    transition: all 0.3s ease; /* Smooth transition for the "X" effect */
+  }
+
+  .toggle-button.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .toggle-button.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .toggle-button.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
   .header {
     width: 100%;
     gap: 0;
     padding: 2%;
     justify-content: space-around;
   }
+
   .nav-container {
     display: none; /* Hidden initially */
     flex-direction: column;
@@ -128,17 +156,25 @@ a {
     top: 100%;
     left: 0;
     box-shadow: 0 6px 10px rgba(0, 104, 56, 0.5);
+    z-index: 10; /* Ensure the nav container appears below the toggle button */
   }
 
   .list-items-align {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
     gap: 15px;
-    padding: 10px 0;
+    padding: 10px 10px;
   }
 
   .nav-container.show {
     display: flex;
+    width: 40%;
+    margin-left: 54%;
+    border-radius: 10px;
+    margin-top: 1%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--primary-color);
   }
 }
 
