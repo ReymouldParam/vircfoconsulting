@@ -48,6 +48,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 
+ 
+// toggler navbar
 document.addEventListener('DOMContentLoaded', function () {
     const toggleButton = document.getElementById('toggleButton');
     const navContainer = document.getElementById('navContainer');

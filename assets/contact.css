@@ -1,8 +1,8 @@
 .form-heading {
   font-family: var(--font-family);
   color: var(--primary-color);
-  font-size: 32px;
-  font-weight: 700px;
+  font-size: 30px;
+  font-weight: 900;
   padding-top: 5%;
 }
 .form-arrange {
@@ -26,7 +26,7 @@
 }
 .label-name {
   color: var(--secondary-color);
-  font-size: 20px;
+  font-size: 16px;
   font-family: var(--font-family);
   font-weight: 600;
 }
@@ -145,9 +145,11 @@
   }
 
   .form-heading {
-    font-size: 24px; /* Smaller font size for mobile */
-    text-align: center; /* Center align heading */
-    padding-top: 2%; /* Adjust padding */
+    font-size: 24px;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-weight: 900 !important;
   }
 
   .input-field-name,
@@ -201,7 +203,7 @@
   }
 
   .label-name {
-    font-size: 16px; /* Smaller font size */
+    font-size: 14px; /* Smaller font size */
   }
 }
 
@@ -210,7 +212,7 @@
 .map-heading {
   font-family: var(--font-family);
   color: var(--secondary-color);
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 700px;
   padding-top: 20px;
   text-align: center;
@@ -343,7 +345,7 @@
   }
 
   .map-heading {
-    font-size: 24px; /* Scale down font size */
+    font-size: 20px; /* Scale down font size */
     text-align: center; /* Center align heading */
     margin-bottom: 20px; /* Add margin below heading */
   }

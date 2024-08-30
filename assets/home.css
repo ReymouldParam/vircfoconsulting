@@ -157,7 +157,7 @@
 .what-we-con {
   padding-left: 2%;
   margin-right: 10%;
-  margin-top: -80px;
+  margin-top: 0px;
 }
 .cfo-sub-align {
   display: flex;
@@ -176,7 +176,7 @@
 }
 .cfo-sub-head {
   font-family: var(--font-family);
-  font-size: 25px;
+  font-size: 24px;
   font-weight: 500;
   color: var(--secondary-color);
 }
@@ -249,13 +249,12 @@
   }
 
   .cfo-head {
-    font-size: 28px; /* Adjusted font size */
+    font-size: 24px; /* Adjusted font size */
     margin-bottom: 10px;
   }
 
   .cfo-sub-head {
     font-size: 20px; /* Adjusted font size */
-    margin-bottom: 10px;
   }
 
   .cfo-para,
@@ -336,7 +335,7 @@
 }
 .list-item {
   font-family: var(--font-family);
-  font-size: 20px;
+  font-size: 16px;
   color: var(--secondary-color);
   font-weight: 500;
   width: 85%;
@@ -372,7 +371,7 @@
   }
 
   .service-head {
-    font-size: 28px; /* Adjusted font size for smaller screens */
+    font-size: 24px; /* Adjusted font size for smaller screens */
     padding-top: 15px; /* Reduced padding */
     padding-bottom: 10px;
   }
@@ -383,17 +382,18 @@
   }
 
   .service-sub-head {
-    font-size: 22px; /* Adjusted font size */
+    font-size: 20px; /* Adjusted font size */
     padding-bottom: 10px;
   }
 
   .list-item {
-    font-size: 16px; /* Reduced font size */
-    padding-bottom: 15px; /* Reduced bottom padding */
-    padding-left: 25px; /* Adjusted padding */
-    background-size: 16px 16px; /* Adjusted image size */
-    background-position: 0 5%; /* Adjusted image position */
-    line-height: 24px; /* Adjusted line-height */
+    font-size: 14px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    background-size: 16px 16px;
+    background-position: 0 5%;
+    line-height: 24px;
+    margin-left: 20px;
   }
 
   .services-alignment {
@@ -459,7 +459,7 @@
 
 .list-item2 {
   font-family: var(--font-family);
-  font-size: 20px;
+  font-size: 16px;
   color: var(--secondary-color);
   font-weight: 500;
   width: 85%;
@@ -471,13 +471,14 @@
   background-position: 0 10%; /* Align the image to the left and center vertically */
   line-height: 30px; /* Match the line-height to the image size to vertically align */
   list-style-type: none; /* Remove default list style */
+  margin-left: -10px;
 }
 .value-sec-img {
   margin-top: 15px;
 }
 .minus-width {
   width: 400px !important;
-  margin-left: -20px;
+  margin-left: -132px;
 }
 
 /* Base styles for mobile view */
@@ -518,12 +519,13 @@
   }
 
   .list-item2 {
-    font-size: 16px; /* Adjust font size */
-    padding-bottom: 15px; /* Adjust padding */
-    padding-left: 20px; /* Adjust padding for smaller screens */
-    background-size: 16px 16px; /* Adjust background image size */
-    background-position: 0 5%; /* Adjust background image position */
-    line-height: 24px; /* Adjust line-height */
+    font-size: 14px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    background-size: 16px 16px;
+    background-position: 0 5%;
+    line-height: 24px;
+    margin-left: 20px;
   }
 
   .minus-width {
@@ -623,7 +625,7 @@
   }
 
   .get-in-touch {
-    font-size: 36px; /* Reduced font size */
+    font-size: 24px; /* Reduced font size */
     animation: none; /* Disable animation on mobile for better performance */
   }
 

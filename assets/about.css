@@ -1,4 +1,3 @@
-
 .section1 {
   background-image: url(./images/about-sec1-bg.png);
   background-size: cover;
@@ -45,12 +44,12 @@
 @media only screen and (max-width: 768px) {
   .section1 {
     width: 102%;
-    margin-top:-17%;
+    margin-top: -17%;
     height: 30vh; /* Reduce the height for mobile */
   }
 
   .about-us {
-    font-size: 36px; /* Decrease the font size */
+    font-size: 20px; /* Decrease the font size */
   }
 
   .section-head-con {
@@ -70,7 +69,6 @@
     }
   }
 }
-
 
 /* section2 */
 .section2 {
@@ -118,10 +116,12 @@
   text-align: center;
   font-family: var(--font-family);
   color: var(--secondary-color);
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 600;
   opacity: 0;
   animation: fadeInText 2s ease-in-out forwards 1s;
+  width: 75%;
+  margin: auto;
 }
 
 @keyframes fadeInText {
@@ -141,7 +141,8 @@
     font-size: 16px; /* Slightly reduce font size */
   }
 
-  .line1 svg, .line2 svg {
+  .line1 svg,
+  .line2 svg {
     width: 80%; /* Scale down the width of the SVG lines */
     height: 50px; /* Adjust the height proportionally */
   }
@@ -159,7 +160,6 @@
     stroke-dashoffset: -312; /* Start with the line fully drawn */
   }
 }
-
 
 /* section3 */
 .section3 {
@@ -273,7 +273,7 @@
   text-align: center;
   font-family: var(--font-family);
   color: var(--primary-color);
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 600;
 }
 
@@ -295,7 +295,11 @@
   }
 
   .section3-h3 {
-    font-size: 24px; /* Reduce font size */
+    font-size: 24px;
+    text-align: center;
+    /* margin: auto; */
+    width: 80%;
+    margin: auto;
   }
 
   .found-paras-align {
@@ -312,9 +316,10 @@
     padding-bottom: 2%;
   }
 
-  .section3-para, .quote-h3, .founder-para1 {
-    font-size: 14px; /* Reduce font size for better mobile readability */
-    width: 90%; /* Adjust width for better alignment */
+  .section3-para,
+  .quote-h3,
+  .founder-para1 {
+    font-size: 14px; /* Reduce font size for better mobile readability */ /* Adjust width for better alignment */
     text-align: center; /* Center-align text */
   }
 
@@ -333,8 +338,6 @@
     padding-bottom: 20px; /* Adjust bottom padding */
   }
 }
-
-
 
 /* section4 */
 /* Initially hide section4 */
@@ -446,7 +449,7 @@
   text-align: left;
   font-family: var(--font-family);
   color: var(--primary-color);
-  font-size: 25px;
+  font-size: 24px;
   font-weight: 600;
 }
 .ethical-para {
@@ -511,7 +514,6 @@
   }
 }
 
-
 /* section5 */
 .service-head {
   font-size: 40px;
@@ -529,7 +531,6 @@
   font-size: 16px;
   font-weight: 400;
   text-align: center;
-
 }
 
 .our-con {
@@ -568,7 +569,7 @@
 }
 
 .our-mission {
-  font-size: 32px;
+  font-size: 30px;
   font-family: var(--font-family);
   color: var(--secondary-color);
   font-weight: 900;
@@ -602,13 +603,13 @@
 
 /* Mobile View */
 @media only screen and (max-width: 768px) {
-  .section5{
+  .section5 {
     width: 100%;
   }
   .service-head {
     font-size: 24px; /* Reduce font size */
     padding-top: 15px; /* Adjust padding */
-    padding-bottom: 10px; /* Adjust padding */
+    padding-bottom: 0; /* Adjust padding */
   }
 
   .service-para {
@@ -644,7 +645,8 @@
   }
 
   .our-mission {
-    font-size: 24px; /* Reduce font size */
+    font-size: 24px;
+    margin-top: -5px;
   }
 
   .our-para {

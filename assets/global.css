@@ -62,23 +62,11 @@ a {
   font-size: 18px; /* Replace with your primary color */
   font-weight: 700; /* Optional: Make the active item bold */
   position: relative;
+  text-decoration-color: #006838;
+  text-decoration: underline;
+  text-decoration-thickness: 3px; /* Adjust the thickness value as needed */
 }
 
-.dot {
-  display: none;
-  background-color: #006838; /* Replace with your primary color */
-  border-radius: 50%;
-  width: 8px;
-  height: 8px;
-  position: absolute;
-  left: -15px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.nav-item.active .dot {
-  display: inline-block;
-}
 
 /* Toggle button styling */
 .toggle-button {
@@ -163,7 +151,7 @@ a {
     flex-direction: column;
     align-items: flex-end;
     gap: 15px;
-    padding: 10px 10px;
+    padding: 10px 15px;
   }
 
   .nav-container.show {

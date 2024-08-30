@@ -64,7 +64,7 @@
   }
 
   .section-head-con h1 {
-    font-size: 36px; /* Scale down heading size */
+    font-size: 24px; /* Scale down heading size */
   }
 }
 
@@ -140,7 +140,7 @@
 
 .out-source-head {
   font-family: var(--font-family);
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 900;
   color: var(--primary-color);
   text-align: center;
@@ -168,10 +168,10 @@
 
 .service-sub-head {
   font-family: var(--font-family);
-  font-size: 32px;
+  font-size: 30px;
   color: var(--secondary-color);
   font-weight: 600;
-  margin-left: -14px;
+  margin-left: -5px;
   padding-bottom: 4%;
   margin-top: -15px;
 }
@@ -180,9 +180,14 @@
   font-size: 16px;
   color: var(--secondary-color);
   font-weight: 500;
-  width: 90%;
-  padding: 0.5%;
-  margin-bottom: 10px;
+  padding-bottom: 20px;
+  padding-left: 30px; /* Increase padding to make room for the larger image */
+  background-image: url(../assets/images/checkmark.png);
+  background-size: 20px 20px; /* Image size set to 30px by 30px */
+  background-repeat: no-repeat;
+  background-position: 0 10%; /* Align the image to the left and center vertically */
+  line-height: 18px; /* Match the line-height to the image size to vertically align */
+  list-style-type: none; /* Remove default list style */
 }
 
 /* Mobile View */
@@ -209,23 +214,25 @@
   }
 
   .service-sub-head {
-    font-size: 24px; /* Smaller font size for mobile */
+    font-size: 20px; /* Smaller font size for mobile */
     margin-left: 0; /* Remove left margin */
     padding-bottom: 2%; /* Adjust padding for mobile */
     margin-top: 0; /* Remove top margin */
   }
 
   .list-item {
-    font-size: 14px; /* Smaller font size for mobile */
-    padding: 1%; /* Adjust padding for mobile */
-    margin-bottom: 8px; /* Adjust spacing between list items */
+    font-size: 14px;
+    /* padding: 1%; */
+    line-height: 16px;
+    margin-bottom: 8px;
+    padding-left: 30px;
   }
 }
 
 /* section3 */
 .cfo-para {
   font-family: var(--font-family);
-  font-size: 20px;
+  font-size: 16px;
   color: var(--secondary-color);
   font-weight: 500;
   text-align: center;
@@ -258,7 +265,7 @@
 .offered-service {
   font-family: var(--font-family);
   color: var(--secondary-color);
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 500;
   border-style: solid;
   border-radius: 15px;
@@ -371,7 +378,7 @@
 }
 .unique-card-head {
   font-family: var(--font-family);
-  font-size: 20px;
+  font-size: 24px;
   color: var(--primary-color);
   font-weight: 600;
   text-align: center;
@@ -384,7 +391,7 @@
   }
 
   .offered-service {
-    font-size: 16px; /* Reduce font size for mobile */
+    font-size: 14px; /* Reduce font size for mobile */
     width: 90%; /* Make buttons wider on mobile */
     padding: 12px; /* Adjust padding for mobile */
     margin: 5px 0; /* Adjust margin for better spacing */
@@ -408,7 +415,7 @@
   }
 
   .list-item3 {
-    font-size: 16px; /* Reduce font size for mobile */
+    font-size: 14px; /* Reduce font size for mobile */
     margin-left: 20px; /* Adjust margin-left for better alignment */
     width: 100%; /* Full width for better fit */
   }
@@ -424,8 +431,7 @@
 }
 .out-source-head-50 {
   font-family: var(--font-family);
-  font-size: 32px;
-  width: 60%;
+  font-size: 40px;
   margin: auto;
   font-weight: 900;
   color: var(--primary-color);
@@ -443,7 +449,7 @@
   }
 
   .cfo-para {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .unique-cards-align {
@@ -463,7 +469,7 @@
   }
 
   .unique-card-head {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 
@@ -486,7 +492,7 @@
 
 @media screen and (max-width: 768px) {
   .logo {
-    font-size: 10px;
+    font-size: 14px;
   }
   .logo-card {
     height: 50px;
