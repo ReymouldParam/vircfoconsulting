@@ -40,6 +40,34 @@
   }
 }
 
+/* Mobile View Styles */
+@media only screen and (max-width: 767px) {
+  .section1 {
+    height: 30vh;
+    margin-top: -10%;
+  }
+
+  .about-us {
+    font-size: 36px; /* Scale down font size for better readability on small screens */
+  }
+
+  .section-head-con {
+    width: 60%; /* Increase width to fit mobile screen better */
+    height: 30vh; /* Adjust height to fit the section */
+    left: 0; /* Ensure the container is fully visible */
+    background: linear-gradient(
+      135deg,
+      rgba(14, 13, 35, 0.9),
+      /* Slightly more transparent for better readability */
+        rgba(0, 104, 56, 0.6)
+    );
+  }
+
+  .section-head-con h1 {
+    font-size: 36px; /* Scale down heading size */
+  }
+}
+
 /* section2 */
 .section2 {
   overflow: hidden;
@@ -157,6 +185,43 @@
   margin-bottom: 10px;
 }
 
+/* Mobile View */
+@media only screen and (max-width: 768px) {
+  .section2 {
+    padding-bottom: 5%; /* Add more padding to fit mobile better */
+  }
+
+  .out-source-head {
+    font-size: 24px; /* Smaller font size for mobile */
+    padding: 10px; /* Adjust padding for mobile */
+  }
+
+  .out-source-cards-align {
+    flex-direction: column; /* Stack cards vertically on mobile */
+    align-items: center; /* Center align cards */
+  }
+
+  .out-source-card {
+    width: 90%; /* Make cards wider on mobile */
+    margin: 10px 0; /* Adjust margin for spacing between cards */
+    padding: 5%; /* Adjust padding inside the cards */
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+
+  .service-sub-head {
+    font-size: 24px; /* Smaller font size for mobile */
+    margin-left: 0; /* Remove left margin */
+    padding-bottom: 2%; /* Adjust padding for mobile */
+    margin-top: 0; /* Remove top margin */
+  }
+
+  .list-item {
+    font-size: 14px; /* Smaller font size for mobile */
+    padding: 1%; /* Adjust padding for mobile */
+    margin-bottom: 8px; /* Adjust spacing between list items */
+  }
+}
+
 /* section3 */
 .cfo-para {
   font-family: var(--font-family);
@@ -234,7 +299,7 @@
   background-size: cover;
   padding: 1%;
 }
-.unique-card1{
+.unique-card1 {
   width: 200px;
   height: 250px;
   background-color: white;
@@ -246,32 +311,7 @@
   justify-content: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.unique-card2{
-  width: 200px;
-  height: 250px;
-  background-color: white;
-  border-radius: 15px;
-  margin: 1%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: -50px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.unique-card3{
-  width: 200px;
-  height: 250px;
-  background-color: white;
-  border-radius: 15px;
-  margin: 1%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.unique-card4{
+.unique-card2 {
   width: 200px;
   height: 250px;
   background-color: white;
@@ -284,7 +324,7 @@
   margin-top: -50px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.unique-card5{
+.unique-card3 {
   width: 200px;
   height: 250px;
   background-color: white;
@@ -296,10 +336,35 @@
   justify-content: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.unique-card1:hover, 
-.unique-card2:hover, 
-.unique-card3:hover, 
-.unique-card4:hover, 
+.unique-card4 {
+  width: 200px;
+  height: 250px;
+  background-color: white;
+  border-radius: 15px;
+  margin: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -50px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.unique-card5 {
+  width: 200px;
+  height: 250px;
+  background-color: white;
+  border-radius: 15px;
+  margin: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.unique-card1:hover,
+.unique-card2:hover,
+.unique-card3:hover,
+.unique-card4:hover,
 .unique-card5:hover {
   transform: scale(1.05); /* Slightly increase the size */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect */
@@ -311,6 +376,44 @@
   font-weight: 600;
   text-align: center;
 }
+
+/* Mobile View */
+@media only screen and (max-width: 768px) {
+  .cfo-para {
+    font-size: 18px; /* Adjust font size for mobile */
+  }
+
+  .offered-service {
+    font-size: 16px; /* Reduce font size for mobile */
+    width: 90%; /* Make buttons wider on mobile */
+    padding: 12px; /* Adjust padding for mobile */
+    margin: 5px 0; /* Adjust margin for better spacing */
+  }
+
+  .offered-services-align {
+    flex-direction: column; /* Stack the two columns vertically */
+    align-items: center; /* Center align items */
+    padding: 2%; /* Adjust padding for mobile */
+  }
+
+  .list-data-align {
+    width: 100%; /* Full width for mobile */
+  }
+
+  .offered-list-services {
+    width: 90%; /* Make list containers wider on mobile */
+    height: auto; /* Adjust height to auto for mobile */
+    padding: 15px; /* Adjust padding for mobile */
+    margin-top: 10px; /* Add spacing between list containers */
+  }
+
+  .list-item3 {
+    font-size: 16px; /* Reduce font size for mobile */
+    margin-left: 20px; /* Adjust margin-left for better alignment */
+    width: 100%; /* Full width for better fit */
+  }
+}
+
 /* section5 */
 .section5 {
   padding: 1%;
@@ -328,6 +431,42 @@
   color: var(--primary-color);
   text-align: center;
 }
+
+/* Mobile view adjustments */
+@media (max-width: 767px) {
+  .section4 {
+    padding: 2% 4%;
+  }
+
+  .out-source-head {
+    font-size: 24px;
+  }
+
+  .cfo-para {
+    font-size: 18px;
+  }
+
+  .unique-cards-align {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .unique-card1,
+  .unique-card2,
+  .unique-card3,
+  .unique-card4,
+  .unique-card5 {
+    width: 100%;
+    max-width: 100%;
+    /* margin-bottom: 15px; */
+    margin: 2%;
+  }
+
+  .unique-card-head {
+    font-size: 18px;
+  }
+}
+
 /* section6 */
 .logo-card {
   background-color: white;
@@ -343,4 +482,14 @@
   text-align: center;
   font-size: 32px;
   font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    font-size: 10px;
+  }
+  .logo-card {
+    height: 50px;
+    border-radius: 5px;
+  }
 }

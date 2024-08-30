@@ -1,3 +1,4 @@
+
 .section1 {
   background-image: url(./images/about-sec1-bg.png);
   background-size: cover;
@@ -40,8 +41,38 @@
   }
 }
 
-/* section2 */
+/* Mobile View */
+@media only screen and (max-width: 768px) {
+  .section1 {
+    width: 102%;
+    margin-top:-17%;
+    height: 30vh; /* Reduce the height for mobile */
+  }
 
+  .about-us {
+    font-size: 36px; /* Decrease the font size */
+  }
+
+  .section-head-con {
+    width: 60%;
+    height: 30vh;
+    left: -100%; /* Start hidden to the left */
+    animation: slideInMobile 1s forwards ease-out; /* Adjust animation timing */
+  }
+
+  /* Mobile-specific animation for sliding the container in */
+  @keyframes slideInMobile {
+    0% {
+      left: -100%; /* Hidden */
+    }
+    100% {
+      left: 0; /* Fully visible */
+    }
+  }
+}
+
+
+/* section2 */
 .section2 {
   display: flex;
   justify-content: space-evenly;
@@ -98,6 +129,37 @@
     opacity: 1;
   }
 }
+/* Mobile View */
+@media only screen and (max-width: 768px) {
+  .section2 {
+    padding-top: 3%;
+    padding-bottom: 2%;
+    justify-content: center; /* Center the elements while maintaining layout */
+  }
+
+  .section2-h3 {
+    font-size: 16px; /* Slightly reduce font size */
+  }
+
+  .line1 svg, .line2 svg {
+    width: 80%; /* Scale down the width of the SVG lines */
+    height: 50px; /* Adjust the height proportionally */
+  }
+
+  .line1 svg path:last-child,
+  .line2 svg path:last-child {
+    stroke-dasharray: 312; /* Adjust stroke-dasharray to match new width */
+  }
+
+  .line1 svg path:last-child {
+    stroke-dashoffset: 312; /* Initially hide the line */
+  }
+
+  .line2 svg path:last-child {
+    stroke-dashoffset: -312; /* Start with the line fully drawn */
+  }
+}
+
 
 /* section3 */
 .section3 {
@@ -223,6 +285,57 @@
   width: 70%;
 }
 
+/* Mobile View */
+@media only screen and (max-width: 768px) {
+  .section3 {
+    opacity: 1; /* Ensure it's visible on mobile */
+    transform: none; /* Remove the vertical translation */
+    animation: none; /* Remove the animation for simplicity */
+    padding: 2% 5%; /* Adjust padding for better spacing on mobile */
+  }
+
+  .section3-h3 {
+    font-size: 24px; /* Reduce font size */
+  }
+
+  .found-paras-align {
+    flex-direction: column; /* Stack paragraphs vertically */
+    align-items: center; /* Center align content */
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+
+  .para-founder-img {
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center align content */
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+
+  .section3-para, .quote-h3, .founder-para1 {
+    font-size: 14px; /* Reduce font size for better mobile readability */
+    width: 90%; /* Adjust width for better alignment */
+    text-align: center; /* Center-align text */
+  }
+
+  .founder-para1 {
+    font-size: 14px;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .founder {
+    width: 100%; /* Make image full width */
+    max-width: 300px; /* Limit the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    padding-bottom: 20px; /* Adjust bottom padding */
+  }
+}
+
+
+
 /* section4 */
 /* Initially hide section4 */
 .section4 {
@@ -344,6 +457,59 @@
   font-weight: 600;
 }
 
+/* Mobile View */
+@media only screen and (max-width: 768px) {
+  .section4 {
+    opacity: 1; /* Ensure it's visible on mobile */
+    transform: none; /* Remove the vertical translation */
+    transition: none; /* Remove the transition for simplicity */
+    /* Adjust padding for better spacing on mobile */
+  }
+
+  .service-head {
+    font-size: 24px; /* Reduce font size for mobile */
+    text-align: center; /* Center align text */
+  }
+
+  .service-para {
+    font-size: 16px; /* Reduce font size */
+    text-align: center; /* Center align text */
+    margin: 10px 0; /* Adjust margin for better spacing */
+  }
+
+  .cards-align {
+    flex-direction: column; /* Stack cards vertically */
+    width: 100%; /* Make cards full width */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+  }
+
+  .ethical-card {
+    width: 90%; /* Reduce width */
+    max-width: 350px; /* Limit maximum width */
+    height: auto; /* Adjust height automatically */
+    margin: 10px 0; /* Add margin for spacing */
+    padding: 10px; /* Adjust padding */
+    transform: none; /* Remove 3D effect */
+    opacity: 1; /* Ensure visibility */
+    transition: none; /* Remove transition */
+  }
+
+  .ethical-img {
+    width: 80px; /* Reduce image size */
+    height: 60px; /* Reduce image size */
+  }
+
+  .ethical-head {
+    font-size: 20px; /* Reduce font size */
+    text-align: center; /* Center align text */
+  }
+
+  .ethical-para {
+    font-size: 14px; /* Reduce font size */
+    text-align: center; /* Center align text */
+  }
+}
 
 
 /* section5 */
@@ -432,4 +598,56 @@
   transform: translateY(0);
   transform: translateX(0);
   transform: rotateY(0deg);
+}
+
+/* Mobile View */
+@media only screen and (max-width: 768px) {
+  .section5{
+    width: 100%;
+  }
+  .service-head {
+    font-size: 24px; /* Reduce font size */
+    padding-top: 15px; /* Adjust padding */
+    padding-bottom: 10px; /* Adjust padding */
+  }
+
+  .service-para {
+    font-size: 14px; /* Reduce font size */
+    margin: 10px 0; /* Adjust margin */
+  }
+
+  .our-con {
+    margin-top: 10px; /* Reduce top margin */
+    margin-bottom: 10px; /* Reduce bottom margin */
+    padding: 10px; /* Add padding for spacing */
+  }
+
+  .mission-align {
+    flex-direction: column; /* Stack vertically on mobile */
+    gap: 10px; /* Adjust gap */
+    text-align: center; /* Center align text */
+  }
+
+  .mission-text {
+    padding: 10px; /* Reduce padding */
+    transform: none; /* Remove transform */
+    opacity: 1; /* Ensure visibility */
+    text-align: center; /* Center align text */
+  }
+
+  .mission-img {
+    width: 80%; /* Reduce image width */
+    height: auto; /* Maintain aspect ratio */
+    transform: none; /* Remove transform */
+    margin: 0 auto; /* Center align image */
+    opacity: 1; /* Ensure visibility */
+  }
+
+  .our-mission {
+    font-size: 24px; /* Reduce font size */
+  }
+
+  .our-para {
+    font-size: 14px; /* Reduce font size */
+  }
 }
