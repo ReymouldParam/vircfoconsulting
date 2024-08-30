@@ -104,8 +104,9 @@
 @media (max-width: 768px) {
   /* Section styles with background animation */
   .section1 {
-    height: 60vh;
+    height: 25vh;
     background-size: cover;
+    margin-top: -40px;
   }
 
   /* Container wrapper for 3D perspective */
@@ -118,8 +119,7 @@
   /* First container that moves fully to center and rotates */
   .section1-para-con {
     width: 60%;
-    /* height: 50vh; 
-    left: 10%;  */
+    height: 25vh;
     transform: translateY(-50%) translateX(-100%);
     animation: moveAndRotateFirstContainer 4s forwards;
   }
@@ -127,8 +127,7 @@
   /* Second container revealed after the rotation */
   .section2-para-con {
     width: 60%;
-    /* height: 50vh; */
-    /* left: 10%; */
+    height: 25vh;
     transform: translateY(-50%) translateX(50%);
     animation: revealSecondContainer 4s forwards 2s;
   }
@@ -139,8 +138,6 @@
     padding-top: 10px;
   }
 }
-
-
 
 /* section2 */
 .section2 {
@@ -235,12 +232,13 @@
     flex-direction: column;
     width: 100%;
     align-items: center;
-    padding:0;
+    padding: 0;
     margin: 0; /* Add padding around the content */
     background-color: rgba(14, 15, 36, 1);
   }
 
-  .what-con, .what-we-con {
+  .what-con,
+  .what-we-con {
     width: 90%;
     display: flex;
     text-align: center;
@@ -260,7 +258,9 @@
     margin-bottom: 10px;
   }
 
-  .cfo-para, .cfo-para2, .cfo-para3 {
+  .cfo-para,
+  .cfo-para2,
+  .cfo-para3 {
     font-size: 14px; /* Adjusted font size */
     width: 100%; /* Full width for better readability */
     margin: 0 auto; /* Center-align paragraphs */
@@ -362,14 +362,13 @@
   padding-bottom: 50px;
 }
 
-
-
 /* Base styles for mobile view */
 @media only screen and (max-width: 768px) {
   .section3 {
-    padding: 20px; /* Add padding around the content */
+    padding: 0; /* Add padding around the content */
     text-align: center; /* Center align text */
     width: 100%;
+    margin: 0 !important;
   }
 
   .service-head {
@@ -399,7 +398,7 @@
 
   .services-alignment {
     display: block; /* Stack elements vertically */
-    width: 100%;
+    width: 85%;
     margin: 0 auto;
   }
 
@@ -414,8 +413,6 @@
     padding-bottom: 20px; /* Reduced padding */
   }
 }
-
-
 
 /* section4 */
 /* Initial hidden state */
@@ -483,38 +480,41 @@
   margin-left: -20px;
 }
 
-
 /* Base styles for mobile view */
 @media only screen and (max-width: 768px) {
   .section4 {
-    padding: 10px;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    /* width: 100%;*/
   }
 
-  .improve-align, .value-align {
-    display: block; /* Stack items vertically */
-    width: 100%; /* Full width for mobile view */
-    margin-bottom: 30px; /* Space between sections */
-    text-align: center; /* Center text */
+  .improve-align,
+  .value-align {
+    display: block;
+    /* width: 100%; */
+    margin-bottom: 30px;
+    text-align: center;
   }
 
-  .improve-align img, .value-align img {
+  .improve-align img,
+  .value-align img {
     width: 100%; /* Full width for images */
     height: auto; /* Maintain aspect ratio */
     max-width: 300px; /* Set a max-width for better scaling */
+    padding-top: 20px;
   }
 
   .value-align .value-sec-img {
     margin-top: 0; /* Remove top margin */
   }
 
-  .improve-head, .value-align .improve-head {
-    font-size: 24px; /* Adjust font size */
+  .improve-head,
+  .value-align .improve-head {
+    font-size: 20px; /* Adjust font size */
     margin-left: 0; /* Remove negative margin */
-    margin-bottom: 10px; /* Space below the heading */
+    margin-bottom: 0; /* Space below the heading */
   }
 
   .list-item2 {
@@ -527,12 +527,10 @@
   }
 
   .minus-width {
-    width: 100%; /* Full width for mobile view */
+    width: 100% !important; /* Full width for mobile view */
     margin-left: 0; /* Remove negative margin */
   }
 }
-
-
 
 /* section5 */
 /* Keyframes for horizontal movement with limited range */
@@ -634,5 +632,3 @@
     animation: none; /* Disable animation on mobile for better performance */
   }
 }
-
-
