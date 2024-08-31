@@ -123,9 +123,19 @@
   margin-top: 30px;
 }
 
+/* largers screens  */
+@media screen and (min-width:1650px){
+  .img-form-align{
+    width: 95%;
+    justify-content: space-around;
+  }
+  .label-name{
+    font-size: 20px;
+  }
+}
 /* smaller screen */
 @media screen and (min-width: 1040px) and (max-width: 1280px) {
-  .form-heading{
+  .form-heading {
     padding-top: 2%;
     padding-bottom: 2%;
   }
@@ -174,8 +184,8 @@
 
   /* Adjust the image size if needed */
   .contact-img {
-    width:450px; /* Adjust this percentage as needed */
-    height:620px;
+    width: 450px; /* Adjust this percentage as needed */
+    height: 620px;
   }
 }
 
@@ -292,6 +302,12 @@
   margin: 4%;
 }
 
+/* larger screens */
+@media screen and (min-width:1650px){
+  .map-styles{
+    width: 84%;
+  }
+}
 /* Mobile View Styles */
 @media only screen and (max-width: 767px) {
   .map-heading {
@@ -388,7 +404,12 @@
   position: relative; /* Ensure these elements appear above the gradient */
   z-index: 2;
 }
-
+/* large screens */
+@media screen and (min-width:1650px){
+  .contact-btn{
+    font-size: 20px;
+  }
+}
 /* Mobile View Styles */
 @media only screen and (max-width: 767px) {
   .get-in-con {

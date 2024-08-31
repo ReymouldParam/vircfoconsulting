@@ -190,6 +190,16 @@
   list-style-type: none; /* Remove default list style */
 }
 
+/* larger screens  */
+@media screen and (min-width:1650px){
+  .out-source-cards-align{
+    width: 86%;
+  }
+  .list-item{
+    font-size: 20px;
+  }
+
+}
 /* Mobile View */
 @media only screen and (max-width: 768px) {
   .section2 {
@@ -384,6 +394,20 @@
   text-align: center;
 }
 
+
+/* larger screens */
+@media screen and (min-width:1650px){
+  .unique-card1,.unique-card2,.unique-card3,.unique-card4,.unique-card5{
+    width: 280px;
+    height: 320px;
+  }
+  .offered-service{
+    font-size: 20px;
+  }
+  .cfo-para{
+    font-size: 20px;
+  }
+}
 /* Mobile View */
 @media only screen and (max-width: 768px) {
   .cfo-para {
@@ -492,7 +516,11 @@
   font-size: 32px;
   font-weight: 600;
 }
-
+@media screen and (min-width:1650px){
+  .cfo-para2{
+    font-size: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .logo {
     font-size: 14px;
