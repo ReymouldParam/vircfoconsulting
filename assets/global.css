@@ -5,8 +5,8 @@
 
 body {
   background-color: rgba(14, 15, 36, 1);
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   margin: 0;
   overflow-x: hidden; /* Prevent horizontal scrolling */
   padding-top: 90px; /* Add padding to prevent overlap with the fixed header */
@@ -85,9 +85,9 @@ a {
 /* Responsive styles */
 @media (max-width: 768px) {
   .global-section {
-    width: 100vw;
-    margin: 0 !important;
-    padding: 0 !important;
+    width: 100%;
+    /* margin-left: 3px; */
+    height: 100%;
   }
 
   .logo-container {
@@ -223,7 +223,7 @@ footer {
   }
 
   .footer-div {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     align-items: center;
   }
 
@@ -240,6 +240,7 @@ footer {
     flex-direction: row; /* Align icons horizontally */
     justify-content: center; /* Center-align icons */
     gap: 10px; /* Adjust gap between icons */
+    margin-bottom: -20px;
   }
 
   .icon-div svg {

@@ -1,3 +1,30 @@
+
+// header 
+window.addEventListener('DOMContentLoaded', (event) => {
+    const navItems = document.querySelectorAll('.nav-item');
+
+    navItems.forEach(item => {
+        // Check if the href matches the current URL
+        if (item.href === window.location.href) {
+            item.classList.add('active');
+        }
+    });
+});
+
+ 
+// toggler navbar
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.getElementById('toggleButton');
+    const navContainer = document.getElementById('navContainer');
+
+    toggleButton.addEventListener('click', function () {
+        navContainer.classList.toggle('show');
+        toggleButton.classList.toggle('open');
+    });
+});
+
+
+// pops card
 document.addEventListener("DOMContentLoaded", function () {
     const urlParams = new URLSearchParams(window.location.search);
     const flagValue = urlParams.get('emailSuccess');
@@ -35,28 +62,3 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("One or more elements with the specified IDs were not found.");
     }
 });
-
-// header 
-window.addEventListener('DOMContentLoaded', (event) => {
-    const navItems = document.querySelectorAll('.nav-item');
-
-    navItems.forEach(item => {
-        // Check if the href matches the current URL
-        if (item.href === window.location.href) {
-            item.classList.add('active');
-        }
-    });
-});
-
- 
-// toggler navbar
-document.addEventListener('DOMContentLoaded', function () {
-    const toggleButton = document.getElementById('toggleButton');
-    const navContainer = document.getElementById('navContainer');
-
-    toggleButton.addEventListener('click', function () {
-        navContainer.classList.toggle('show');
-        toggleButton.classList.toggle('open');
-    });
-});
-

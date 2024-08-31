@@ -43,9 +43,9 @@
 /* Mobile View */
 @media only screen and (max-width: 768px) {
   .section1 {
-    width: 102%;
-    margin-top: -17%;
-    height: 30vh; /* Reduce the height for mobile */
+    width: 100%;
+    margin-top: -11%;
+    height: 30vh;
   }
 
   .about-us {
@@ -143,8 +143,9 @@
 
   .line1 svg,
   .line2 svg {
-    width: 80%; /* Scale down the width of the SVG lines */
-    height: 50px; /* Adjust the height proportionally */
+    width: 100%;
+    height: 50px;
+    margin-left: 10px;
   }
 
   .line1 svg path:last-child,
@@ -370,7 +371,7 @@
 
 /* Apply animation to ethical cards when section has the animate class */
 .section4.animate .ethical-card {
-  animation: zoomInFromInside 3s ease-out forwards; /* Increased duration for slower animation */
+  animation: zoomInFromInside 2s ease-out forwards; /* Increased duration for slower animation */
 }
 
 /* Optional: Add a slight delay to each card for a staggered effect */
@@ -482,9 +483,6 @@
 
   .cards-align {
     flex-direction: column; /* Stack cards vertically */
-    width: 100%; /* Make cards full width */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
   }
 
   .ethical-card {
@@ -496,6 +494,7 @@
     transform: none; /* Remove 3D effect */
     opacity: 1; /* Ensure visibility */
     transition: none; /* Remove transition */
+    align-items: center;
   }
 
   .ethical-img {
