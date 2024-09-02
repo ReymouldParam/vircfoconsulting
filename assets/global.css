@@ -11,7 +11,11 @@ body {
   overflow-x: hidden; /* Prevent horizontal scrolling */
   padding-top: 90px; /* Add padding to prevent overlap with the fixed header */
 }
-
+@media screen and (max-width:768px){
+  body{
+    padding-top: 60px;
+  }
+}
 :root {
   --primary-color: #006838;
   --secondary-color: #ffffff;

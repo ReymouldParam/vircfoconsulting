@@ -43,9 +43,11 @@
 /* Mobile View */
 @media only screen and (max-width: 768px) {
   .section1 {
-    width: 100%;
-    margin-top: -11%;
+    background-image: url(./images/about-sec1-bg.png);
+    background-size: cover;
     height: 30vh;
+    width: 100vw;
+    margin-top: -10%;
   }
 
   .about-us {

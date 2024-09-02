@@ -499,3 +499,13 @@
   color: #1e1b25;
   font-family: var(--font-family);
 }
+
+/* mobile screen */
+@media screen and (max-width:768px){
+  .popup{
+    width: 84%;
+  }
+  .pop-up-heading{
+    font-size: 24px;
+  }
+}

@@ -3,13 +3,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $name = $_POST['name'];
     $number = $_POST['number'];
     $email = $_POST['email'];
-    $name = $_POST['organiazation'];
-    $name = $_POST['dropMessage'];
+    $organization = $_POST['organization'];
+    $dropMessage = $_POST['dropMessage'];
     $message = $_POST['require'];
 
     $to = "reymould.social@gmail.com";
     $subject = "Enquiry from website";
-    $body = "Name: $name\nEmail: $email\nDropMessage: $dropMessage";
+    $body = "Name: $name\nEmail: $email\ndropMessage: $dropMessage";
 
     // Send email to both recipients
     mail("naresh.narnapati@reymould.com", $subject, $body);
