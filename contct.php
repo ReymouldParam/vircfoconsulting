@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $to = "reymould.social@gmail.com";
     $subject = "Enquiry from website";
-    $body = "Name: $name\nEmail: $email\ndropMessage: $dropMessage";
+    $body = "Name: $name\nEmail: $email\ndropMessage: $dropMessage\nNumber: $number\nOrganization: $organization\nMessage: $message";
 
     // Send email to both recipients
     mail("naresh.narnapati@reymould.com", $subject, $body);
