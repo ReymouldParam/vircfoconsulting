@@ -11,8 +11,8 @@ body {
   overflow-x: hidden; /* Prevent horizontal scrolling */
   padding-top: 90px; /* Add padding to prevent overlap with the fixed header */
 }
-@media screen and (max-width:768px){
-  body{
+@media screen and (max-width: 768px) {
+  body {
     padding-top: 60px;
   }
 }
@@ -71,7 +71,6 @@ a {
   text-decoration-thickness: 3px; /* Adjust the thickness value as needed */
 }
 
-
 /* Toggle button styling */
 .toggle-button {
   display: none;
@@ -82,7 +81,7 @@ a {
 
 .toggle-button span {
   width: 25px;
-  
+
   height: 3px;
   background-color: #000;
   border-radius: 2px;
@@ -163,6 +162,11 @@ a {
     gap: 15px;
     padding: 10px 15px;
   }
+  .nav-container {
+    max-height: 0; /* Initially hidden */
+    overflow: hidden; /* Ensures smooth slide down */
+    transition: max-height 0.5s ease-in-out; /* Transition effect for slideToggle */
+  }
 
   .nav-container.show {
     display: flex;
@@ -220,16 +224,15 @@ footer {
   margin-top: 50px;
 }
 
-
 /* large screens */
-@media screen and (min-width:1650px){
-  .footer-head{
+@media screen and (min-width: 1650px) {
+  .footer-head {
     font-size: 20px;
   }
-  .footer-para{
-    font-size:20px;
+  .footer-para {
+    font-size: 20px;
   }
-  .last-line{
+  .last-line {
     font-size: 20px;
   }
 }

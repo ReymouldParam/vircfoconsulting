@@ -12,7 +12,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
  
-// toggler navbar
 document.addEventListener('DOMContentLoaded', function () {
     const toggleButton = document.getElementById('toggleButton');
     const navContainer = document.getElementById('navContainer');
@@ -20,6 +19,12 @@ document.addEventListener('DOMContentLoaded', function () {
     toggleButton.addEventListener('click', function () {
         navContainer.classList.toggle('show');
         toggleButton.classList.toggle('open');
+
+        if (navContainer.classList.contains('show')) {
+            navContainer.style.maxHeight = navContainer.scrollHeight + 'px'; // Expands the menu
+        } else {
+            navContainer.style.maxHeight = null; // Collapses the menu
+        }
     });
 });
 
