@@ -112,7 +112,7 @@
 @media (max-width: 768px) {
   /* Section styles with background animation */
   .section1 {
-    height: 25vh;
+    height: 30vh;
     background-size: cover;
     margin-top: -40px;
   }
@@ -127,7 +127,7 @@
   /* First container that moves fully to center and rotates */
   .section1-para-con {
     width: 60%;
-    height: 25vh;
+    height: 30vh;
     transform: translateY(-50%) translateX(-100%);
     animation: moveAndRotateFirstContainer 4s forwards;
   }
@@ -135,7 +135,7 @@
   /* Second container revealed after the rotation */
   .section2-para-con {
     width: 60%;
-    height: 25vh;
+    height: 30vh;
     transform: translateY(-50%) translateX(50%);
     animation: revealSecondContainer 4s forwards 2s;
   }

@@ -40,14 +40,13 @@
   }
 }
 
-/* Mobile View */
 @media only screen and (max-width: 768px) {
   .section1 {
     background-image: url(./images/about-sec1-bg.png);
     background-size: cover;
     height: 30vh;
-    width: 100vw;
-    margin-top: -10%;
+    width: 100vw; /* Ensure the section takes full screen width */
+    margin: 0; /* Remove any margins */
   }
 
   .about-us {
@@ -71,6 +70,7 @@
     }
   }
 }
+
 
 /* section2 */
 .section2 {
@@ -138,17 +138,22 @@
     padding-top: 3%;
     padding-bottom: 2%;
     justify-content: center; /* Center the elements while maintaining layout */
+    margin: 0;
+    width: 100vw; /* Ensure the section takes full screen width */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
   }
 
   .section2-h3 {
     font-size: 16px; /* Slightly reduce font size */
+    width: 90%; /* Ensure the text container doesn't overflow */
+    margin: 0 auto; /* Center the text */
   }
 
   .line1 svg,
   .line2 svg {
-    width: 100%;
+    width: 100%; /* Make sure SVGs are responsive */
     height: 50px;
-    margin-left: 10px;
+    margin-left: 10px; /* Remove left margin for better alignment */
   }
 
   .line1 svg path:last-child,
@@ -164,6 +169,7 @@
     stroke-dashoffset: -312; /* Start with the line fully drawn */
   }
 }
+
 
 /* section3 */
 .section3 {
@@ -312,19 +318,21 @@
     font-size: 20px;
   }
 }
+
 /* Mobile View */
 @media only screen and (max-width: 768px) {
   .section3 {
     opacity: 1; /* Ensure it's visible on mobile */
     transform: none; /* Remove the vertical translation */
     animation: none; /* Remove the animation for simplicity */
-    padding: 2% 5%; /* Adjust padding for better spacing on mobile */
+    width: 100vw; /* Ensure the section takes full screen width */
+    margin: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
   }
 
   .section3-h3 {
     font-size: 24px;
     text-align: center;
-    /* margin: auto; */
     width: 80%;
     margin: auto;
   }
@@ -334,6 +342,8 @@
     align-items: center; /* Center align content */
     padding-top: 2%;
     padding-bottom: 2%;
+    width: 90%; /* Ensure full-width alignment on mobile */
+    margin: auto;
   }
 
   .para-founder-img {
@@ -341,13 +351,17 @@
     align-items: center; /* Center align content */
     padding-top: 2%;
     padding-bottom: 2%;
+    width: 90%; /* Ensure full-width alignment on mobile */
+    margin: auto;
   }
 
   .section3-para,
   .quote-h3,
   .founder-para1 {
-    font-size: 14px; /* Reduce font size for better mobile readability */ /* Adjust width for better alignment */
+    font-size: 14px; /* Reduce font size for better mobile readability */
     text-align: center; /* Center-align text */
+    width: 90%; /* Adjust width for better alignment */
+    margin: auto;
   }
 
   .founder-para1 {
@@ -363,6 +377,7 @@
     max-width: 300px; /* Limit the maximum width */
     height: auto; /* Maintain aspect ratio */
     padding-bottom: 20px; /* Adjust bottom padding */
+    margin: auto; /* Center the image on the screen */
   }
 }
 
