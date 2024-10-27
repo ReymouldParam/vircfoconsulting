@@ -49,7 +49,7 @@
 }
 
 .section-head-con {
-  font-size: 64px;
+  font-size: 40px;
   width: 80%;
   margin: auto;
   font-family: var(--font-family);
@@ -483,7 +483,7 @@
 .value-align {
   padding: 1%;
   display: flex;
-  gap: 10%;
+  gap: 5%;
   justify-content: space-between;
 }
 .improve-head {
@@ -514,8 +514,8 @@
   margin-top: 15px;
 }
 .minus-width {
-  width: 400px !important;
-  margin-left: -132px;
+  width: 350px !important;
+  margin-left: -50px;
 }
 
 /* larger screens */
@@ -622,7 +622,8 @@
 
 .arrow-align {
   display: flex;
-  justify-content: space-around;
+  width: 100%;
+  justify-content:center;
   position: relative; /* Ensure the position is relative for proper animation */
 }
 
@@ -653,9 +654,9 @@
 }
 .arrow-align {
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  gap: 20%;
+  align-items: flex-start;
+  justify-content:flex-start;
+  /* gap: 20%; */
 }
 .arrow-size {
   font-size: 60px;
