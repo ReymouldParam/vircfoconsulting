@@ -75,238 +75,252 @@
   }
 }
 
+/* :root {
+  --primary-color: red;
+  --secondary-color: blue;
+  --primary-color-rgb: white;
+} */
+/* General Styling */
 .services-animations {
-  /* background-color: rgba(14, 15, 36, 1); */
   height: 100vh;
+  overflow: hidden;
+  position: relative;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Heading Container */
+.heading-con {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 2rem;
 }
 
 .heading-font2-port {
-  font-size: 40px;
+  font-size: 3rem;
   font-weight: 600;
-  text-align: center;
   font-family: var(--font-family);
+  text-transform: uppercase;
   color: var(--primary-color);
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+  text-align: center;
+}
+
+.service-header-wrapper {
+  position: relative;
+  margin-bottom: 1.5rem;
 }
 
 .heading-font1-port {
-  font-size: 24px;
+  font-size: 2.5rem;
   font-weight: bold;
   font-family: var(--font-family);
   color: var(--primary-color);
-  text-align: left;
-  margin-top: 1rem;
-  transition: opacity 1s ease;
+  margin: 0;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s;
 }
 
+/* Progress Bar */
+.progress-bar {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.progress {
+  height: 100%;
+  width: 0;
+  background: var(--primary-color);
+  transition: width 4s linear;
+}
+
+/* Service Description */
+.service-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-family: var(--font-family);
+  color: var(--primary-color);
+  max-width: 600px;
+  opacity: 0.85;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s;
+}
+
+/* Project List Styling */
 .project-list-align {
   display: flex;
   justify-content: space-between;
   width: 90%;
-  margin: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 3rem;
 }
 
 #project-list {
   list-style: none;
   width: 40%;
-  height: 50vh;
-  font-family: var(--font-family);
-  color: var(--secondary-color);
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;  /* Prevent overflow during transition */
-  transition: opacity 1s ease, transform 1s ease;
-  overflow: auto; /* Add transition for smoothness */
+  max-height: 500px;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
 }
 
+#project-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+#project-list::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+#project-list::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+/* Project Item Styling */
 .project-item {
-  padding: 10px;
-  font-size: 18px;
-  font-weight: 400;
-  opacity: 0.5;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  font-size: 16px;
   font-family: var(--font-family);
-  color: var(--secondary-color);
-  transition: background-color 1s ease, transform 1s ease, opacity 1s ease;
-  transform: translateY(2%);
- 
+  color: var(--primary-color);
+  background: #ffffff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .project-item p {
-  display: none; 
-  /* Hide paragraph in list items */
+  display: none;
+}
+
+.service-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--secondary-color);
+  transition: color 0.3s;
+}
+
+.service-indicator {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) scaleY(0);
+  width: 5px;
+  height: 0;
+  background: var(--primary-color);
+  transition: transform 0.3s ease, height 0.3s ease;
 }
 
 .project-item.active {
-  background-color: rgba(34, 139, 34, 0.5); /* Soft green shade */
+  background: var(--primary-color);
+  color: #fff;
   font-weight: bold;
-  transform: translateY(0);
-  opacity: 1;
-  width: 70%;
-  font-family: var(--font-family);
-  color: var(--secondary-color);
+  transform: translateX(0);
 }
 
+.project-item.active .service-indicator {
+  height: 70%;
+  transform: translateY(-50%) scaleY(1);
+}
+
+.project-item.active .service-title {
+  color: #fff;
+  border-radius: 10px;
+}
+
+/* Image Column */
 .images-in-colum {
   width: 50%;
-  height: 100%;
   position: relative;
+  height: 300px;
+  overflow: hidden;
 }
 
 .image-container {
   position: absolute;
+  width: 100%;
+  height: 100%;
   opacity: 0;
-  transform: translateY(10%);
-  transition: opacity 1s ease, transform 1s ease;
+  transform: scale(0.9) translateY(20px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
 .image-container.visible {
   opacity: 1;
-  transform: translateY(-30%);
+  transform: scale(1) translateY(0);
 }
 
-.image-container img {
-  max-width: 100%;
-  height: auto;
-}
-.heading-con{
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  width: 80%;
-  justify-content: flex-start;
-  margin-left: 5%;
-  margin-bottom: 2%;
-}
-.heading-con p{
-  width:40%;
-  font-size:16px;
-  font-family: var(--font-family);
-  color: var(--secondary-color);
-  text-align: justify;
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s;
 }
 
-/* large screens */
-@media screen and (min-width: 1600px) {
-  .heading-con {
-    padding-top: 10%;
-    margin-left: 10%;
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom right, rgba(var(--primary-color-rgb), 0.2), transparent);
+  pointer-events: none;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .project-list-align {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  #project-list,
+  .images-in-colum {
+    width: 100%;
   }
 
   .heading-font1-port {
-    font-size: 20px;
-    font-family: var(--font1);
-    color: var(--brown-color);
-    font-weight: 400;
-    padding-left: 5%;
+    font-size: 2rem;
   }
 
-  .heading-font2-port {
-    font-size: 20px;
-    font-family: var(--font1);
-    color: var(--black-color);
-    font-weight: 400;
-    padding-left: 0%;
-  }
-
-  .project-list-align {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin: auto;
-    gap: 8%;
-    position: relative;
-  }
-
-  .overview {
-    font-size: 16px;
-    font-family: "Microsoft YaHei";
-    font-weight: 400;
-    color: var(--brown-color);
-    padding-bottom: 5%;
-  }
-
-  #project-list {
-    list-style: none;
-    width: 80%;
-    position: relative;
-    z-index: 1;
-    cursor: pointer;
-    overflow: hidden;
-    height: auto;
-    margin-top: 0%;
-  }
-
-  .project-item {
-    padding: 2px;
-    font-size: 16px;
-    font-family: "Microsoft YaHei";
-    font-weight: 400;
-    border-bottom: 1px solid black;
-    transition: background-color 1.5s, transform 1.5s ease-out, opacity 1.5s ease-out;
-    opacity: 0;
-    position: absolute;
-    width: 70%;
-    text-align: center;
-  }
-
-  .project-item.active {
-    /* background-color: #E2DDD0; */
-    font-size: 20px;
-    color: var(--brown-color);
-    /* Text color for active item */
-    font-weight: bold;
-    background-color: rgba(48, 21, 3, 0.2);
-    /* border-bottom: 1px solid #ccc; */
-    transform: scale(1.05);
-    /* Slightly scale up the active item */
-  }
-
-  .project-item.visible {
-    opacity: 1;
-    position: relative;
-
-  }
-
-  .images-in-colum {
+  .service-description {
     width: 100%;
-    height: 50vh;
-    overflow: visible;
-    position: relative;
-    padding-bottom: 0%;
-  }
-
-  .image-container {
-    width: 100%;
-    position: absolute;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-    transform: translateY(100%);
-    opacity: 0;
-    transition: transform 1.5s ease-out, opacity 1.5s ease-out;
-    margin-top: -30%;
-  }
-
-  .image-container.visible {
-    transform: translateY(-50px);
-    opacity: 1;
-  }
-
-  .image-container img {
-    max-width: auto;
-    height: 100%;
-    display: block;
-    margin-top: 10%;
-  }
-
-  .numeric-para {
-    font-family: "Microsoft YaHei";
-    color: #000000;
-    font-size: 16px;
-    line-height: 24px;
-    width: 91%;
-    text-align: left;
   }
 }
 
@@ -318,7 +332,8 @@
   justify-content: center;
   background-image: url(./images/Vector\ 1.png);
   background-size: cover;
-  padding: 1%; background-color: rgba(48, 21, 3, 0.2);
+  padding: 1%;
+  background-color: rgba(48, 21, 3, 0.2);
 }
 
 .unique-card1 {
