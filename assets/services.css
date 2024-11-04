@@ -75,255 +75,84 @@
   }
 }
 
-/* :root {
-  --primary-color: red;
-  --secondary-color: blue;
-  --primary-color-rgb: white;
-} */
-/* General Styling */
-.services-animations {
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
-  padding: 2rem 0;
+
+.service-heading1{
+  font-size: 40px;
+  font-weight: 900;
+  font-family: var(--font-family);
+  text-transform: uppercase;
+  color: var(--primary-color);
+  text-align:center;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+/* service about particular section */
+.service-section-aling{
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
-
-/* Heading Container */
-.heading-con {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-bottom: 2rem;
-}
-
-.heading-font2-port {
-  font-size: 3rem;
+.service-heading{
+  font-size: 30px;
   font-weight: 600;
   font-family: var(--font-family);
   text-transform: uppercase;
   color: var(--primary-color);
-  letter-spacing: 2px;
-  margin-bottom: 0.5rem;
-  opacity: 0.8;
-  text-align: center;
+  text-align:left;
+  margin-bottom: 10px;
 }
-
-.service-header-wrapper {
-  position: relative;
-  margin-bottom: 1.5rem;
-}
-
-.heading-font1-port {
-  font-size: 2.5rem;
-  font-weight: bold;
+.cfo-para{
   font-family: var(--font-family);
-  color: var(--primary-color);
-  margin: 0;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s;
-}
-
-/* Progress Bar */
-.progress-bar {
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: rgba(0, 0, 0, 0.1);
-}
-
-.progress {
-  height: 100%;
-  width: 0;
-  background: var(--primary-color);
-  transition: width 4s linear;
-}
-
-/* Service Description */
-.service-description {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  font-family: var(--font-family);
-  color: var(--primary-color);
-  max-width: 600px;
-  opacity: 0.85;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s;
-}
-
-/* Project List Styling */
-.project-list-align {
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 3rem;
-}
-
-#project-list {
-  list-style: none;
-  width: 40%;
-  max-height: 500px;
-  padding: 0;
-  margin: 0;
-  overflow-y: auto;
-  scrollbar-width: thin;
-}
-
-#project-list::-webkit-scrollbar {
-  width: 4px;
-}
-
-#project-list::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.05);
-}
-
-#project-list::-webkit-scrollbar-thumb {
-  background: var(--primary-color);
-  border-radius: 4px;
-}
-
-/* Project Item Styling */
-.project-item {
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 8px;
   font-size: 16px;
+  font-weight: 500;
+  width:100%;
+  text-align: justify;
+  color: var(--secondary-color);
+}
+.list-item2 {
   font-family: var(--font-family);
-  color: var(--primary-color);
-  background: #ffffff;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
-  cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 16px;
+  color: var(--secondary-color);
+  font-weight: 500;
+  width: 85%;
+  padding-bottom: 20px;
+  padding-left: 30px; /* Increase padding to make room for the larger image */
+  background-image: url(../assets/images/checkmark.png);
+  background-size: 20px 20px; /* Image size set to 30px by 30px */
+  background-repeat: no-repeat;
+  background-position: 0 10%; /* Align the image to the left and center vertically */
+  line-height: 30px; /* Match the line-height to the image size to vertically align */
+  list-style-type: none; /* Remove default list style */
+  margin-left: 5px;
+}
+.service-con-align{
   display: flex;
   align-items: center;
-  position: relative;
-  overflow: hidden;
+  width: 80%;
+  margin: auto;
+  padding: 2%;
+  border: 2px solid #ffffff;
+  margin-bottom: 20px;
 }
-
-.project-item p {
-  display: none;
-}
-
-.service-title {
-  font-size: 2.5rem;
-  font-weight: 500;
-  color: var(--secondary-color);
-  transition: color 0.3s;
-}
-
-.service-indicator {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%) scaleY(0);
-  width: 5px;
-  height: 0;
-  background: var(--primary-color);
-  transition: transform 0.3s ease, height 0.3s ease;
-}
-
-.project-item.active {
-  background: var(--primary-color);
-  color: #fff;
-  font-weight: bold;
-  transform: translateX(0);
-}
-
-.project-item.active .service-indicator {
-  height: 70%;
-  transform: translateY(-50%) scaleY(1);
-}
-
-.project-item.active .service-title {
-  color: #fff;
-  border-radius: 10px;
-}
-
-/* Image Column */
-.images-in-colum {
+.service-img{
   width: 50%;
-  position: relative;
-  height: 300px;
-  overflow: hidden;
+  height:300px;
 }
 
-.image-container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transform: scale(0.9) translateY(20px);
-  transition: opacity 0.6s, transform 0.6s;
+.list-img-align{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2%;
 }
-
-.image-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  border-radius: 12px;
-}
-
-.image-container.visible {
-  opacity: 1;
-  transform: scale(1) translateY(0);
-}
-
-.image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s;
-}
-
-.image-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(to bottom right, rgba(var(--primary-color-rgb), 0.2), transparent);
-  pointer-events: none;
-}
-
-.fade-out {
-  opacity: 0;
-  transform: translateY(-10px);
-}
-
-.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Responsive Styling */
-@media (max-width: 768px) {
-  .project-list-align {
-    flex-direction: column;
-    gap: 2rem;
+@media screen and (min-width:1600px) {
+  .service-img{
+    width: 50%;
+    height:350px;
   }
-
-  #project-list,
-  .images-in-colum {
-    width: 100%;
-  }
-
-  .heading-font1-port {
-    font-size: 2rem;
-  }
-
-  .service-description {
-    width: 100%;
+  .list-img-align{
+    justify-content: space-between;
   }
 }
-
 /* section4 */
 .unique-cards-align {
   display: flex;

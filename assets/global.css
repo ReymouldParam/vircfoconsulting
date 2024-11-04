@@ -74,14 +74,18 @@ a {
 .nav-item.active {
   color: #006838;
   font-size: 18px;
-  /* Replace with your primary color */
   font-weight: 700;
-  /* Optional: Make the active item bold */
   position: relative;
-  text-decoration-color: #006838;
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
-  /* Adjust the thickness value as needed */
+}
+
+.nav-item.active::after {
+  content: "•"; /* Unicode for a dot */
+  color: #006838; /* Match the dot color to the active item color */
+  font-size: 30px; /* Adjust size if needed */
+  position: absolute;
+  left: 50%;
+  top: 15px;
+  transform: translateX(-50%); /* Center the dot below the text */
 }
 
 /* Toggle button styling */
@@ -460,6 +464,12 @@ a {
   height: 45px;
   width: 45px;
   /* Ensure width is also consistent */
+}
+
+@media screen and (min-width:1600px){
+  .icon-5{
+    height: 230px;
+  }
 }
 
 @media (max-width: 600px) {
