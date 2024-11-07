@@ -233,7 +233,7 @@ a {
 .footer-background {
   background-color: var(--primary-color);
   display: flex;
-  width: 78%;
+  width: 82%;
   flex-direction: column;
   /* align-items: center; */
 

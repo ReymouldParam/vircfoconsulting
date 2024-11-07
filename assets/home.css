@@ -162,14 +162,16 @@
   justify-content: space-around;
   padding-left: 5%;
 }
-.what-we-con {
+/* .what-we-con {
   padding-left: 2%;
   margin-right: 10%;
   margin-top: 0px;
-}
+  width: 100%;
+} */
 .cfo-sub-align {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 90%;
 }
 .line-divide {
@@ -193,13 +195,15 @@
   font-size: 16px;
   font-weight: 500;
   width: 60%;
+  text-align: justify;
   color: var(--secondary-color);
 }
 .cfo-para2 {
   font-family: var(--font-family);
   font-size: 16px;
   font-weight: 500;
-  width: 50%;
+  width: 60%;
+  text-align: justify;
   color: var(--secondary-color);
 }
 .cfo-para3 {
@@ -208,6 +212,7 @@
   font-weight: 500;
   width: 100%;
   color: var(--secondary-color);
+  text-align: justify;
 }
 .cfo-section1-btn {
   background: transparent;

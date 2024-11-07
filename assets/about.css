@@ -277,6 +277,7 @@
   font-size: 16px;
   font-weight: 500;
   color: var(--secondary-color);
+  text-align: justify;
 }
 
 .quote-h3 {
@@ -285,6 +286,7 @@
   color: var(--primary-color);
   font-size: 24px;
   font-weight: 600;
+  margin-left: 15%;
 }
 
 .founder-para1 {
@@ -293,6 +295,7 @@
   font-weight: 500;
   color: var(--secondary-color);
   width: 70%;
+  text-align: justify;
 }
 
 @media screen and (min-width: 1650px) {
@@ -316,6 +319,7 @@
   }
   .founder-para1{
     font-size: 20px;
+    text-align: justify;
   }
 }
 
@@ -644,6 +648,7 @@
   font-weight: 400;
   opacity: 0;
   transition: opacity 1.2s ease-out;
+  text-align: justify;
 }
 
 /* Trigger animations when in view */

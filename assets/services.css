@@ -76,38 +76,42 @@
 }
 
 
-.service-heading1{
+.service-heading1 {
   font-size: 40px;
   font-weight: 900;
   font-family: var(--font-family);
   text-transform: uppercase;
   color: var(--primary-color);
-  text-align:center;
+  text-align: center;
   margin-top: 1%;
   margin-bottom: 1%;
 }
+
 /* service about particular section */
-.service-section-aling{
+.service-section-aling {
   display: flex;
   align-items: center;
 }
-.service-heading{
+
+.service-heading {
   font-size: 30px;
   font-weight: 600;
   font-family: var(--font-family);
   text-transform: uppercase;
   color: var(--primary-color);
-  text-align:left;
+  text-align: left;
   margin-bottom: 10px;
 }
-.cfo-para{
+
+.cfo-para {
   font-family: var(--font-family);
   font-size: 16px;
   font-weight: 500;
-  width:100%;
+  width: 100%;
   text-align: justify;
   color: var(--secondary-color);
 }
+
 .list-item2 {
   font-family: var(--font-family);
   font-size: 16px;
@@ -115,16 +119,22 @@
   font-weight: 500;
   width: 85%;
   padding-bottom: 20px;
-  padding-left: 30px; /* Increase padding to make room for the larger image */
+  padding-left: 30px;
+  /* Increase padding to make room for the larger image */
   background-image: url(../assets/images/checkmark.png);
-  background-size: 20px 20px; /* Image size set to 30px by 30px */
+  background-size: 20px 20px;
+  /* Image size set to 30px by 30px */
   background-repeat: no-repeat;
-  background-position: 0 10%; /* Align the image to the left and center vertically */
-  line-height: 30px; /* Match the line-height to the image size to vertically align */
-  list-style-type: none; /* Remove default list style */
+  background-position: 0 10%;
+  /* Align the image to the left and center vertically */
+  line-height: 30px;
+  /* Match the line-height to the image size to vertically align */
+  list-style-type: none;
+  /* Remove default list style */
   margin-left: 5px;
 }
-.service-con-align{
+
+.service-con-align {
   display: flex;
   align-items: center;
   width: 80%;
@@ -133,26 +143,30 @@
   border: 2px solid #ffffff;
   margin-bottom: 20px;
 }
-.service-img{
+
+.service-img {
   width: 50%;
-  height:300px;
+  height: 300px;
 }
 
-.list-img-align{
+.list-img-align {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 2%;
 }
+
 @media screen and (min-width:1600px) {
-  .service-img{
+  .service-img {
     width: 50%;
-    height:350px;
+    height: 350px;
   }
-  .list-img-align{
+
+  .list-img-align {
     justify-content: space-between;
   }
 }
+
 /* section4 */
 .unique-cards-align {
   display: flex;
@@ -386,19 +400,17 @@
 
 /* section6 */
 .logo-card {
-  background-color: white;
-  width: 200px;
-  height: 200px;
+  align-items: center;
+  width: 100%;
+  height:100%;
   border-radius: 15px;
   margin: 20px;
+  background-color:white;
 }
 
-.logo {
-  color: var(--primary-color);
-  font-family: var(--font-family);
-  text-align: center;
-  font-size: 32px;
-  font-weight: 600;
+.logo-card .logo {
+  width: 250px;
+  height:150px;
 }
 
 @media screen and (min-width:1650px) {
