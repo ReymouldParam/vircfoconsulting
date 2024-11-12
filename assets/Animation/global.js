@@ -68,3 +68,14 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("One or more elements with the specified IDs were not found.");
     }
 });
+// navbar effect 
+// Navbar scroll effect
+window.addEventListener('scroll', function () {
+    var header = document.querySelector('.header');
+
+    if (window.scrollY > 0) {
+        header.classList.add('fullwidth');
+    } else {
+        header.classList.remove('fullwidth');
+    }
+});

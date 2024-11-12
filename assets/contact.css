@@ -404,6 +404,11 @@
 .contact-btn {
   position: relative; /* Ensure these elements appear above the gradient */
   z-index: 2;
+  cursor: pointer;
+  transition: all;
+}
+.contact-btn:hover{
+  background-color: var(--primary-color);
 }
 /* large screens */
 @media screen and (min-width:1650px){
