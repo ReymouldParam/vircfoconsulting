@@ -1,0 +1,114 @@
+/* General Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --primary-color: #006838;
+    --secondary-color: #ffffff;
+    --font-family: "Inter", sans-serif;
+  }
+  
+  /* Body Styling */
+  body {
+    background-color: rgba(14, 15, 36, 1);
+    color: var(--secondary-color);
+    font-family: var(--font-family);
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    padding-top: 90px; /* Padding for fixed header */
+  }
+  
+  @media screen and (max-width: 768px) {
+    body {
+      padding-top: 60px; /* Adjust padding for smaller devices */
+    }
+  }
+  
+  /* Fixed Header */
+  .fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 15px 0;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .fixed-header h1 {
+    font-size: 20px;
+  }
+  
+  /* Policy Container */
+  .policy-container {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 40px 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Section Headers */
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .header h1 {
+    font-size: 28px;
+    color: var(--primary-color);
+  }
+  
+  .header .subheader {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Content Sections */
+  .content h2 {
+    font-size: 20px;
+    color: var(--primary-color);
+    margin-top: 20px;
+  }
+  
+  .content p, .content ul {
+    margin: 10px 0;
+  }
+  
+  .content ul {
+    padding-left: 20px;
+    list-style: disc;
+  }
+  
+  .content ul li {
+    margin-bottom: 8px;
+  }
+  
+  /* Contact Info Section */
+  .contact-info {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  /* Footer Styling */
+  .footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 14px;
+    color: #777;
+    border-top: 1px solid #ccc;
+  }
+  

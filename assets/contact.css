@@ -5,12 +5,14 @@
   font-weight: 900;
   padding-top: 5%;
 }
+
 .form-arrange {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 3%;
 }
+
 .img-form-align {
   display: flex;
   width: 85%;
@@ -18,20 +20,23 @@
   justify-content: space-between;
   gap: 4%;
 }
+
 .label-field {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
+
 .label-name {
   color: var(--secondary-color);
   font-size: 16px;
   font-family: var(--font-family);
   font-weight: 600;
 }
+
 .input-field-name {
-  width: 275px;
+  width: 398px;
   height: 40px;
   padding: 1%;
   border-radius: 10px;
@@ -46,8 +51,14 @@
   background-color: transparent;
 }
 
+@media screen and (min-width:1600px) {
+  .input-field-name {
+    width: 495px;
+  }
+}
+
 .input-field-area {
-  width: 100%;
+  width: 90%;
   height: 120px;
   padding: 1%;
   border-radius: 10px;
@@ -62,7 +73,7 @@
 }
 
 .input-field {
-  width: 100%;
+  width: 90%;
   height: 40px;
   padding: 1%;
   border-radius: 10px;
@@ -77,17 +88,19 @@
 }
 
 .name-email {
-  display: flex;
+  /* display: flex; */
   align-items: center;
-  gap: 10%;
-  justify-content: space-around;
+  gap: 5%;
+  justify-content: center;
 }
+
 .select-con {
   width: 102%;
   height: 50px;
   font-size: 20px;
   border-radius: 5px;
 }
+
 .drop-option {
   font-size: 16px;
   font-family: var(--font-family);
@@ -124,21 +137,25 @@
 }
 
 /* largers screens  */
-@media screen and (min-width:1650px){
-  .img-form-align{
+@media screen and (min-width:1650px) {
+  .img-form-align {
     width: 95%;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 10%;
   }
-  .label-name{
+
+  .label-name {
     font-size: 20px;
   }
 }
+
 /* smaller screen */
 @media screen and (min-width: 1040px) and (max-width: 1280px) {
   .form-heading {
     padding-top: 2%;
     padding-bottom: 2%;
   }
+
   .img-form-align {
     flex-direction: row;
     justify-content: space-between;
@@ -185,7 +202,8 @@
 
   /* Adjust the image size if needed */
   .contact-img {
-    width: 450px; /* Adjust this percentage as needed */
+    width: 450px;
+    /* Adjust this percentage as needed */
     height: 620px;
   }
 }
@@ -200,15 +218,21 @@
   }
 
   .img-form-align {
-    flex-direction: column; /* Stack image and form vertically */
-    align-items: center; /* Center align items */
-    width: 90%; /* Adjust width for mobile */
-    gap: 2%; /* Reduce gap for mobile */
+    flex-direction: column;
+    /* Stack image and form vertically */
+    align-items: center;
+    /* Center align items */
+    width: 90%;
+    /* Adjust width for mobile */
+    gap: 2%;
+    /* Reduce gap for mobile */
   }
 
   .form-arrange {
-    width: 100%; /* Full width for form */
-    align-items: center; /* Center align form elements */
+    width: 100%;
+    /* Full width for form */
+    align-items: center;
+    /* Center align form elements */
   }
 
   .form-heading {
@@ -222,28 +246,38 @@
   .input-field-name,
   .input-field,
   .input-field-area {
-    width: 100%; /* Full width inputs */
-    font-size: 14px; /* Smaller font size */
+    width: 100%;
+    /* Full width inputs */
+    font-size: 14px;
+    /* Smaller font size */
   }
 
   .input-field-name {
-    max-width: 100%; /* Ensure no overflow */
+    max-width: 100%;
+    /* Ensure no overflow */
   }
 
   .input-field-area {
-    height: 100px; /* Reduced height for mobile */
+    height: 100px;
+    /* Reduced height for mobile */
   }
 
   .select-con {
-    width: 100%; /* Full width select input */
-    height: 40px; /* Adjust height */
-    font-size: 14px; /* Smaller font size */
+    width: 100%;
+    /* Full width select input */
+    height: 40px;
+    /* Adjust height */
+    font-size: 14px;
+    /* Smaller font size */
   }
 
   .name-email {
-    gap: 10px; /* Adjust gap */
-    align-items: stretch; /* Stretch items to fit width */
+    gap: 10px;
+    /* Adjust gap */
+    align-items: stretch;
+    /* Stretch items to fit width */
   }
+
   .tandc {
     display: flex;
     flex-direction: column;
@@ -252,25 +286,34 @@
     /* align-items: stretch; */
     padding-top: 10px;
   }
+
   .check-box-head {
-    font-size: 14px; /* Smaller font size */
-    padding-left: 0; /* Remove left padding */
-    text-align: center; /* Center align text */
+    font-size: 14px;
+    /* Smaller font size */
+    padding-left: 0;
+    /* Remove left padding */
+    text-align: center;
+    /* Center align text */
   }
 
   .contact-btn {
-    width: 100%; /* Full width button */
-    font-size: 14px; /* Smaller font size */
+    width: 100%;
+    /* Full width button */
+    font-size: 14px;
+    /* Smaller font size */
     padding: 10px;
-    margin-bottom: 30px; /* Adequate padding */
+    margin-bottom: 30px;
+    /* Adequate padding */
   }
 
   .label-field {
-    width: 100%; /* Full width for label fields */
+    width: 100%;
+    /* Full width for label fields */
   }
 
   .label-name {
-    font-size: 14px; /* Smaller font size */
+    font-size: 14px;
+    /* Smaller font size */
   }
 }
 
@@ -283,6 +326,7 @@
   padding-top: 20px;
   text-align: center;
 }
+
 .map-container {
   display: flex;
   flex-direction: column;
@@ -290,7 +334,8 @@
   align-items: center;
   background-image: url(./images/mav-bg.png);
   animation: gradientAnimation 5s ease-out infinite;
-  height: auto; /* This will make the container full height of the viewport */
+  height: auto;
+  /* This will make the container full height of the viewport */
 }
 
 .map-styles {
@@ -304,27 +349,35 @@
 }
 
 /* larger screens */
-@media screen and (min-width:1650px){
-  .map-styles{
+@media screen and (min-width:1650px) {
+  .map-styles {
     width: 84%;
   }
 }
+
 /* Mobile View Styles */
 @media only screen and (max-width: 767px) {
   .map-heading {
-    font-size: 24px; /* Smaller font size for mobile */
-    padding-top: 10px; /* Adjust padding for mobile */
+    font-size: 24px;
+    /* Smaller font size for mobile */
+    padding-top: 10px;
+    /* Adjust padding for mobile */
   }
 
   .map-container {
-    background-image: url(./images/mav-bg.png); /* Ensure background image fits well */
-    padding: 10px; /* Add padding to avoid content touching edges */
+    background-image: url(./images/mav-bg.png);
+    /* Ensure background image fits well */
+    padding: 10px;
+    /* Add padding to avoid content touching edges */
   }
 
   .map-styles {
-    width: 100%; /* Full width for mobile */
-    height: 300px; /* Reduced height for mobile */
-    margin: 2% 0; /* Adjust margin for better spacing */
+    width: 100%;
+    /* Full width for mobile */
+    height: 300px;
+    /* Reduced height for mobile */
+    margin: 2% 0;
+    /* Adjust margin for better spacing */
   }
 }
 
@@ -333,9 +386,11 @@
   0% {
     background-position: 0% 0%;
   }
+
   50% {
     background-position: 100% 0%;
   }
+
   100% {
     background-position: 0% 0%;
   }
@@ -344,25 +399,21 @@
 /* Define the animation for the gradient color change */
 @keyframes gradientAnimation {
   0% {
-    background: linear-gradient(
-      135deg,
-      rgba(14, 13, 35, 0.96) 0%,
-      rgba(0, 104, 56, 0.7) 100%
-    );
+    background: linear-gradient(135deg,
+        rgba(14, 13, 35, 0.96) 0%,
+        rgba(0, 104, 56, 0.7) 100%);
   }
+
   50% {
-    background: linear-gradient(
-      135deg,
-      rgba(0, 104, 56, 0.7) 0%,
-      rgba(14, 13, 50, 0.96) 100%
-    );
+    background: linear-gradient(135deg,
+        rgba(0, 104, 56, 0.7) 0%,
+        rgba(14, 13, 50, 0.96) 100%);
   }
+
   100% {
-    background: linear-gradient(
-      135deg,
-      rgba(14, 13, 50, 0.96) 0%,
-      rgba(0, 104, 56, 0.8) 100%
-    );
+    background: linear-gradient(135deg,
+        rgba(14, 13, 50, 0.96) 0%,
+        rgba(0, 104, 56, 0.8) 100%);
   }
 }
 
@@ -377,7 +428,8 @@
   background-position-y: 30px !important;
   background-size: 25% auto;
   background-repeat: no-repeat;
-  background-position: center; /* Corrected from 'cente' to 'center' */
+  background-position: center;
+  /* Corrected from 'cente' to 'center' */
   animation: backgroundImageAnimation 2.5s ease-out infinite;
   padding-bottom: 4%;
   position: relative;
@@ -392,51 +444,72 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: transparent; /* Initially transparent for troubleshooting */
+  background: transparent;
+  /* Initially transparent for troubleshooting */
   animation: gradientAnimation 5s linear infinite;
-  z-index: 1; /* Ensure it overlays the background image */
-  pointer-events: none; /* Allows interaction with elements below */
+  z-index: 1;
+  /* Ensure it overlays the background image */
+  pointer-events: none;
+  /* Allows interaction with elements below */
 }
+
 .map-heading {
   margin: auto;
   z-index: 2;
 }
+
 .contact-btn {
-  position: relative; /* Ensure these elements appear above the gradient */
+  position: relative;
+  /* Ensure these elements appear above the gradient */
   z-index: 2;
   cursor: pointer;
   transition: all;
 }
-.contact-btn:hover{
+
+.contact-btn:hover {
   background-color: var(--primary-color);
 }
+
 /* large screens */
-@media screen and (min-width:1650px){
-  .contact-btn{
+@media screen and (min-width:1650px) {
+  .contact-btn {
     font-size: 20px;
   }
 }
+
 /* Mobile View Styles */
 @media only screen and (max-width: 767px) {
   .get-in-con {
-    height: 20vh; /* Adjust height for better fitting on mobile */
-    padding: 20px 10px; /* Add padding for mobile */
-    background-size: 100% auto; /* Adjust background size for mobile */
+    height: 20vh;
+    /* Adjust height for better fitting on mobile */
+    padding: 20px 10px;
+    /* Add padding for mobile */
+    background-size: 100% auto;
+    /* Adjust background size for mobile */
   }
 
   .map-heading {
-    font-size: 20px; /* Scale down font size */
-    text-align: center; /* Center align heading */
-    margin-bottom: 20px; /* Add margin below heading */
+    font-size: 20px;
+    /* Scale down font size */
+    text-align: center;
+    /* Center align heading */
+    margin-bottom: 20px;
+    /* Add margin below heading */
   }
 
   .contact-btn2 {
-    width: 50%; /* Full width button */
-    font-size: 16px; /* Adjust font size for mobile */
-    padding: 10px; /* Ensure adequate padding */
-    border: solid white 1px; /* Ensure button border is visible */
-    border-radius: 10px; /* Consistent border radius */
-    margin: 18px; /* Remove margin for mobile */
+    width: 50%;
+    /* Full width button */
+    font-size: 16px;
+    /* Adjust font size for mobile */
+    padding: 10px;
+    /* Ensure adequate padding */
+    border: solid white 1px;
+    /* Ensure button border is visible */
+    border-radius: 10px;
+    /* Consistent border radius */
+    margin: 18px;
+    /* Remove margin for mobile */
   }
 }
 
@@ -507,11 +580,12 @@
 }
 
 /* mobile screen */
-@media screen and (max-width:768px){
-  .popup{
+@media screen and (max-width:768px) {
+  .popup {
     width: 84%;
   }
-  .pop-up-heading{
+
+  .pop-up-heading {
     font-size: 24px;
   }
 }

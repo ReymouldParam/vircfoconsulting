@@ -171,7 +171,7 @@
 @media screen and (min-width:1600px) {
   .service-img {
     width: 50%;
-    height: 350px;
+    height:400px;
   }
 
   .list-img-align {
@@ -194,7 +194,7 @@
 .unique-card1 {
   width: 200px;
   height: 250px;
-  background-color: white;
+  background-color: var(--primary-color);
   border-radius: 15px;
   margin: 1%;
   display: flex;
@@ -207,7 +207,7 @@
 .unique-card2 {
   width: 200px;
   height: 250px;
-  background-color: white;
+  background-color: var(--primary-color);
   border-radius: 15px;
   margin: 1%;
   display: flex;
@@ -221,7 +221,7 @@
 .unique-card3 {
   width: 200px;
   height: 250px;
-  background-color: white;
+  background-color: var(--primary-color);
   border-radius: 15px;
   margin: 1%;
   display: flex;
@@ -234,7 +234,7 @@
 .unique-card4 {
   width: 200px;
   height: 250px;
-  background-color: white;
+  background-color: var(--primary-color);
   border-radius: 15px;
   margin: 1%;
   display: flex;
@@ -248,7 +248,7 @@
 .unique-card5 {
   width: 200px;
   height: 250px;
-  background-color: white;
+  background-color: var(--primary-color);
   border-radius: 15px;
   margin: 1%;
   display: flex;
@@ -272,9 +272,10 @@
 .unique-card-head {
   font-family: var(--font-family);
   font-size: 24px;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-weight: 600;
   text-align: center;
+  width: 50%;
 }
 
 

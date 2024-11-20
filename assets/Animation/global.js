@@ -11,23 +11,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 
-// mobiel nav-items
-
+// mobile navbar
 document.addEventListener('DOMContentLoaded', function () {
     const toggleButton = document.getElementById('toggleButton');
     const navContainer = document.getElementById('navContainer');
-
+  
     toggleButton.addEventListener('click', function () {
-        navContainer.classList.toggle('show');
-        toggleButton.classList.toggle('open');
-
-        if (navContainer.classList.contains('show')) {
-            navContainer.style.maxHeight = navContainer.scrollHeight + 'px'; // Expands the menu
-        } else {
-            navContainer.style.maxHeight = null; // Collapses the menu
-        }
+      navContainer.classList.toggle('show'); // Show/hide the menu
+      toggleButton.classList.toggle('open'); // Animate the toggle button
     });
-});
+  });
+  
 
 
 // pops card
@@ -47,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (popupMessage && popupHeading && popupPara && closePopup) {
         if (flagValue === 'true') {
             popupHeading.innerHTML = "EMAIL SENT SUCCESSFULLY";
-            popupPara.innerHTML = "Thanks for Your Interest"; 
+            popupPara.innerHTML = "Thanks for Your Interest";
             popupMessage.style.display = "block";
         } else if (flagValue === 'false') {
             popupHeading.innerHTML = "EMAIL NOT SENT";

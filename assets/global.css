@@ -139,19 +139,34 @@ a {
   border-radius: 2px;
 }
 
+.image-con-about-us {
+  width: 70%;
+  height: 100%;
+}
+
+.about-us-discription {
+  width: 400px;
+  height: 250px;
+  border-radius: 15px;
+  /* border: solid 0.1px white; */
+
+}
+
+@media screen and (min-width:1600px) {
+  .about-us-discription {
+    width: 85%;
+  }
+}
+
+
 /* Responsive styles */
 @media (max-width: 768px) {
-  body {
-    padding-top: 50px;
-    margin: 0;
-    overflow-x: hidden;
-    /* Prevent horizontal scrolling */
-  }
 
   .global-section {
-    /* width: 100%; */
-    /* margin-left: 3px; */
-    /* height: 100%; */
+
+    width: 100%;
+    margin-left: 3px;
+    height: 100%;
   }
 
   .logo-container {
@@ -242,6 +257,7 @@ a {
     border-color: var(--primary-color);
   }
 }
+
 
 /* footer */
 /* section6 */
