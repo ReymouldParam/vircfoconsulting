@@ -33,6 +33,7 @@
   font-size: 16px;
   font-family: var(--font-family);
   font-weight: 600;
+  padding-bottom:5px;
 }
 
 .input-field-name {
@@ -49,6 +50,7 @@
   font-weight: 600;
   background-color: transparent;
   background-color: transparent;
+  margin-bottom:10px;
 }
 
 @media screen and (min-width:1600px) {
@@ -313,6 +315,7 @@
 
   .label-name {
     font-size: 14px;
+    padding-bottom:8px;
     /* Smaller font size */
   }
 }
