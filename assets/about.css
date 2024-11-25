@@ -6,19 +6,18 @@
   position: relative;
   overflow: hidden;
 }
+
 .about-us {
   font-family: var(--font-family);
   color: var(--secondary-color);
   font-weight: 900;
-  font-size: 64px;
+  font-size: 40px;
 }
 
 .section-head-con {
-  background: linear-gradient(
-    135deg,
-    rgba(14, 13, 35, 0.96),
-    rgba(0, 104, 56, 0.7)
-  );
+  background: linear-gradient(135deg,
+      rgba(14, 13, 35, 0.96),
+      rgba(0, 104, 56, 0.7));
   width: 60%;
   height: 70vh;
   display: flex;
@@ -26,17 +25,22 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: -100%; /* Start hidden to the left */
-  animation: slideIn 1.5s forwards ease-out; /* Trigger the animation */
+  left: -100%;
+  /* Start hidden to the left */
+  animation: slideIn 1.5s forwards ease-out;
+  /* Trigger the animation */
 }
 
 /* Animation for sliding the container in */
 @keyframes slideIn {
   0% {
-    left: -100%; /* Hidden */
+    left: -100%;
+    /* Hidden */
   }
+
   100% {
-    left: 0; /* Fully visible */
+    left: 0;
+    /* Fully visible */
   }
 }
 
@@ -45,28 +49,36 @@
     background-image: url(./images/about-sec1-bg.png);
     background-size: cover;
     height: 30vh;
-    width: 100vw; /* Ensure the section takes full screen width */
-    margin: 0; /* Remove any margins */
+    width: 100vw;
+    /* Ensure the section takes full screen width */
+    margin: 0;
+    /* Remove any margins */
   }
 
   .about-us {
-    font-size: 20px; /* Decrease the font size */
+    font-size: 20px;
+    /* Decrease the font size */
   }
 
   .section-head-con {
     width: 60%;
     height: 30vh;
-    left: -100%; /* Start hidden to the left */
-    animation: slideInMobile 1s forwards ease-out; /* Adjust animation timing */
+    left: -100%;
+    /* Start hidden to the left */
+    animation: slideInMobile 1s forwards ease-out;
+    /* Adjust animation timing */
   }
 
   /* Mobile-specific animation for sliding the container in */
   @keyframes slideInMobile {
     0% {
-      left: -100%; /* Hidden */
+      left: -100%;
+      /* Hidden */
     }
+
     100% {
-      left: 0; /* Fully visible */
+      left: 0;
+      /* Fully visible */
     }
   }
 }
@@ -79,6 +91,7 @@
   padding-top: 4%;
   padding-bottom: 2%;
 }
+
 .section2-h3 {
   text-align: center;
   font-family: var(--font-family);
@@ -89,16 +102,19 @@
 
 .line1 svg path:last-child,
 .line2 svg path:last-child {
-  stroke-dasharray: 390; /* This matches the length of the path */
+  stroke-dasharray: 390;
+  /* This matches the length of the path */
 }
 
 .line1 svg path:last-child {
-  stroke-dashoffset: 390; /* Initially hide the left line */
+  stroke-dashoffset: 390;
+  /* Initially hide the left line */
   animation: growLineRight 2s ease-in-out forwards;
 }
 
 .line2 svg path:last-child {
-  stroke-dashoffset: -390; /* Start with the right line fully drawn */
+  stroke-dashoffset: -390;
+  /* Start with the right line fully drawn */
   animation: growLineLeft 2s ease-in-out forwards;
 }
 
@@ -137,36 +153,47 @@
   .section2 {
     padding-top: 3%;
     padding-bottom: 2%;
-    justify-content: center; /* Center the elements while maintaining layout */
+    justify-content: center;
+    /* Center the elements while maintaining layout */
     margin: 0;
-    width: 100vw; /* Ensure the section takes full screen width */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 100vw;
+    /* Ensure the section takes full screen width */
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
   }
 
   .section2-h3 {
-    font-size: 16px; /* Slightly reduce font size */
-    width: 90%; /* Ensure the text container doesn't overflow */
-    margin: 0 auto; /* Center the text */
+    font-size: 16px;
+    /* Slightly reduce font size */
+    width: 90%;
+    /* Ensure the text container doesn't overflow */
+    margin: 0 auto;
+    /* Center the text */
   }
 
   .line1 svg,
   .line2 svg {
-    width: 100%; /* Make sure SVGs are responsive */
+    width: 100%;
+    /* Make sure SVGs are responsive */
     height: 50px;
-    margin-left: 10px; /* Remove left margin for better alignment */
+    margin-left: 10px;
+    /* Remove left margin for better alignment */
   }
 
   .line1 svg path:last-child,
   .line2 svg path:last-child {
-    stroke-dasharray: 312; /* Adjust stroke-dasharray to match new width */
+    stroke-dasharray: 312;
+    /* Adjust stroke-dasharray to match new width */
   }
 
   .line1 svg path:last-child {
-    stroke-dashoffset: 312; /* Initially hide the line */
+    stroke-dashoffset: 312;
+    /* Initially hide the line */
   }
 
   .line2 svg path:last-child {
-    stroke-dashoffset: -312; /* Start with the line fully drawn */
+    stroke-dashoffset: -312;
+    /* Start with the line fully drawn */
   }
 }
 
@@ -186,28 +213,28 @@
   }
 }
 
-.found-paras-align > div,
-.para-founder-img > div {
+.found-paras-align>div,
+.para-founder-img>div {
   opacity: 0;
   transform: translateY(50px);
 }
 
-.found-paras-align > div:nth-child(1) {
+.found-paras-align>div:nth-child(1) {
   animation: fadeInTextLeft 1.2s ease-out forwards;
   animation-delay: 1s;
 }
 
-.found-paras-align > div:nth-child(2) {
+.found-paras-align>div:nth-child(2) {
   animation: fadeInTextRight 1.2s ease-out forwards;
   animation-delay: 1.2s;
 }
 
-.para-founder-img > div:nth-child(1) {
+.para-founder-img>div:nth-child(1) {
   animation: fadeInTextLeft 1.2s ease-out forwards;
   animation-delay: 1.4s;
 }
 
-.para-founder-img > div:nth-child(2) {
+.para-founder-img>div:nth-child(2) {
   animation: fadeInTextLeft 1.2s ease-out forwards;
   animation-delay: 1.6s;
 }
@@ -251,7 +278,7 @@
   text-align: center;
   font-family: var(--font-family);
   color: var(--primary-color);
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 900;
 }
 
@@ -277,6 +304,7 @@
   font-size: 16px;
   font-weight: 500;
   color: var(--secondary-color);
+  text-align: justify;
 }
 
 .quote-h3 {
@@ -285,6 +313,7 @@
   color: var(--primary-color);
   font-size: 24px;
   font-weight: 600;
+  margin-left: 15%;
 }
 
 .founder-para1 {
@@ -293,6 +322,7 @@
   font-weight: 500;
   color: var(--secondary-color);
   width: 70%;
+  text-align: justify;
 }
 
 @media screen and (min-width: 1650px) {
@@ -304,6 +334,7 @@
     padding-top: 1%;
     padding-bottom: 2%;
   }
+
   .para-founder-img {
     display: flex;
     justify-content: space-around;
@@ -311,23 +342,31 @@
     width: 84%;
     margin: auto;
   }
-  .section3-para{
+
+  .section3-para {
     font-size: 20px;
   }
-  .founder-para1{
+
+  .founder-para1 {
     font-size: 20px;
+    text-align: justify;
   }
 }
 
 /* Mobile View */
 @media only screen and (max-width: 768px) {
   .section3 {
-    opacity: 1; /* Ensure it's visible on mobile */
-    transform: none; /* Remove the vertical translation */
-    animation: none; /* Remove the animation for simplicity */
-    width: 100vw; /* Ensure the section takes full screen width */
+    opacity: 1;
+    /* Ensure it's visible on mobile */
+    transform: none;
+    /* Remove the vertical translation */
+    animation: none;
+    /* Remove the animation for simplicity */
+    width: 100vw;
+    /* Ensure the section takes full screen width */
     margin: 0;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
   }
 
   .section3-h3 {
@@ -338,29 +377,38 @@
   }
 
   .found-paras-align {
-    flex-direction: column; /* Stack paragraphs vertically */
-    align-items: center; /* Center align content */
+    flex-direction: column;
+    /* Stack paragraphs vertically */
+    align-items: center;
+    /* Center align content */
     padding-top: 2%;
     padding-bottom: 2%;
-    width: 90%; /* Ensure full-width alignment on mobile */
+    width: 90%;
+    /* Ensure full-width alignment on mobile */
     margin: auto;
   }
 
   .para-founder-img {
-    flex-direction: column; /* Stack image and text vertically */
-    align-items: center; /* Center align content */
+    flex-direction: column;
+    /* Stack image and text vertically */
+    align-items: center;
+    /* Center align content */
     padding-top: 2%;
     padding-bottom: 2%;
-    width: 90%; /* Ensure full-width alignment on mobile */
+    width: 90%;
+    /* Ensure full-width alignment on mobile */
     margin: auto;
   }
 
   .section3-para,
   .quote-h3,
   .founder-para1 {
-    font-size: 14px; /* Reduce font size for better mobile readability */
-    text-align: center; /* Center-align text */
-    width: 90%; /* Adjust width for better alignment */
+    font-size: 14px;
+    /* Reduce font size for better mobile readability */
+    text-align: center;
+    /* Center-align text */
+    width: 90%;
+    /* Adjust width for better alignment */
     margin: auto;
   }
 
@@ -373,11 +421,16 @@
   }
 
   .founder {
-    width: 100%; /* Make image full width */
-    max-width: 300px; /* Limit the maximum width */
-    height: auto; /* Maintain aspect ratio */
-    padding-bottom: 20px; /* Adjust bottom padding */
-    margin: auto; /* Center the image on the screen */
+    width: 100%;
+    /* Make image full width */
+    max-width: 300px;
+    /* Limit the maximum width */
+    height: auto;
+    /* Maintain aspect ratio */
+    padding-bottom: 20px;
+    /* Adjust bottom padding */
+    margin: auto;
+    /* Center the image on the screen */
   }
 }
 
@@ -385,57 +438,66 @@
 /* Initially hide section4 */
 .section4 {
   opacity: 0;
-  transform: translateY(
-    50px
-  ); /* Move it slightly down to create an entrance effect */
-  transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* Increased duration for slower animation */
+  transform: translateY(50px);
+  /* Move it slightly down to create an entrance effect */
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+  /* Increased duration for slower animation */
 }
 
 /* When the animate class is added, show the section and animate the cards */
 .section4.animate {
   opacity: 1;
-  transform: translateY(0); /* Move it to its final position */
+  transform: translateY(0);
+  /* Move it to its final position */
 }
 
 /* Define keyframes for the 3D zoom-in effect for cards */
 @keyframes zoomInFromInside {
   0% {
-    transform: perspective(1000px) scale(1.5) rotateX(15deg) rotateY(15deg)
-      translateZ(-100px); /* Start from inside */
+    transform: perspective(1000px) scale(1.5) rotateX(15deg) rotateY(15deg) translateZ(-100px);
+    /* Start from inside */
     opacity: 0;
   }
+
   100% {
-    transform: perspective(1000px) scale(1) rotateX(0) rotateY(0) translateZ(0); /* End at normal scale and position */
+    transform: perspective(1000px) scale(1) rotateX(0) rotateY(0) translateZ(0);
+    /* End at normal scale and position */
     opacity: 1;
   }
 }
 
 /* Apply animation to ethical cards when section has the animate class */
 .section4.animate .ethical-card {
-  animation: zoomInFromInside 2s ease-out forwards; /* Increased duration for slower animation */
+  animation: zoomInFromInside 2s ease-out forwards;
+  /* Increased duration for slower animation */
 }
 
 /* Optional: Add a slight delay to each card for a staggered effect */
 .section4.animate .ethical-card:nth-child(1) {
   animation-delay: 0.1s;
 }
+
 .section4.animate .ethical-card:nth-child(2) {
   animation-delay: 0.2s;
 }
+
 .section4.animate .ethical-card:nth-child(3) {
   animation-delay: 0.3s;
 }
+
 .section4.animate .ethical-card:nth-child(4) {
   animation-delay: 0.4s;
 }
+
 .section4.animate .ethical-card:nth-child(5) {
   animation-delay: 0.5s;
 }
 
 .ethical-img {
-  width: 100px;
+  width: 80px;
   height: 70px;
 }
+
 .cards-align {
   display: flex;
   align-items: center;
@@ -458,15 +520,16 @@
   border-radius: 20px;
   background-color: #ffffff;
   margin: 0.8%;
-  transform: perspective(1000px) scale(1.5) rotateX(15deg) rotateY(15deg)
-    translateZ(-100px); /* Start from inside */
+  transform: perspective(1000px) scale(1.5) rotateX(15deg) rotateY(15deg) translateZ(-100px);
+  /* Start from inside */
   opacity: 0;
   transition: transform 1s ease-out, opacity 1s ease-out;
 }
 
 /* Add this class when the section is in view */
 .animate .ethical-card {
-  transform: perspective(1000px) scale(1) rotateX(0) rotateY(0) translateZ(0); /* End at normal scale and position */
+  transform: perspective(1000px) scale(1) rotateX(0) rotateY(0) translateZ(0);
+  /* End at normal scale and position */
   opacity: 1;
 }
 
@@ -474,15 +537,19 @@
 .animate .ethical-card:nth-child(1) {
   transition-delay: 0.1s;
 }
+
 .animate .ethical-card:nth-child(2) {
   transition-delay: 0.2s;
 }
+
 .animate .ethical-card:nth-child(3) {
   transition-delay: 0.3s;
 }
+
 .animate .ethical-card:nth-child(4) {
   transition-delay: 0.4s;
 }
+
 .animate .ethical-card:nth-child(5) {
   transition-delay: 0.5s;
 }
@@ -494,6 +561,7 @@
   font-size: 24px;
   font-weight: 600;
 }
+
 .ethical-para {
   text-align: left;
   font-family: var(--font-family);
@@ -513,64 +581,90 @@
     justify-content: center;
     flex-wrap: wrap;
   }
+
   .ethical-card {
     width: 350px;
     height: 300px;
     margin: 2%;
   }
-  .ethical-para{
+
+  .ethical-para {
     font-size: 20px;
   }
 }
+
 /* Mobile View */
 @media only screen and (max-width: 768px) {
   .section4 {
-    opacity: 1; /* Ensure it's visible on mobile */
-    transform: none; /* Remove the vertical translation */
-    transition: none; /* Remove the transition for simplicity */
+    opacity: 1;
+    /* Ensure it's visible on mobile */
+    transform: none;
+    /* Remove the vertical translation */
+    transition: none;
+    /* Remove the transition for simplicity */
     /* Adjust padding for better spacing on mobile */
   }
 
   .service-head {
-    font-size: 24px; /* Reduce font size for mobile */
-    text-align: center; /* Center align text */
+    font-size: 24px;
+    /* Reduce font size for mobile */
+    text-align: center;
+    /* Center align text */
   }
 
   .service-para {
-    font-size: 16px; /* Reduce font size */
-    text-align: center; /* Center align text */
-    margin: 10px 0; /* Adjust margin for better spacing */
+    font-size: 16px;
+    /* Reduce font size */
+    text-align: center;
+    /* Center align text */
+    margin: 10px 0;
+    /* Adjust margin for better spacing */
   }
 
   .cards-align {
-    flex-direction: column; /* Stack cards vertically */
+    flex-direction: column;
+    /* Stack cards vertically */
   }
 
   .ethical-card {
-    width: 90%; /* Reduce width */
-    max-width: 350px; /* Limit maximum width */
-    height: auto; /* Adjust height automatically */
-    margin: 10px 0; /* Add margin for spacing */
-    padding: 10px; /* Adjust padding */
-    transform: none; /* Remove 3D effect */
-    opacity: 1; /* Ensure visibility */
-    transition: none; /* Remove transition */
+    width: 90%;
+    /* Reduce width */
+    max-width: 350px;
+    /* Limit maximum width */
+    height: auto;
+    /* Adjust height automatically */
+    margin: 10px 0;
+    /* Add margin for spacing */
+    padding: 10px;
+    /* Adjust padding */
+    transform: none;
+    /* Remove 3D effect */
+    opacity: 1;
+    /* Ensure visibility */
+    transition: none;
+    /* Remove transition */
     align-items: center;
   }
 
   .ethical-img {
-    width: 80px; /* Reduce image size */
-    height: 60px; /* Reduce image size */
+    width: 80px;
+    /* Reduce image size */
+    height: 60px;
+    /* Reduce image size */
   }
 
   .ethical-head {
-    font-size: 20px; /* Reduce font size */
-    text-align: center; /* Center align text */
+    font-size: 20px;
+    /* Reduce font size */
+    text-align: center;
+    /* Center align text */
   }
 
   .ethical-para {
-    font-size: 14px; /* Reduce font size */
-    text-align: center; /* Center align text */
+    font-size: 14px;
+    /* Reduce font size */
+    text-align: center;
+    /* Center align text */
   }
 }
 
@@ -607,8 +701,8 @@
 
 .mission-align {
   display: flex;
-  justify-content: space-around;
-  gap: 2%;
+  justify-content: center;
+  /* gap: 2%; */
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 1.4s ease-out, transform 1.4s ease-out;
@@ -626,6 +720,10 @@
   opacity: 0;
   transform: translateX(50px) rotateY(-10deg);
   transition: opacity 1.8s ease-out, transform 1.8s ease-out;
+  height: 250px;
+  width: 450px;
+  border-radius: 35px;
+
 }
 
 .our-mission {
@@ -644,6 +742,7 @@
   font-weight: 400;
   opacity: 0;
   transition: opacity 1.2s ease-out;
+  text-align: justify;
 }
 
 /* Trigger animations when in view */
@@ -666,54 +765,78 @@
   .our-con {
     width: 84%;
   }
-  .our-mission{
+
+  .our-mission {
     font-size: 24px;
   }
-  .our-para{
+
+  .our-para {
     font-size: 20px;
   }
 }
+
 /* Mobile View */
 @media only screen and (max-width: 768px) {
   .section5 {
     width: 100%;
   }
+
   .service-head {
-    font-size: 24px; /* Reduce font size */
-    padding-top: 15px; /* Adjust padding */
-    padding-bottom: 0; /* Adjust padding */
+    font-size: 24px;
+    /* Reduce font size */
+    padding-top: 15px;
+    /* Adjust padding */
+    padding-bottom: 0;
+    /* Adjust padding */
   }
 
   .service-para {
-    font-size: 14px; /* Reduce font size */
-    margin: 10px 0; /* Adjust margin */
+    font-size: 14px;
+    /* Reduce font size */
+    margin: 10px 0;
+    /* Adjust margin */
   }
 
   .our-con {
-    margin-top: 10px; /* Reduce top margin */
-    margin-bottom: 10px; /* Reduce bottom margin */
-    padding: 10px; /* Add padding for spacing */
+    margin-top: 10px;
+    /* Reduce top margin */
+    margin-bottom: 10px;
+    /* Reduce bottom margin */
+    padding: 10px;
+    /* Add padding for spacing */
   }
 
   .mission-align {
-    flex-direction: column; /* Stack vertically on mobile */
-    gap: 10px; /* Adjust gap */
-    text-align: center; /* Center align text */
+    flex-direction: column;
+    /* Stack vertically on mobile */
+    gap: 10px;
+    /* Adjust gap */
+    text-align: center;
+    /* Center align text */
   }
 
   .mission-text {
-    padding: 10px; /* Reduce padding */
-    transform: none; /* Remove transform */
-    opacity: 1; /* Ensure visibility */
-    text-align: center; /* Center align text */
+    padding: 10px;
+    /* Reduce padding */
+    transform: none;
+    /* Remove transform */
+    opacity: 1;
+    /* Ensure visibility */
+    text-align: center;
+    /* Center align text */
   }
 
   .mission-img {
-    width: 80%; /* Reduce image width */
-    height: auto; /* Maintain aspect ratio */
-    transform: none; /* Remove transform */
-    margin: 0 auto; /* Center align image */
-    opacity: 1; /* Ensure visibility */
+    width: 80%;
+    /* Reduce image width */
+    height: auto;
+    /* Maintain aspect ratio */
+    transform: none;
+    /* Remove transform */
+    margin: 0 auto;
+    /* Center align image */
+    opacity: 1;
+    /* Ensure visibility */
   }
 
   .our-mission {
@@ -722,6 +845,7 @@
   }
 
   .our-para {
-    font-size: 14px; /* Reduce font size */
+    font-size: 14px;
+    /* Reduce font size */
   }
 }

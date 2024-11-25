@@ -1,20 +1,22 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // Collect form data
     $name = $_POST['name'];
-    $number = $_POST['number'];
     $email = $_POST['email'];
+    $number = $_POST['number'];
     $organization = $_POST['organization'];
     $dropMessage = $_POST['dropMessage'];
-    $message = $_POST['require'];
 
-    $to = "reymould.social@gmail.com";
+    // Set email recipients
+    $to = "contact@vircfoconsulting.com";
     $subject = "Enquiry from website";
-    $body = "Name: $name\nEmail: $email\ndropMessage: $dropMessage\nNumber: $number\nOrganization: $organization\nMessage: $message";
+    $body = "Name: $name\nEmail: $email\nMessage: $dropMessage\nNumber: $number\nOrganization: $organization";
 
-    // Send email to both recipients
-    mail("naresh.narnapati@reymould.com", $subject, $body);
+    // Send email to primary recipient
+    $mailStatus = mail($to, $subject, $body);
 
-    if (mail($to, $subject, $body)) {
+    // Redirect based on success or failure
+    if ($mailStatus) {
         header("Location: contact.html?emailSuccess=true");
     } else {
         header("Location: contact.html?emailSuccess=false");
