@@ -11,7 +11,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 
- 
+// mobiel nav-items
+
 document.addEventListener('DOMContentLoaded', function () {
     const toggleButton = document.getElementById('toggleButton');
     const navContainer = document.getElementById('navContainer');
