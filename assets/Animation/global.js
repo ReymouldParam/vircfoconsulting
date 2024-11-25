@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Simulate a condition (replace with actual logic or URL parameters)
   const urlParams = new URLSearchParams(window.location.search);
-  const mailStatus = urlParams.get("mailStatus"); // e.g., mailStatus=true or mailStatus=false
+  const mailStatus = urlParams.get("emailSuccess"); // e.g., mailStatus=true or mailStatus=false
 
   if (popupMessage && popupHeading && popupOverlay) {
     if (mailStatus === "true") {

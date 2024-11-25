@@ -590,7 +590,7 @@ a {
   font-size: 16px;
   font-weight: bold;
   color: #fff;
-  background-color: #f56e09;
+  background-color: var(--primary-color);
   border: none;
   border-radius: 5px;
   cursor: pointer;
