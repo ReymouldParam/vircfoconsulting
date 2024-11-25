@@ -23,46 +23,33 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
   
-
-
-// pops card
-document.addEventListener("DOMContentLoaded", function () {
-    const urlParams = new URLSearchParams(window.location.search);
-    const flagValue = urlParams.get('emailSuccess');
+// pop cards
+  document.addEventListener("DOMContentLoaded", function () {
     const popupMessage = document.getElementById("popup-message");
+    const popupOverlay = document.getElementById("popup-overlay");
     const popupHeading = document.getElementById("popup-heading");
     const popupPara = document.getElementById("popup-para");
-    const closePopup = document.getElementById("close-popup");
-
-    console.log("popupMessage:", popupMessage);
-    console.log("popupHeading:", popupHeading);
-    console.log("popupPara:", popupPara);
-    console.log("closePopup:", closePopup);
-
-    if (popupMessage && popupHeading && popupPara && closePopup) {
-        if (flagValue === 'true') {
-            popupHeading.innerHTML = "EMAIL SENT SUCCESSFULLY";
-            popupPara.innerHTML = "Thanks for Your Interest";
-            popupMessage.style.display = "block";
-        } else if (flagValue === 'false') {
-            popupHeading.innerHTML = "EMAIL NOT SENT";
-            popupPara.innerHTML = "There was an error sending your message. Please try again later.";
-            popupMessage.style.display = "block";
-        }
-
-        closePopup.addEventListener("click", function () {
-            popupMessage.style.display = "none";
-        });
-
-        // Get the current URL without the query parameters
-        const baseUrl = window.location.href.split('?')[0];
-
-        // Replace the current state with a new state without the query parameters
-        history.replaceState(null, null, baseUrl);
-    } else {
-        console.error("One or more elements with the specified IDs were not found.");
-    }
-});
+    const closeBtn = document.getElementById("close-btn");
+  
+    // Simulate a condition to show the popup
+    popupHeading.innerText = "Sample Heading";
+    popupPara.innerText = "This is a sample message.";
+    popupMessage.style.display = "block";
+    popupOverlay.style.display = "block";
+  
+    // Close the popup
+    closeBtn.addEventListener("click", function () {
+      popupMessage.style.display = "none";
+      popupOverlay.style.display = "none";
+    });
+  
+    // Close when clicking overlay
+    popupOverlay.addEventListener("click", function () {
+      popupMessage.style.display = "none";
+      popupOverlay.style.display = "none";
+    });
+  });
+  
 // navbar effect 
 // Navbar scroll effect
 window.addEventListener('scroll', function () {

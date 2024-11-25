@@ -542,69 +542,63 @@ a {
   border: none;
 }
 
-/* pop-up */
-.popup {
+/* Popup Styles */
+#popup-message {
   display: none;
-  /* Initially hidden */
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 50%;
-  height: auto;
-  /* Adjust height to fit content */
-  background-color: #D51832;
-  /* Background color */
   transform: translate(-50%, -50%);
-  padding: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
   z-index: 1000;
+  width: 90%;
+  max-width: 400px;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
   text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
 }
 
-.pop-up-heading {
-  font-size: 30px;
-  /* Adjust font size for better fit */
-  font-family: var(--font-family);
-  font-weight: 400;
-  color: #ffffff;
-  letter-spacing: 2px;
+#popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+}
+
+#popup-heading {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
   margin-bottom: 10px;
-  /* Margin for spacing */
 }
 
-.pop-up-para {
-  color: #FFFFFF;
+#popup-para {
   font-size: 16px;
-  /* Adjust font size for better fit */
-  font-family: var(--font-family);
-  font-weight: normal;
+  color: #555;
   margin-bottom: 20px;
-  /* Margin for spacing */
 }
 
-.close-btn {
-  margin-top: 10px;
-  width: auto;
-  /* Adjust width for better fit */
-  height: auto;
-  font-family: var(--font-family);
-  font-size: 10px;
-  /* Adjust font size for better fit */
-  background-color: #1E1B25;
-  color: #FFFFFF;
-  border: none;
+#close-btn {
+  display: inline-block;
   padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #f56e09;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-  /* Transition for hover effect */
+  transition: background-color 0.3s;
 }
 
-.close-btn:hover {
-  background-color: #FFFFFF;
-  color: #1e1b25;
-  font-family: var(--font-family);
+#close-btn:hover {
+  background-color: #d55d07;
 }
 
 /* smaller laptops */
