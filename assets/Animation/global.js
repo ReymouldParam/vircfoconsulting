@@ -13,15 +13,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 // mobiel nav-items
 
-document.addEventListener('DOMContentLoaded', function () {
-    const toggleButton = document.getElementById('toggleButton');
-    const navContainer = document.getElementById('navContainer');
-  
-    toggleButton.addEventListener('click', function () {
-      navContainer.classList.toggle('show'); // Show/hide the menu
-      toggleButton.classList.toggle('open'); // Animate the toggle button
-    });
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleButton = document.querySelector(".toggle-button");
+  const navContainer = document.querySelector(".nav-container");
+
+  toggleButton.addEventListener("click", function () {
+    navContainer.classList.toggle("active");
+    toggleButton.classList.toggle("open");
   });
+});
   
 // pop cards
 document.addEventListener("DOMContentLoaded", function () {

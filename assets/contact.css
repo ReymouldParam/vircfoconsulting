@@ -37,7 +37,7 @@
 }
 
 .input-field-name {
-  width: 398px;
+  width: 365px;
   height: 40px;
   padding: 1%;
   border-radius: 10px;
@@ -186,7 +186,7 @@
   .input-field-area,
   .select-con {
     width: 100%;
-    max-width: 600px;
+    max-width: 400px;
   }
 
   .tandc {
@@ -254,10 +254,7 @@
     /* Smaller font size */
   }
 
-  .input-field-name {
-    max-width: 100%;
-    /* Ensure no overflow */
-  }
+ 
 
   .input-field-area {
     height: 100px;

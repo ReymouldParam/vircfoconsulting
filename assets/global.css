@@ -14,11 +14,6 @@ body {
   /* Add padding to prevent overlap with the fixed header */
 }
 
-@media screen and (max-width: 768px) {
-  body {
-    padding-top: 60px;
-  }
-}
 
 :root {
   --primary-color: #006838;
@@ -39,7 +34,6 @@ body {
   border-top-right-radius: 8px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  ;
   margin: auto;
   position: fixed;
   top: 0;
@@ -79,7 +73,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #000000;
+  color:#ffffff;
 }
 
 .list-items-align {
@@ -145,10 +139,11 @@ a {
 }
 
 .about-us-discription {
-  width: 400px;
-  height: 250px;
+  width: 300px;
+  height: 150px;
   border-radius: 15px;
   /* border: solid 0.1px white; */
+  margin-bottom: 10px;
 
 }
 
@@ -158,47 +153,48 @@ a {
   }
 }
 
-
-/* Responsive styles */
-@media (max-width: 768px) {
-
-  .global-section {
-
-    width: 100%;
-    margin-left: 3px;
-    height: 100%;
+/* mobile header */
+/* Mobile View Header Styles */
+@media screen and (max-width: 768px) {
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff; /* Add background to ensure visibility */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional for design */
   }
 
   .logo-container {
-    width: 80%;
-    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
 
-  .logo {
-    width: auto;
-    height: 30px;
+  .logo-container img {
+    max-height: 50px; /* Adjust logo size */
+    object-fit: contain;
   }
 
   .toggle-button {
     display: flex;
     flex-direction: column;
-    cursor: pointer;
     gap: 5px;
-    z-index: 11;
-    /* Ensure the toggle button is on top of other elements */
+    cursor: pointer;
   }
 
   .toggle-button span {
-    width: 25px;
+    width: 25px; /* Adjust size for better appearance */
     height: 3px;
     background-color: #000;
     border-radius: 2px;
-    transition: all 0.3s ease;
-    /* Smooth transition for the "X" effect */
+    transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
   .toggle-button.open span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+    transform: rotate(45deg) translateY(6px);
   }
 
   .toggle-button.open span:nth-child(2) {
@@ -206,58 +202,51 @@ a {
   }
 
   .toggle-button.open span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-
-  .header {
-    width: 100%;
-    gap: 0;
-    padding: 2%;
-    justify-content: space-around;
+    transform: rotate(-45deg) translateY(-6px);
   }
 
   .nav-container {
-    display: none;
-    /* Hidden initially */
-    flex-direction: column;
-    width: 100%;
-    background-color: white;
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: -100%; /* Hidden off-screen initially */
     left: 0;
-    box-shadow: 0 6px 10px rgba(0, 104, 56, 0.5);
-    z-index: 10;
-    /* Ensure the nav container appears below the toggle button */
+    width: 100%;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: top 0.3s ease-in-out; /* Smooth sliding effect */
+    z-index: 999;
+  }
+
+  .nav-container.active {
+    top: 60px; /* Adjust based on header height */
   }
 
   .list-items-align {
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 15px;
-    padding: 10px 15px;
-  }
-
-  .nav-container {
-    max-height: 0;
-    /* Initially hidden */
-    overflow: hidden;
-    /* Ensures smooth slide down */
-    transition: max-height 0.5s ease-in-out;
-    /* Transition effect for slideToggle */
-  }
-
-  .nav-container.show {
     display: flex;
-    width: 40%;
-    margin-left: 54%;
-    border-radius: 10px;
-    margin-top: 1%;
-    border-width: 2px;
-    border-style: solid;
-    border-color: var(--primary-color);
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .nav-item {
+    font-size: 18px;
+    color: var(--primary-color);
+    font-weight: 500;
+    padding: 10px 0;
+    text-decoration: none;
+    width: 100%;
+  }
+
+  .nav-item.active {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--secondary-color);
   }
 }
-
 
 /* footer */
 /* section6 */
@@ -1060,7 +1049,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-color: #1e1b25;
+    background-color:var(--primary-color);
     /* gap:40%; */
   }
 
