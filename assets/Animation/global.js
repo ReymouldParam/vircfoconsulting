@@ -12,17 +12,24 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 // mobiel nav-items
-
 document.addEventListener("DOMContentLoaded", function () {
-  const toggleButton = document.querySelector(".toggle-button");
-  const navContainer = document.querySelector(".nav-container");
+  const toggleButton = document.getElementById("toggleButton");
+  const navContainer = document.getElementById("navContainer");
 
   toggleButton.addEventListener("click", function () {
-    navContainer.classList.toggle("active");
+    if (navContainer.classList.contains("show")) {
+      // Slide up
+      navContainer.style.maxHeight = "0"; // Set max-height to 0 to collapse it
+      navContainer.classList.remove("show");
+    } else {
+      // Slide down
+      navContainer.classList.add("show");
+      navContainer.style.maxHeight = `${navContainer.scrollHeight}px`; // Expand to full height
+    }
     toggleButton.classList.toggle("open");
   });
 });
-  
+
 // pop cards
 document.addEventListener("DOMContentLoaded", function () {
   const popupMessage = document.getElementById("popup-message");

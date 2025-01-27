@@ -827,16 +827,11 @@
   }
 
   .mission-img {
-    width: 80%;
-    /* Reduce image width */
-    height: auto;
-    /* Maintain aspect ratio */
+    width: 75%;
     transform: none;
-    /* Remove transform */
     margin: 0 auto;
-    /* Center align image */
     opacity: 1;
-    /* Ensure visibility */
+    /* Center align image */
   }
 
   .our-mission {

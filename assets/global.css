@@ -73,7 +73,7 @@ body {
 
 a {
   text-decoration: none;
-  color:#ffffff;
+  color: #ffffff;
 }
 
 .list-items-align {
@@ -94,6 +94,7 @@ a {
 
 .none-item {
   list-style-type: none;
+  padding-bottom: 10px;
 }
 
 .nav-item.active {
@@ -153,29 +154,23 @@ a {
   }
 }
 
-/* mobile header */
-/* Mobile View Header Styles */
+/* mobiile header */
+/* Mobile Header */
 @media screen and (max-width: 768px) {
   .header {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #fff; /* Add background to ensure visibility */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional for design */
-  }
-
-  .logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .logo-container img {
-    max-height: 50px; /* Adjust logo size */
-    object-fit: contain;
+    /* justify-content: space-between; */
+    padding: 0px 20px;
+    background-color: #FFFFFF;
+    height: 60px;
+    position: fixed;
+    width: 85%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    clip-path: none;
+    margin-top: 10px;
   }
 
   .toggle-button {
@@ -186,15 +181,15 @@ a {
   }
 
   .toggle-button span {
-    width: 25px; /* Adjust size for better appearance */
+    width: 25px;
     height: 3px;
     background-color: #000;
     border-radius: 2px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: all 0.3s ease;
   }
 
   .toggle-button.open span:nth-child(1) {
-    transform: rotate(45deg) translateY(6px);
+    transform: translateY(8px) rotate(45deg);
   }
 
   .toggle-button.open span:nth-child(2) {
@@ -202,51 +197,51 @@ a {
   }
 
   .toggle-button.open span:nth-child(3) {
-    transform: rotate(-45deg) translateY(-6px);
+    transform: translateY(-8px) rotate(-45deg);
   }
 
   .nav-container {
+    display: none;
     position: fixed;
-    top: -100%; /* Hidden off-screen initially */
+    top: -400px;
     left: 0;
-    width: 100%;
-    background-color: #fff;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: top 0.3s ease-in-out; /* Smooth sliding effect */
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     z-index: 999;
+    transition: top 0.3s ease;
   }
 
-  .nav-container.active {
-    top: 60px; /* Adjust based on header height */
+  .nav-container.show {
+    display: block;
+    top: 75px;
+    width: 35%;
+    margin-left: auto;
+    border-radius: 15px;
   }
 
   .list-items-align {
-    display: flex;
     flex-direction: column;
+    padding: 10px;
     gap: 15px;
-    width: 100%;
-    text-align: left;
   }
 
-  .nav-item {
-    font-size: 18px;
-    color: var(--primary-color);
-    font-weight: 500;
-    padding: 10px 0;
-    text-decoration: none;
-    width: 100%;
+  .list-items-align .none-item {
+    text-align: center;
   }
-
-  .nav-item.active {
-    font-size: 20px;
-    font-weight: bold;
-    color: var(--secondary-color);
-  }
+  /* Initial state for nav-container */
+#navContainer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out; /* Smooth transition for max-height */
 }
+
+/* When the nav-container is visible */
+#navContainer.show {
+  max-height: 500px; /* Or a suitable value larger than the container's max height */
+}
+}
+
 
 /* footer */
 /* section6 */
@@ -588,6 +583,10 @@ a {
 
 #close-btn:hover {
   background-color: #d55d07;
+}
+.what-app{
+  width: 35px;
+  height: 30px;
 }
 
 /* smaller laptops */
@@ -1049,7 +1048,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-color:var(--primary-color);
+    background-color: var(--primary-color);
     /* gap:40%; */
   }
 
