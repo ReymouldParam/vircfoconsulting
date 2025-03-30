@@ -1,340 +1,407 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="icon" type="image/jpg" href="./Assets/images/FAVICON VIRCFO FINAL.svg" />
-    <!-- font-family -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
+      rel="icon"
+      type="image/jpg"
+      href="./Assets/images/FAVICON VIRCFO FINAL.svg"
+    />
+     <!-- font awsome -->
+    <!---fontawesome links-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font-family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/global.css" />
     <link rel="stylesheet" href="./assets/home.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="global-section">
-        <nav class="header">
-            <div class="logo-container">
-              <a href=".">
-                <img src="./assets/images/VirCFO LOGO FINAL VERSION.png" alt="CFO" class="logo" />
+      <nav class="header">
+        <div class="logo-container">
+          <a href=".">
+            <img
+              src="./assets/images/VirCFO LOGO FINAL VERSION.png"
+              alt="CFO"
+              class="logo"
+            />
+          </a>
+        </div>
+        <div class="toggle-button" id="toggleButton">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="nav-container" id="navContainer">
+          <ul class="list-items-align">
+            <li class="none-item">
+              <a href="." class="nav-item">Home <span class="dot"></span></a>
+            </li>
+            <li class="none-item">
+              <a href="about" class="nav-item"
+                >About Us <span class="dot"></span
+              ></a>
+            </li>
+            <li class="none-item">
+              <a href="services" class="nav-item"
+                >Services <span class="dot"></span
+              ></a>
+            </li>
+            <li class="none-item">
+              <a href="contact" class="nav-item"
+                >Contact <span class="dot"></span
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <section class="section1">
+        <div class="container-wrapper">
+          <div class="section1-para-con">
+            <h1 class="section-head-con">
+              Drive growth with strategic financial guidance tailored to your
+              business needs
+            </h1>
+          </div>
+          <div class="section2-para-con">
+            <h1 class="section-head-con">
+              Access seasoned financial leadership to elevate your business
+            </h1>
+          </div>
+        </div>
+      </section>
+      <section class="section2 hidden">
+        <div class="what-con">
+          <h1 class="cfo-head">About VirCFO</h1>
+          <!-- <h2 class="cfo-sub-head">Who we are and what we do</h2> -->
+          <br />
+          <p class="cfo-para">
+            we specialize in providing strategic financial solutions that
+            empower businesses to achieve sustainable growth and financial
+            clarity. With over 25 years of collective experience, our team
+            brings in-depth industry knowledge and a client-focused approach to
+            deliver customized services, from Virtual CFO support to business
+            restructuring and valuation. We are committed to helping companies
+            of all sizes navigate financial challenges and drive long-term
+            success.
+          </p>
+          <a href="./about.html">
+            <button class="cfo-section1-btn">Read More</button>
+          </a>
+        </div>
+        <div class="image-con-about-us">
+          <img
+            src="./assets/images/business-person-futuristic-business-environment.jpg"
+            alt="business-person"
+            class="about-us-discription"
+          />
+        </div>
+      </section>
+      <hr />
+
+      <!-- services section -->
+      <section class="services-animations">
+        <h1 class="heading-font2-port">OUR SERVICES</h1>
+        <div class="heading-con">
+          <div class="service-header-wrapper">
+            <h2 id="service-heading" class="heading-font1-port">
+              Virtual CFO Services
+            </h2>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+          </div>
+          <p class="service-description">
+            Our Virtual CFO services offer expert financial guidance to help
+            your business thrive without the need for a full-time, in-house CFO.
+            We provide strategic financial management, performance monitoring,
+            and reporting to optimize business operations and ensure financial
+            stability
+          </p>
+        </div>
+        <div class="project-list-align">
+          <ul id="project-list">
+            <li class="project-item active" data-index="0">
+              Virtual CFO Services
+              <a href="./services.html">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-arrow-right arrow-size"
+                  width="44"
+                  height="44"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="#FFFFFF"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M5 12l14 0" />
+                  <path d="M13 18l6 -6" />
+                  <path d="M13 6l6 6" />
+                </svg>
               </a>
+              <p>
+                Our Virtual CFO services offer expert financial guidance to help
+                your business thrive without the need for a full-time, in-house
+                CFO. We provide strategic financial management, performance
+                monitoring, and reporting to optimize business operations and
+                ensure financial stability
+              </p>
+            </li>
+            <li class="project-item" data-index="1">
+              Business Support Services
+              <a href="./services.html">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-arrow-right arrow-size"
+                  width="44"
+                  height="44"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="#FFFFFF"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M5 12l14 0" />
+                  <path d="M13 18l6 -6" />
+                  <path d="M13 6l6 6" />
+                </svg>
+              </a>
+              <p>
+                Our business support services provide administrative, financial,
+                and operational assistance, enabling businesses to focus on core
+                activities. From accounting to compliance, we ensure your
+                business functions smoothly and efficiently.
+              </p>
+            </li>
+            <li class="project-item" data-index="2">
+              Entity Restructuring services
+              <a href="./services.html">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-arrow-right arrow-size"
+                  width="44"
+                  height="44"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="#FFFFFF"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M5 12l14 0" />
+                  <path d="M13 18l6 -6" />
+                  <path d="M13 6l6 6" />
+                </svg>
+              </a>
+              <p>
+                We assist businesses in transferring ownership or restructuring
+                their entities to achieve operational efficiency, tax
+                optimization, and sustainable growth. Our experts guide you
+                through legal, financial, and operational aspects for a seamless
+                transition.
+              </p>
+            </li>
+            <li class="project-item" data-index="3">
+              Business Valuation Services
+              <a href="./services.html">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-arrow-right arrow-size"
+                  width="44"
+                  height="44"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="#FFFFFF"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M5 12l14 0" />
+                  <path d="M13 18l6 -6" />
+                  <path d="M13 6l6 6" />
+                </svg>
+              </a>
+              <p>
+                Accurately assessing your business’s worth is critical for
+                decision-making. We provide comprehensive business valuation
+                services, helping you understand the real value of your assets,
+                liabilities, and market position for mergers, acquisitions, and
+                investment purposes.
+              </p>
+            </li>
+            <li class="project-item" data-index="4">
+              Fund Raising
+              <a href="./services.html">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-arrow-right arrow-size"
+                  width="44"
+                  height="44"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="#FFFFFF"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M5 12l14 0" />
+                  <path d="M13 18l6 -6" />
+                  <path d="M13 6l6 6" />
+                </svg>
+              </a>
+              <p>
+                Our fundraising services are designed to help businesses secure
+                capital through debt or equity financing. We offer strategic
+                advice on the best funding options to support business
+                expansion, working capital needs, or new projects.
+              </p>
+            </li>
+          </ul>
+          <div class="images-in-colum">
+            <div class="image-container visible" data-index="0">
+              <div class="image-wrapper">
+                <img
+                  src="./assets/images/cfo-services.jpg"
+                  alt="Compliance And Governance"
+                />
+              </div>
             </div>
-            <div class="toggle-button" id="toggleButton">
-              <span></span>
-              <span></span>
-              <span></span>
+            <div class="image-container" data-index="1">
+              <div class="image-wrapper">
+                <img
+                  src="./assets/images/bussiness-valuation-of-homepage.jpg"
+                  alt="Accounting Setups"
+                />
+              </div>
             </div>
-            <div class="nav-container" id="navContainer">
-              <ul class="list-items-align">
-                <li class="none-item">
-                  <a href="." class="nav-item">Home <span class="dot"></span></a>
-                </li>
-                <li class="none-item">
-                  <a href="about" class="nav-item">About Us <span class="dot"></span></a>
-                </li>
-                <li class="none-item">
-                  <a href="services" class="nav-item">Services <span class="dot"></span></a>
-                </li>
-                <li class="none-item">
-                  <a href="contact" class="nav-item">Contact <span class="dot"></span></a>
-                </li>
-              </ul>
+            <div class="image-container" data-index="2">
+              <div class="image-wrapper">
+                <img
+                  src="./assets/images/bussiness-support.jpg"
+                  alt="Back Office Services"
+                />
+              </div>
             </div>
-          </nav>
-          
-        <section class="section1">
-            <div class="container-wrapper">
-                <div class="section1-para-con">
-                    <h1 class="section-head-con">
-                        Drive growth with strategic financial guidance
-                        tailored to your business needs
-                    </h1>
-                </div>
-                <div class="section2-para-con">
-                    <h1 class="section-head-con">
-                        Access seasoned financial leadership to elevate your
-                        business
-                    </h1>
-                </div>
+            <div class="image-container" data-index="3">
+              <div class="image-wrapper">
+                <img
+                  src="./assets/images/entity-restructuring-services.jpg"
+                  alt="Corporate Office Services"
+                />
+              </div>
             </div>
-        </section>
-        <section class="section2 hidden">
-            <div class="what-con">
-                <h1 class="cfo-head">About VirCFO</h1>
-                <!-- <h2 class="cfo-sub-head">Who we are and what we do</h2> -->
-                <br />
-                <p class="cfo-para">
-                    we specialize in providing strategic financial solutions
-                    that empower businesses to achieve sustainable growth
-                    and financial clarity. With over 25 years of collective
-                    experience, our team brings in-depth industry knowledge
-                    and a client-focused approach to deliver customized
-                    services, from Virtual CFO support to business
-                    restructuring and valuation. We are committed to helping
-                    companies of all sizes navigate financial challenges and
-                    drive long-term success.
-                </p>
-                <a href="./about.html">
-                    <button class="cfo-section1-btn">Read More</button>
-                </a>
+            <div class="image-container" data-index="4">
+              <div class="image-wrapper">
+                <img
+                  src="./assets/images/fund-raising.avif"
+                  alt="IT Services"
+                />
+              </div>
             </div>
-            <div class="image-con-about-us">
-                <img src="./assets/images/business-person-futuristic-business-environment.jpg" alt="business-person"
-                    class="about-us-discription" />
-            </div>
-        </section>
-        <hr />
-
-        <!-- services section -->
-        <section class="services-animations">
-            <h1 class="heading-font2-port">OUR SERVICES</h1>
-            <div class="heading-con">
-                <div class="service-header-wrapper">
-                    <h2 id="service-heading" class="heading-font1-port">Virtual CFO Services</h2>
-                    <div class="progress-bar">
-                        <div class="progress"></div>
-                    </div>
-                </div>
-                <p class="service-description">
-                    Our Virtual CFO services offer expert financial guidance
-                    to help your business thrive without the need for a
-                    full-time, in-house CFO. We provide strategic financial
-                    management, performance monitoring, and reporting to
-                    optimize business operations and ensure financial
-                    stability
-
-                </p>
-            </div>
-            <div class="project-list-align">
-                <ul id="project-list">
-                    <li class="project-item active" data-index="0">Virtual CFO Services <a href="./services.html">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="icon icon-tabler icon-tabler-arrow-right arrow-size" width="44" height="44"
-                                viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFFFFF" fill="none"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <path d="M5 12l14 0" />
-                                <path d="M13 18l6 -6" />
-                                <path d="M13 6l6 6" />
-                            </svg>
-                        </a>
-                        <p>
-                            Our Virtual CFO services offer expert financial
-                            guidance
-                            to help your business thrive without the need
-                            for a
-                            full-time, in-house CFO. We provide strategic
-                            financial
-                            management, performance monitoring, and
-                            reporting to
-                            optimize business operations and ensure
-                            financial
-                            stability
-                        </p>
-                    </li>
-                    <li class="project-item" data-index="1">Business Support
-                        Services <a href="./services.html">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="icon icon-tabler icon-tabler-arrow-right arrow-size" width="44" height="44"
-                                viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFFFFF" fill="none"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <path d="M5 12l14 0" />
-                                <path d="M13 18l6 -6" />
-                                <path d="M13 6l6 6" />
-                            </svg>
-                        </a>
-                        <p>
-                            Our business support services provide
-                            administrative, financial, and operational
-                            assistance, enabling businesses to focus on core
-                            activities. From accounting to compliance, we
-                            ensure your business functions smoothly and
-                            efficiently.
-                        </p>
-                    </li>
-                    <li class="project-item" data-index="2">Entity
-                        Restructuring services <a href="./services.html">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="icon icon-tabler icon-tabler-arrow-right arrow-size" width="44" height="44"
-                                viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFFFFF" fill="none"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <path d="M5 12l14 0" />
-                                <path d="M13 18l6 -6" />
-                                <path d="M13 6l6 6" />
-                            </svg>
-                        </a>
-                        <p>
-                            We assist businesses in transferring ownership
-                            or restructuring their entities to achieve
-                            operational efficiency, tax optimization, and
-                            sustainable growth. Our experts guide you
-                            through legal, financial, and operational
-                            aspects for a seamless transition.
-                        </p>
-                    </li>
-                    <li class="project-item" data-index="3">Business
-                        Valuation Services <a href="./services.html">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="icon icon-tabler icon-tabler-arrow-right arrow-size" width="44" height="44"
-                                viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFFFFF" fill="none"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <path d="M5 12l14 0" />
-                                <path d="M13 18l6 -6" />
-                                <path d="M13 6l6 6" />
-                            </svg>
-                        </a>
-                        <p>
-                            Accurately assessing your business’s worth is
-                            critical for decision-making. We provide
-                            comprehensive business valuation services,
-                            helping you understand the real value of your
-                            assets, liabilities, and market position for
-                            mergers, acquisitions, and investment purposes.
-                        </p>
-                    </li>
-                    <li class="project-item" data-index="4">Fund Raising <a href="./services.html">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="icon icon-tabler icon-tabler-arrow-right arrow-size" width="44" height="44"
-                                viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFFFFF" fill="none"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <path d="M5 12l14 0" />
-                                <path d="M13 18l6 -6" />
-                                <path d="M13 6l6 6" />
-                            </svg>
-                        </a>
-                        <p>
-                            Our fundraising services are designed to help
-                            businesses secure capital through debt or equity
-                            financing. We offer strategic advice on the best
-                            funding options to support business expansion,
-                            working capital needs, or new projects.
-                        </p>
-                    </li>
-                </ul>
-                <div class="images-in-colum">
-                    <div class="image-container visible" data-index="0">
-                        <div class="image-wrapper">
-                            <img src="./assets/images/cfo-services.jpg" alt="Compliance And Governance" />
-                        </div>
-                    </div>
-                    <div class="image-container" data-index="1">
-                        <div class="image-wrapper">
-                            <img src="./assets/images/bussiness-valuation-of-homepage.jpg" alt="Accounting Setups" />
-                        </div>
-                    </div>
-                    <div class="image-container" data-index="2">
-                        <div class="image-wrapper">
-                            <img src="./assets/images/bussiness-support.jpg" alt="Back Office Services" />
-                        </div>
-                    </div>
-                    <div class="image-container" data-index="3">
-                        <div class="image-wrapper">
-                            <img src="./assets/images/entity-restructuring-services.jpg"
-                                alt="Corporate Office Services" />
-                        </div>
-                    </div>
-                    <div class="image-container" data-index="4">
-                        <div class="image-wrapper">
-                            <img src="./assets/images/fund-raising.avif" alt="IT Services" />
-                        </div>
-                    </div>
-                    <div class="image-container" data-index="5">
-                        <div class="image-wrapper">
-                            <!-- <img
+            <div class="image-container" data-index="5">
+              <div class="image-wrapper">
+                <!-- <img
                                     src="./assets/images/ceo-blue-suit-close-up.png"
                                     alt="Financial Services" /> -->
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <hr />
-        <section class="section4">
-            <div class="improve-align">
-                <div>
-                    <img src="./assets/images/bussiness-improve.png" alt="growth" />
-                </div>
-                <div>
-                    <h3 class="improve-head">
-                        IMPROVE
-                    </h3>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-minus minus-width"
-                        width="400" height="10" viewBox="0 0 400 24" stroke-width="2.5" stroke="#006838" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h400v24H0z" fill="none" />
-                        <path d="M5 12h390" />
-                    </svg>
-                    <ul>
-                        <li class="list-item2">
-                            Improved Financial Control of Your Business
-
-                        </li>
-                        <li class="list-item2">
-                            Strategic Financial Direction
-
-                        </li>
-                        <li class="list-item2">
-                            Enhanced Profitability and Cash Flow
-
-                        </li>
-                        <li class="list-item2">
-                            Clear and Accurate Financial Reporting
-
-                        </li>
-                        <li class="list-item2">
-                            Informed Decision-Making with Expert Insights
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="value-align">
-                <div>
-                    <h3 class="improve-head">
-                        VALUE
-                    </h3>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-minus minus-width"
-                        width="400" height="10" viewBox="0 0 400 24" stroke-width="2.5" stroke="#006838" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h400v24H0z" fill="none" />
-                        <path d="M5 12h390" />
-                    </svg>
-                    <ul>
-                        <li class="list-item2">
-                            Enhanced Business Stability
-
-                        </li>
-                        <li class="list-item2">
-                            Tailored Financial Solutions for Business
-                        </li>
-                        <li class="list-item2">
-                            Proactive Financial Oversight
-
-                        </li>
-                        <li class="list-item2">
-                            Trusted Strategic Partnerships
-
-                        </li>
-                        <li class="list-item2">
-                            Focus on Long-Term Growth
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <img src="./assets/images/chat-graph.png" alt="growth" class="value-sec-img" />
-                </div>
-            </div>
-        </section>
-        <!-- <section class="section5">
+      <hr />
+      <section class="section4">
+        <div class="improve-align">
+          <div>
+            <img src="./assets/images/bussiness-improve.png" alt="growth" />
+          </div>
+          <div>
+            <h3 class="improve-head">IMPROVE</h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-minus minus-width"
+              width="400"
+              height="10"
+              viewBox="0 0 400 24"
+              stroke-width="2.5"
+              stroke="#006838"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h400v24H0z" fill="none" />
+              <path d="M5 12h390" />
+            </svg>
+            <ul>
+              <li class="list-item2">
+                Improved Financial Control of Your Business
+              </li>
+              <li class="list-item2">Strategic Financial Direction</li>
+              <li class="list-item2">Enhanced Profitability and Cash Flow</li>
+              <li class="list-item2">Clear and Accurate Financial Reporting</li>
+              <li class="list-item2">
+                Informed Decision-Making with Expert Insights
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="value-align">
+          <div>
+            <h3 class="improve-head">VALUE</h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-minus minus-width"
+              width="400"
+              height="10"
+              viewBox="0 0 400 24"
+              stroke-width="2.5"
+              stroke="#006838"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h400v24H0z" fill="none" />
+              <path d="M5 12h390" />
+            </svg>
+            <ul>
+              <li class="list-item2">Enhanced Business Stability</li>
+              <li class="list-item2">
+                Tailored Financial Solutions for Business
+              </li>
+              <li class="list-item2">Proactive Financial Oversight</li>
+              <li class="list-item2">Trusted Strategic Partnerships</li>
+              <li class="list-item2">Focus on Long-Term Growth</li>
+            </ul>
+          </div>
+          <div>
+            <img
+              src="./assets/images/chat-graph.png"
+              alt="growth"
+              class="value-sec-img"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- <section class="section5">
                 <div class="arrow-align">
                     <h3 class="get-in-touch">Get in Touch</h3>
                     <a href="./contact.html">
@@ -351,96 +418,155 @@
                     </a>
                 </div>
             </section> -->
-        <hr />
-        <!-- footer -->
-        <section class="section6">
-            <div class="footer-background">
-                <div class="input-btn-align">
-                    <div>
-                        <h3 class="Do-you">
-                            Want to Know <span class="span-footer">
-                                More?</span> Enter Your Email and Get
-                            Started!
-                        </h3>
-                    </div>
-                    <form class="frame2" action="email.php" method="post">
-                        <div class="text-wrapper">
-                            <input type="email" name="email" id="email" placeholder="Email Address" class="input-field"
-                                required />
-                        </div>
-                        <div class="div-wrapper">
-                            <div class="div">
-                                <button type="submit" class="sub-btn">Send</button>
-                            </div>
-                        </div>
-                    </form>
+      <hr />
+      <!-- footer -->
+      <section class="section6">
+        <div class="footer-background">
+          <div class="input-btn-align">
+            <div>
+              <h3 class="Do-you">
+                Want to Know <span class="span-footer"> More?</span> Enter Your
+                Email and Get Started!
+              </h3>
+            </div>
+            <form class="frame2" action="email.php" method="post">
+              <div class="text-wrapper">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email Address"
+                  class="input-field"
+                  required
+                />
+              </div>
+              <div class="div-wrapper">
+                <div class="div">
+                  <button type="submit" class="sub-btn">Send</button>
                 </div>
-                <hr class="hr-color" />
-                .<div class="frame3">
-                    <div class="div">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="54"
-                            height="54" viewBox="0 0 24 24" stroke-width="0.8" stroke="#ffffff" fill="none"
-                            stroke-linecap="round" stroke-linejoin="round" class="icon-visible">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
-                            <path
-                                d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
-                        </svg>
+              </div>
+            </form>
+          </div>
+          <hr class="hr-color" />
+          .
+          <div class="frame3">
+            <div class="div">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-map-pin"
+                width="54"
+                height="54"
+                viewBox="0 0 24 24"
+                stroke-width="0.8"
+                stroke="#ffffff"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon-visible"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                <path
+                  d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"
+                />
+              </svg>
 
-                        <p class="corporate-office">Plot No 81, 2nd Floor,
-                            Green Park Avenue, Suchitra Circle, Hyderabad
-                            500067
-                    </div>
-                    <div class="div-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone-call"
-                            width="54" height="54" viewBox="0 0 24 24" stroke-width="0.8" stroke="#ffffff" fill="none"
-                            stroke-linecap="round" stroke-linejoin="round" class="icon-visible">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path
-                                d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
-                            <path d="M15 7a2 2 0 0 1 2 2" />
-                            <path d="M15 3a6 6 0 0 1 6 6" />
-                        </svg>
+              <p class="corporate-office">
+                Plot No 81, 2nd Floor, Green Park Avenue, Suchitra Circle,
+                Hyderabad 500067
+              </p>
+            </div>
 
-                        <p class="phone">
-                            <span class="text-wrapper">Phone:
-                                7670898558<br />
-                                Email:contact@vircfoconsulting.com
-                            </span>
-                        </p>
-                    </div>
-                    <div class="icons-set">
-                        <a href=" https://www.facebook.com/profile.php?id=61565181642009" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" class="icon"
-                                viewBox="0,0,256,256">
-                                <g fill="white" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
-                                    stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray
-                                    stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none"
-                                    text-anchor="none" style="mix-blend-mode: normal">
-                                    <g transform="scale(5.12,5.12)">
-                                        <path
-                                            d="M25,3c-12.13844,0 -22,9.86156 -22,22c0,11.01913 8.12753,20.13835 18.71289,21.72852l1.14844,0.17383v-17.33594h-5.19727v-3.51953h5.19727v-4.67383c0,-2.87808 0.69065,-4.77363 1.83398,-5.96289c1.14334,-1.18926 2.83269,-1.78906 5.18359,-1.78906c1.87981,0 2.61112,0.1139 3.30664,0.19922v2.88086h-2.44727c-1.38858,0 -2.52783,0.77473 -3.11914,1.80664c-0.59131,1.03191 -0.77539,2.264 -0.77539,3.51953v4.01758h6.12305l-0.54492,3.51953h-5.57812v17.36523l1.13477,-0.1543c10.73582,-1.45602 19.02148,-10.64855 19.02148,-21.77539c0,-12.13844 -9.86156,-22 -22,-22z">
-                                        </path>
-                                    </g>
-                                </g>
-                            </svg>
-                        </a>
-                        <a href=" https://www.instagram.com/vircfo_consulting/" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" class="icon" 
-                                viewBox="0,0,256,256">
-                                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1"
-                                    stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
-                                    stroke-dasharray stroke-dashoffset="0" font-family="none" font-weight="none"
-                                    font-size="none" text-anchor="none" style="mix-blend-mode: normal">
-                                    <g transform="scale(5.12,5.12)">
-                                        <path
-                                            d="M16,3c-7.16752,0 -13,5.83248 -13,13v18c0,7.16752 5.83248,13 13,13h18c7.16752,0 13,-5.83248 13,-13v-18c0,-7.16752 -5.83248,-13 -13,-13zM16,5h18c6.08648,0 11,4.91352 11,11v18c0,6.08648 -4.91352,11 -11,11h-18c-6.08648,0 -11,-4.91352 -11,-11v-18c0,-6.08648 4.91352,-11 11,-11zM37,11c-1.10457,0 -2,0.89543 -2,2c0,1.10457 0.89543,2 2,2c1.10457,0 2,-0.89543 2,-2c0,-1.10457 -0.89543,-2 -2,-2zM25,14c-6.06329,0 -11,4.93671 -11,11c0,6.06329 4.93671,11 11,11c6.06329,0 11,-4.93671 11,-11c0,-6.06329 -4.93671,-11 -11,-11zM25,16c4.98241,0 9,4.01759 9,9c0,4.98241 -4.01759,9 -9,9c-4.98241,0 -9,-4.01759 -9,-9c0,-4.98241 4.01759,-9 9,-9z">
-                                        </path>
-                                    </g>
-                                </g>
-                            </svg>
-                        </a>
-                        <a href="https://wa.me/message/V7AW73KRU63GH1" target="_blank">
+            <div class="div-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-phone-call"
+                width="54"
+                height="54"
+                viewBox="0 0 24 24"
+                stroke-width="0.8"
+                stroke="#ffffff"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon-visible"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
+                />
+                <path d="M15 7a2 2 0 0 1 2 2" />
+                <path d="M15 3a6 6 0 0 1 6 6" />
+              </svg>
+
+              <p class="phone">
+                <span class="text-wrapper"
+                  >Phone: 7670898558<br />
+                  Email:contact@vircfoconsulting.com
+                </span>
+              </p>
+            </div>
+            <div class="icons-set">
+              <a
+                href=" https://www.facebook.com/profile.php?id=61565181642009"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="40"
+                  height="40"
+                  class="icon"
+                  viewBox="0,0,256,256"
+                >
+                  <g
+                    fill="white"
+                    fill-rule="nonzero"
+                    stroke="none"
+                    stroke-width="1"
+                    stroke-linecap="butt"
+                    stroke-linejoin="miter"
+                    stroke-miterlimit="10"
+                    stroke-dasharray
+                    stroke-dashoffset="0"
+                    font-family="none"
+                    font-weight="none"
+                    font-size="none"
+                    text-anchor="none"
+                    style="mix-blend-mode: normal"
+                  >
+                    <g transform="scale(5.12,5.12)">
+                      <path
+                        d="M25,3c-12.13844,0 -22,9.86156 -22,22c0,11.01913 8.12753,20.13835 18.71289,21.72852l1.14844,0.17383v-17.33594h-5.19727v-3.51953h5.19727v-4.67383c0,-2.87808 0.69065,-4.77363 1.83398,-5.96289c1.14334,-1.18926 2.83269,-1.78906 5.18359,-1.78906c1.87981,0 2.61112,0.1139 3.30664,0.19922v2.88086h-2.44727c-1.38858,0 -2.52783,0.77473 -3.11914,1.80664c-0.59131,1.03191 -0.77539,2.264 -0.77539,3.51953v4.01758h6.12305l-0.54492,3.51953h-5.57812v17.36523l1.13477,-0.1543c10.73582,-1.45602 19.02148,-10.64855 19.02148,-21.77539c0,-12.13844 -9.86156,-22 -22,-22z"
+                      ></path>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com" target="_blank">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="40"
+                  height="40"
+                  class="icon"
+                  viewBox="0 0 24 24"
+                  fill="white"
+                >
+                  <path
+                    d="M20 3H4C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21H20C20.5523 21 21 20.5523 21 20V4C21 3.44772 20.5523 3 20 3ZM8.53993 17.5H6V9.968H8.53993V17.5ZM7.28285 8.78763C6.46682 8.78763 5.86963 8.19044 5.86963 7.37441C5.86963 6.55838 6.46682 5.96119 7.28285 5.96119C8.09888 5.96119 8.69607 6.55838 8.69607 7.37441C8.69607 8.19044 8.09888 8.78763 7.28285 8.78763ZM18 17.5H15.4601V13.5096C15.4601 12.5426 15.4426 11.2596 14.2314 11.2596C13.0023 11.2596 12.8157 12.352 12.8157 13.4382V17.5H10.2758V9.968H12.708V11.0745H12.7385C13.061 10.4723 13.8251 9.83745 14.9493 9.83745C17.2828 9.83745 18 11.3486 18 13.2234V17.5Z"
+                  />
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/vircfo_consulting/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" class="icon" viewBox="0 0 256 256" fill="white">
+                    <path d="M128,28c-28.52,0-32.09.11-43.32.63-10.42.48-17.52,2.12-23.72,4.51a48.13,48.13,0,0,0-17.4,11.35A48.13,48.13,0,0,0,32.14,62c-2.39,6.2-4,13.3-4.51,23.72C27.11,97.91,27,101.48,27,128s.11,30.09.63,42.32c.48,10.42,2.12,17.52,4.51,23.72a48.13,48.13,0,0,0,11.35,17.4A48.13,48.13,0,0,0,62,223.86c6.2,2.39,13.3,4,23.72,4.51,12.23.52,15.8.63,42.32.63s30.09-.11,42.32-.63c10.42-.48,17.52-2.12,23.72-4.51a48.13,48.13,0,0,0,17.4-11.35A48.13,48.13,0,0,0,223.86,194c2.39-6.2,4-13.3,4.51-23.72.52-12.23.63-15.8.63-42.32s-.11-30.09-.63-42.32c-.48-10.42-2.12-17.52-4.51-23.72a48.13,48.13,0,0,0-11.35-17.4A48.13,48.13,0,0,0,194,32.14c-6.2-2.39-13.3-4-23.72-4.51C160.09,27.11,156.52,27,128,27ZM128,60a68,68,0,1,1-68,68A68,68,0,0,1,128,60Zm0,112a44,44,0,1,0-44-44A44,44,0,0,0,128,172Zm56-108a12,12,0,1,1-12,12A12,12,0,0,1,184,64Z"/>
+                </svg>
+            </a>
+            
+              <!-- <a href="https://wa.me/message/V7AW73KRU63GH1" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"  class="icon"
                                 fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round">
@@ -448,107 +574,113 @@
                                 <path
                                     d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
                             </svg>
-                        </a>
-
-                    </div>
-                </div>
+                        </a> -->
             </div>
-            <div class="paras-align-bottom">
-                <p class="bottom-line1">
-                    Copyright© 2024 VirCFO. All Rights Reserved.
-                </p>
-                <p class="bottom-line2">
-                    <a href="./privacy.html"> User Terms & Conditions |
-                        Privacy Policy</a>
-                </p>
-            </div>
-            <!-- pop-up card  -->
-            <div id="popup-overlay"></div>
-            <div id="popup-message">
-                <h2 id="popup-heading"></h2>
-                <p id="popup-para"></p>
-                <button id="close-btn">Close</button>
-            </div>
-
-        </section>
+          </div>
+           <!-- whats app -->
+           <a href="https://wa.me/92811 17175" class="whatsapp-container" target="_blank">
+            <i class="fa-brands fa-square-whatsapp"></i>
+        </a>
+        </div>
+        <div class="paras-align-bottom">
+          <p class="bottom-line1">
+            Copyright© 2024 VirCFO. All Rights Reserved.
+          </p>
+          <p class="bottom-line2">
+            <a href="./privacy.html">
+              User Terms & Conditions | Privacy Policy</a
+            >
+          </p>
+        </div>
+        <!-- pop-up card  -->
+        <div id="popup-overlay"></div>
+        <div id="popup-message">
+          <h2 id="popup-heading"></h2>
+          <p id="popup-para"></p>
+          <button id="close-btn">Close</button>
+        </div>
+      </section>
     </div>
     <!-- header -->
     <script src="./assets/Animation/global.js"></script>
-    <script src="./assets/Animation/home.js">
-    </script>
+    <script src="./assets/Animation/home.js"></script>
     <!-- services animation -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const items = document.querySelectorAll('.project-item');
-            const projectList = document.getElementById('project-list');
-            const containers = document.querySelectorAll('.image-container');
-            const serviceHeading = document.getElementById('service-heading');
-            const serviceDescription = document.querySelector('.heading-con p');
-            const progressBar = document.querySelector('.progress');
-            const duration = 4000;
-            let currentIndex = 0;
-            let intervalId;
+      document.addEventListener("DOMContentLoaded", () => {
+        const items = document.querySelectorAll(".project-item");
+        const projectList = document.getElementById("project-list");
+        const containers = document.querySelectorAll(".image-container");
+        const serviceHeading = document.getElementById("service-heading");
+        const serviceDescription = document.querySelector(".heading-con p");
+        const progressBar = document.querySelector(".progress");
+        const duration = 4000;
+        let currentIndex = 0;
+        let intervalId;
 
-            function updateProgress() {
-                progressBar.style.width = '0%';
-                requestAnimationFrame(() => {
-                    progressBar.style.width = '100%';
-                });
-            }
+        function updateProgress() {
+          progressBar.style.width = "0%";
+          requestAnimationFrame(() => {
+            progressBar.style.width = "100%";
+          });
+        }
 
-            function showItem(index) {
-                updateProgress();
+        function showItem(index) {
+          updateProgress();
 
-                // Update list items
-                items.forEach(item => item.classList.remove('active'));
-                items[index].classList.add('active');
+          // Update list items
+          items.forEach((item) => item.classList.remove("active"));
+          items[index].classList.add("active");
 
-                // Update images
-                containers.forEach(container => container.classList.remove('visible'));
-                containers[index].classList.add('visible');
+          // Update images
+          containers.forEach((container) =>
+            container.classList.remove("visible")
+          );
+          containers[index].classList.add("visible");
 
-                // Fade effect for heading and description
-                const selectedItem = items[index];
-                serviceHeading.style.opacity = 0;
-                serviceDescription.style.opacity = 0;
+          // Fade effect for heading and description
+          const selectedItem = items[index];
+          serviceHeading.style.opacity = 0;
+          serviceDescription.style.opacity = 0;
 
-                setTimeout(() => {
-                    serviceHeading.textContent = selectedItem.childNodes[0].textContent.trim();
-                    serviceDescription.textContent = selectedItem.querySelector('p').textContent.trim();
-                    serviceHeading.style.opacity = 1;
-                    serviceDescription.style.opacity = 1;
-                }, 300);
-            }
+          setTimeout(() => {
+            serviceHeading.textContent =
+              selectedItem.childNodes[0].textContent.trim();
+            serviceDescription.textContent = selectedItem
+              .querySelector("p")
+              .textContent.trim();
+            serviceHeading.style.opacity = 1;
+            serviceDescription.style.opacity = 1;
+          }, 300);
+        }
 
-            function showNextItem() {
-                currentIndex = (currentIndex + 1) % items.length;
-                showItem(currentIndex);
-            }
+        function showNextItem() {
+          currentIndex = (currentIndex + 1) % items.length;
+          showItem(currentIndex);
+        }
 
-            // Start animation
+        // Start animation
+        intervalId = setInterval(showNextItem, duration);
+        showItem(currentIndex);
+
+        // Click handler for manual item selection
+        items.forEach((item, index) => {
+          item.addEventListener("click", () => {
+            clearInterval(intervalId);
+            showItem(index);
+            currentIndex = index;
             intervalId = setInterval(showNextItem, duration);
-            showItem(currentIndex);
-
-            // Click handler for manual item selection
-            items.forEach((item, index) => {
-                item.addEventListener('click', () => {
-                    clearInterval(intervalId);
-                    showItem(index);
-                    currentIndex = index;
-                    intervalId = setInterval(showNextItem, duration);
-                });
-            });
-
-            // Pause on tab invisibility
-            document.addEventListener('visibilitychange', () => {
-                if (document.hidden) {
-                    clearInterval(intervalId);
-                } else {
-                    intervalId = setInterval(showNextItem, duration);
-                }
-            });
+          });
         });
-    </script>
-</body>
 
+        // Pause on tab invisibility
+        document.addEventListener("visibilitychange", () => {
+          if (document.hidden) {
+            clearInterval(intervalId);
+          } else {
+            intervalId = setInterval(showNextItem, duration);
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
