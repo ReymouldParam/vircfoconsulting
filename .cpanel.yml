@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/pk5ixxuh5zp9/public_html/dev.vircfoconsulting.com
+    - export DEPLOYPATH=/home/pk5ixxuh5zp9/public_html/vircfoconsulting.com
     - /bin/cp -R * $DEPLOYPATH
