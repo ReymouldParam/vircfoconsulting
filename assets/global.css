@@ -501,6 +501,24 @@ a {
   width: 45px;
   /* Ensure width is also consistent */
 }
+@keyframes bounce-call {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+}
+
+.bounce-phone {
+  animation: bounce-call 1.2s infinite;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
 
 @media screen and (min-width:1600px) {
   .icon-5 {
