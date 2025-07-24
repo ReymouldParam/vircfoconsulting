@@ -230,22 +230,24 @@ a {
   .list-items-align .none-item {
     text-align: center;
   }
-  /* Initial state for nav-container */
-#navContainer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease-out; /* Smooth transition for max-height */
-}
 
-/* When the nav-container is visible */
-#navContainer.show {
-  max-height: 500px; /* Or a suitable value larger than the container's max height */
-}
+  /* Initial state for nav-container */
+  #navContainer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    /* Smooth transition for max-height */
+  }
+
+  /* When the nav-container is visible */
+  #navContainer.show {
+    max-height: 500px;
+    /* Or a suitable value larger than the container's max height */
+  }
 }
 
 
 /* footer */
-/* section6 */
 .section6 {
   background: linear-gradient(to bottom, rgba(14, 15, 36, 1) 50%, #FFFFFF 50%);
   height: fit-content;
@@ -501,13 +503,18 @@ a {
   width: 45px;
   /* Ensure width is also consistent */
 }
+
 @keyframes bounce-call {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   30% {
     transform: translateY(-5px);
   }
+
   60% {
     transform: translateY(-3px);
   }
@@ -544,6 +551,48 @@ a {
   cursor: pointer;
   border: none;
 }
+
+.callus-container {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-family);
+  font-size: 14px;
+  z-index: 999;
+  text-decoration: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  animation: bounce-call 1.5s infinite;
+}
+
+.callus-container i {
+  font-size: 18px;
+}
+
+/* ✅ Mobile adjustments */
+@media screen and (max-width: 480px) {
+  .callus-container {
+    padding: 8px 12px;
+    font-size: 12px;
+    bottom: 80px;
+    right: 15px;
+  }
+
+  .callus-container i {
+    font-size: 16px;
+  }
+
+  .callus-container .call-label {
+    font-size: 12px;
+  }
+}
+
 
 /* Popup Styles */
 #popup-message {
@@ -617,7 +666,7 @@ a {
 
 .whatsapp-container i {
   font-size: 40px;
-  color:#25D366;
+  color: #25D366;
   display: inline-block;
   animation: whatsappbeat 1.5s infinite;
 }
@@ -626,11 +675,11 @@ a {
 
   0%,
   100% {
-      transform: scale(1);
+    transform: scale(1);
   }
 
   50% {
-      transform: scale(1.2);
+    transform: scale(1.2);
   }
 }
 
@@ -913,9 +962,9 @@ a {
     letter-spacing: 1.5px;
   }
 
-  .bottom-line2  {
+  .bottom-line2 {
     font-size: 12px;
-    color:#1e1b25;
+    color: #1e1b25;
     font-family: var(--font-family);
     font-weight: 600;
     text-align: center;
@@ -1123,6 +1172,7 @@ a {
     padding-bottom: 4%;
   }
 }
+
 /* hover effect */
 .icons-set .icon {
   transition: transform 0.3s ease-in-out;
