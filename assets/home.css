@@ -326,7 +326,7 @@
   .cfo-para2,
   .cfo-para3 {
     font-size: 14px;
-     width: 95%;
+    width: 95%;
     /* margin: 0 auto; */
     padding: 0;
   }
@@ -429,8 +429,8 @@
   transition: width 4s linear;
 } */
 
-@media only screen and (max-width: 768px){
-  .heading-font2-port{
+@media only screen and (max-width: 768px) {
+  .heading-font2-port {
     font-size: 24px;
   }
 }
@@ -647,6 +647,7 @@
 
 /* mobile view */
 @media only screen and (max-width: 768px) {
+
   /* General Section Styling */
   .services-animations {
     padding: 1rem;
@@ -693,7 +694,8 @@
     width: 100%;
     max-height: 300px;
     overflow-x: auto;
-    scrollbar-width: none; /* Hide scrollbar on mobile */
+    scrollbar-width: none;
+    /* Hide scrollbar on mobile */
   }
 
   .project-item {
@@ -737,23 +739,7 @@
 }
 
 /* section4 */
-/* Initial hidden state */
-.section4 {
-  opacity: 0;
-  transform: scale(0.98);
-  /* Start slightly scaled down */
-  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
-  /* Smooth transition */
-  will-change: opacity, transform;
-  /* Optimize performance */
-}
 
-/* Animation effect */
-.section4.visible {
-  opacity: 1;
-  transform: scale(1);
-  /* Scale to original size */
-}
 
 .section4 {
   padding: 2%;
@@ -815,6 +801,41 @@
 .minus-width {
   width: 350px !important;
   margin-left: -50px;
+}
+
+
+/* Fix VALUE section image only */
+.value-align>div:last-child {
+  width: 55%;
+}
+
+.value-sec-img {
+  width: 100%;
+  height: auto;
+  max-height: 320px;
+  display: block;
+  border-radius: 20px;
+  margin-top: 15px;
+}
+
+/* Keep text side balanced */
+.value-align>div:first-child {
+  width: 40%;
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+
+  .value-align>div:last-child,
+  .value-align>div:first-child {
+    width: 100%;
+  }
+
+  .value-sec-img {
+    height: auto;
+    max-width: 300px;
+    margin: 0 auto;
+  }
 }
 
 /* larger screens */

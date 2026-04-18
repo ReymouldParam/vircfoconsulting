@@ -38,18 +38,18 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(section3);
   });
 //   section4
-document.addEventListener("DOMContentLoaded", function () {
-    const section4 = document.querySelector('.section4');
+// document.addEventListener("DOMContentLoaded", function () {
+//     const section4 = document.querySelector('.section4');
   
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // Stop observing after animation triggers
-        }
-      });
-    }, { threshold: 0.5 }); // Trigger when 50% of the element is visible
+//     const observer = new IntersectionObserver((entries, observer) => {
+//       entries.forEach(entry => {
+//         if (entry.isIntersecting) {
+//           entry.target.classList.add('visible');
+//           observer.unobserve(entry.target); 
+//         }
+//       });
+//     }, { threshold: 0.5 }); 
   
-    // Observe the section4 element
-    observer.observe(section4);
-  });
+  
+//     observer.observe(section4);
+//   });
