@@ -49,19 +49,18 @@
 
 
 /* Card Image Area */
+/* Card Image Area */
 .card-image {
-    position: relative;
-    max-width: 500px;
-    max-height: 700px;
-    margin: auto;
-    margin-left: 20px;
-    margin-top: 20px;
+    width: 95%;
+    /* max-width: 500px; */
+    margin: 20px auto 20px;
 }
 
 /* image style */
 .image-blog {
-    /* width: 100%; */
+    width: 100%;
     height: auto;
+    display: block;
     border-radius: 15px;
 }
 
